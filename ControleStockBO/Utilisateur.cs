@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ControleStockBO
 {
+    /// <summary>
+    /// Classe permettant de stocké les données relatif à l'utilisateur
+    /// </summary>
     public class Utilisateur
     {
         private int id;
@@ -13,6 +16,13 @@ namespace ControleStockBO
         private string prenom;
         private Profil profil;
 
+        /// <summary>
+        /// Initialise une nouvelle Instance de la classe Utilisateur
+        /// </summary>
+        /// <param name="id">id permetant d'identifié l'utilisateur</param>
+        /// <param name="nom">nom de l'utilisateur</param>
+        /// <param name="prenom">prénom de l'utilisateur</param>
+        /// <param name="profil">profil de l'utilisateur</param>
         public Utilisateur(int id, string nom, string prenom, Profil profil)
         {
             this.id = id;
