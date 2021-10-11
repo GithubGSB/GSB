@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace GSBControleStockage
 {
-    public partial class FormAccueil : Form
+    public partial class FormControleRealise : Form
     {
-        public FormAccueil()
+        public FormControleRealise()
         {
             InitializeComponent();
-        }
-
-        private void ajoutDunContrôleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormControleRealise formControleRealise = new FormControleRealise();
-            formControleRealise.Show();
         }
     }
 }
