@@ -23,6 +23,7 @@ namespace ControleStockDAL
             if (uneInstance == null) uneInstance = new ProfilDAO();
             return uneInstance;
         }
+        private ProfilDAO() { }
 
         /// <summary>
         /// Permet de récupéré tous les profils contenus dans la BD

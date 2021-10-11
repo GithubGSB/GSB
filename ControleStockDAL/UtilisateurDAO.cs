@@ -24,6 +24,7 @@ namespace ControleStockDAL
             if (uneInstance == null) uneInstance = new UtilisateurDAO();
             return uneInstance;
         }
+        private UtilisateurDAO() { }
 
         /// <summary>
         /// Permet d'ajouter un utilisateur dans la base de données
