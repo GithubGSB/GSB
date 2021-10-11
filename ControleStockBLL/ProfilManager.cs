@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ControleStockBO;
+using ControleStockDAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,5 +24,14 @@ namespace ControleStockBLL
             return uneInstance;
         }
         private ProfilManager() { }
+
+        /// <summary>
+        /// Permet de récupéré la liste des profils de la BD
+        /// </summary>
+        /// <returns>Liste des profils</returns>
+        public List<Profil> GetProfils()
+        {
+            return ProfilDAO.GetInstance().GetProfils();
+        }
     }
 }

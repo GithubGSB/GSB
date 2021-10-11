@@ -47,5 +47,15 @@
     <Compile Include="ProfilManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControleStockBO\ControleStockBO.csproj">
+      <Project>{486EEB90-DD0B-47BD-A628-77EE80495E0D}</Project>
+      <Name>ControleStockBO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControleStockDAL\ControleStockDAL.csproj">
+      <Project>{466F1454-B76C-46B7-819E-DD81CFBE9ED4}</Project>
+      <Name>ControleStockDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
