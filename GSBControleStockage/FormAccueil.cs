@@ -16,5 +16,13 @@ namespace GSBControleStockage
         {
             InitializeComponent();
         }
+
+        private void mnuitemAjoutUtilisateur_Click(object sender, EventArgs e)
+        {
+            using(FormAjoutUtilisateur fau = new FormAjoutUtilisateur())
+            {
+                fau.ShowDialog();
+            }
+        }
     }
 }

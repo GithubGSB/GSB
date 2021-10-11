@@ -35,6 +35,7 @@ namespace GSBControleStockage
             this.mnuItemControleRealise = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemControleObliga = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemUtilisateur = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuitemAjoutUtilisateur = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGSBControleStock.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,9 +80,18 @@ namespace GSBControleStockage
             // 
             // mnuItemUtilisateur
             // 
+            this.mnuItemUtilisateur.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuitemAjoutUtilisateur});
             this.mnuItemUtilisateur.Name = "mnuItemUtilisateur";
             this.mnuItemUtilisateur.Size = new System.Drawing.Size(175, 24);
             this.mnuItemUtilisateur.Text = "Gestion des utilisateurs";
+            // 
+            // mnuitemAjoutUtilisateur
+            // 
+            this.mnuitemAjoutUtilisateur.Name = "mnuitemAjoutUtilisateur";
+            this.mnuitemAjoutUtilisateur.Size = new System.Drawing.Size(229, 26);
+            this.mnuitemAjoutUtilisateur.Text = "Ajout d\'un utilisateur";
+            this.mnuitemAjoutUtilisateur.Click += new System.EventHandler(this.mnuitemAjoutUtilisateur_Click);
             // 
             // FormAccueil
             // 
@@ -107,6 +117,7 @@ namespace GSBControleStockage
         private System.Windows.Forms.ToolStripMenuItem mnuItemControleRealise;
         private System.Windows.Forms.ToolStripMenuItem mnuItemControleObliga;
         private System.Windows.Forms.ToolStripMenuItem mnuItemUtilisateur;
+        private System.Windows.Forms.ToolStripMenuItem mnuitemAjoutUtilisateur;
     }
 }
 
