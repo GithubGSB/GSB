@@ -30,7 +30,7 @@ namespace ControleStockBLL
         /// </summary>
         /// <param name="utilisateur">Utilisateur à vérifié</param>
         /// <param name="motDePasse">Mot de passe, null si aucun contrôle</param>
-        /// <param name="motDePasseConf">Mot de passe de confirmation, null si aucun contrôle</param>
+        /// <param name="motDePasseConf">Mot de passe de confirmation</param>
         /// <returns>true si valide sinon false</returns>
         private bool VerifDonneesUtilisateurs(Utilisateur utilisateur, string motDePasse = null, string motDePasseConf = null)
         {
@@ -43,7 +43,7 @@ namespace ControleStockBLL
             else if (utilisateur.Prenom.Length > 50) lesErreurs.Add("Le prénom est trop grand (maximun 50).");
             if (utilisateur.Profil == null) lesErreurs.Add("Aucun profil n'a été sélectionné");
 
-            if(motDePasse != null && motDePasseConf != null)
+            if(motDePasse != null)
             {
                 if (string.IsNullOrWhiteSpace(motDePasse) || motDePasse.Length < 8) lesErreurs.Add("Le mot de passe est trop petit (minimun 8).");
                 else if (motDePasse.Length > 20) lesErreurs.Add("Le mot de passe est trop grand (maximun 20).");
