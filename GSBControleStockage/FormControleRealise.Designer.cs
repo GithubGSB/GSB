@@ -29,126 +29,202 @@ namespace GSBControleStockage
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblResume = new System.Windows.Forms.Label();
-            this.lblPrixHT = new System.Windows.Forms.Label();
             this.lblDateDerniereModif = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtPrixHT = new System.Windows.Forms.TextBox();
-            this.txtResume = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.lblDateCreation = new System.Windows.Forms.Label();
+            this.lblDateControle = new System.Windows.Forms.Label();
+            this.dtCreation = new System.Windows.Forms.DateTimePicker();
+            this.dtControle = new System.Windows.Forms.DateTimePicker();
+            this.dtDerniereModif = new System.Windows.Forms.DateTimePicker();
             this.btnAjout = new System.Windows.Forms.Button();
+            this.txtPrixHT = new System.Windows.Forms.TextBox();
+            this.lblPrixHT = new System.Windows.Forms.Label();
+            this.txtResume = new System.Windows.Forms.TextBox();
+            this.lblResume = new System.Windows.Forms.Label();
+            this.btnAnnul = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.lblEntreprise = new System.Windows.Forms.Label();
+            this.lblZoneStockage = new System.Windows.Forms.Label();
+            this.lblTypeControle = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblResume
-            // 
-            this.lblResume.AutoSize = true;
-            this.lblResume.Location = new System.Drawing.Point(94, 231);
-            this.lblResume.Name = "lblResume";
-            this.lblResume.Size = new System.Drawing.Size(99, 13);
-            this.lblResume.TabIndex = 0;
-            this.lblResume.Text = "Resumé du contôle";
-            // 
-            // lblPrixHT
-            // 
-            this.lblPrixHT.AutoSize = true;
-            this.lblPrixHT.Location = new System.Drawing.Point(94, 261);
-            this.lblPrixHT.Name = "lblPrixHT";
-            this.lblPrixHT.Size = new System.Drawing.Size(126, 13);
-            this.lblPrixHT.TabIndex = 1;
-            this.lblPrixHT.Text = "Prix hors taxe du contrôle";
             // 
             // lblDateDerniereModif
             // 
             this.lblDateDerniereModif.AutoSize = true;
-            this.lblDateDerniereModif.Location = new System.Drawing.Point(94, 171);
+            this.lblDateDerniereModif.Location = new System.Drawing.Point(35, 112);
             this.lblDateDerniereModif.Name = "lblDateDerniereModif";
-            this.lblDateDerniereModif.Size = new System.Drawing.Size(156, 13);
-            this.lblDateDerniereModif.TabIndex = 2;
-            this.lblDateDerniereModif.Text = "Date de la dernière modification";
+            this.lblDateDerniereModif.Size = new System.Drawing.Size(162, 13);
+            this.lblDateDerniereModif.TabIndex = 24;
+            this.lblDateDerniereModif.Text = "Date de la dernière modification :";
             // 
-            // label1
+            // lblDateCreation
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 141);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Date création";
+            this.lblDateCreation.AutoSize = true;
+            this.lblDateCreation.Location = new System.Drawing.Point(111, 82);
+            this.lblDateCreation.Name = "lblDateCreation";
+            this.lblDateCreation.Size = new System.Drawing.Size(77, 13);
+            this.lblDateCreation.TabIndex = 25;
+            this.lblDateCreation.Text = "Date création :";
             // 
-            // label2
+            // lblDateControle
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(94, 114);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Date contrôle";
+            this.lblDateControle.AutoSize = true;
+            this.lblDateControle.Location = new System.Drawing.Point(110, 55);
+            this.lblDateControle.Name = "lblDateControle";
+            this.lblDateControle.Size = new System.Drawing.Size(77, 13);
+            this.lblDateControle.TabIndex = 26;
+            this.lblDateControle.Text = "Date contrôle :";
             // 
-            // txtPrixHT
+            // dtCreation
             // 
-            this.txtPrixHT.Location = new System.Drawing.Point(226, 254);
-            this.txtPrixHT.Name = "txtPrixHT";
-            this.txtPrixHT.Size = new System.Drawing.Size(100, 20);
-            this.txtPrixHT.TabIndex = 5;
+            this.dtCreation.Location = new System.Drawing.Point(198, 76);
+            this.dtCreation.Name = "dtCreation";
+            this.dtCreation.Size = new System.Drawing.Size(200, 20);
+            this.dtCreation.TabIndex = 29;
             // 
-            // txtResume
+            // dtControle
             // 
-            this.txtResume.Location = new System.Drawing.Point(226, 224);
-            this.txtResume.Name = "txtResume";
-            this.txtResume.Size = new System.Drawing.Size(100, 20);
-            this.txtResume.TabIndex = 6;
+            this.dtControle.Location = new System.Drawing.Point(197, 48);
+            this.dtControle.Name = "dtControle";
+            this.dtControle.Size = new System.Drawing.Size(200, 20);
+            this.dtControle.TabIndex = 30;
             // 
-            // dateTimePicker1
+            // dtDerniereModif
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(211, 134);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 7;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(211, 107);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 8;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(256, 164);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker3.TabIndex = 9;
+            this.dtDerniereModif.Location = new System.Drawing.Point(197, 105);
+            this.dtDerniereModif.Name = "dtDerniereModif";
+            this.dtDerniereModif.Size = new System.Drawing.Size(200, 20);
+            this.dtDerniereModif.TabIndex = 31;
             // 
             // btnAjout
             // 
-            this.btnAjout.Location = new System.Drawing.Point(301, 351);
+            this.btnAjout.Location = new System.Drawing.Point(323, 325);
             this.btnAjout.Name = "btnAjout";
             this.btnAjout.Size = new System.Drawing.Size(75, 23);
-            this.btnAjout.TabIndex = 10;
+            this.btnAjout.TabIndex = 32;
             this.btnAjout.Text = "Ajouter";
             this.btnAjout.UseVisualStyleBackColor = true;
+            // 
+            // txtPrixHT
+            // 
+            this.txtPrixHT.Location = new System.Drawing.Point(197, 174);
+            this.txtPrixHT.Name = "txtPrixHT";
+            this.txtPrixHT.Size = new System.Drawing.Size(201, 20);
+            this.txtPrixHT.TabIndex = 27;
+            // 
+            // lblPrixHT
+            // 
+            this.lblPrixHT.AutoSize = true;
+            this.lblPrixHT.Location = new System.Drawing.Point(65, 177);
+            this.lblPrixHT.Name = "lblPrixHT";
+            this.lblPrixHT.Size = new System.Drawing.Size(132, 13);
+            this.lblPrixHT.TabIndex = 23;
+            this.lblPrixHT.Text = "Prix hors taxe du contrôle :";
+            // 
+            // txtResume
+            // 
+            this.txtResume.Location = new System.Drawing.Point(196, 148);
+            this.txtResume.Name = "txtResume";
+            this.txtResume.Size = new System.Drawing.Size(202, 20);
+            this.txtResume.TabIndex = 28;
+            this.txtResume.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblResume
+            // 
+            this.lblResume.AutoSize = true;
+            this.lblResume.Location = new System.Drawing.Point(86, 151);
+            this.lblResume.Name = "lblResume";
+            this.lblResume.Size = new System.Drawing.Size(105, 13);
+            this.lblResume.TabIndex = 22;
+            this.lblResume.Text = "Resumé du contôle :";
+            this.lblResume.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnAnnul
+            // 
+            this.btnAnnul.Location = new System.Drawing.Point(197, 325);
+            this.btnAnnul.Name = "btnAnnul";
+            this.btnAnnul.Size = new System.Drawing.Size(75, 23);
+            this.btnAnnul.TabIndex = 33;
+            this.btnAnnul.Text = "Annuler";
+            this.btnAnnul.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(196, 215);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(202, 21);
+            this.comboBox1.TabIndex = 34;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(196, 269);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(202, 21);
+            this.comboBox2.TabIndex = 35;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(196, 242);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(202, 21);
+            this.comboBox3.TabIndex = 36;
+            // 
+            // lblEntreprise
+            // 
+            this.lblEntreprise.AutoSize = true;
+            this.lblEntreprise.Location = new System.Drawing.Point(130, 223);
+            this.lblEntreprise.Name = "lblEntreprise";
+            this.lblEntreprise.Size = new System.Drawing.Size(60, 13);
+            this.lblEntreprise.TabIndex = 37;
+            this.lblEntreprise.Text = "Entreprise :";
+            // 
+            // lblZoneStockage
+            // 
+            this.lblZoneStockage.AutoSize = true;
+            this.lblZoneStockage.Location = new System.Drawing.Point(91, 250);
+            this.lblZoneStockage.Name = "lblZoneStockage";
+            this.lblZoneStockage.Size = new System.Drawing.Size(100, 13);
+            this.lblZoneStockage.TabIndex = 38;
+            this.lblZoneStockage.Text = "Zone de stockage :";
+            // 
+            // lblTypeControle
+            // 
+            this.lblTypeControle.AutoSize = true;
+            this.lblTypeControle.Location = new System.Drawing.Point(97, 277);
+            this.lblTypeControle.Name = "lblTypeControle";
+            this.lblTypeControle.Size = new System.Drawing.Size(93, 13);
+            this.lblTypeControle.TabIndex = 39;
+            this.lblTypeControle.Text = "Type de contrôle :";
             // 
             // FormControleRealise
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnAjout);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.txtResume);
-            this.Controls.Add(this.txtPrixHT);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblDateDerniereModif);
-            this.Controls.Add(this.lblPrixHT);
+            this.Controls.Add(this.lblTypeControle);
+            this.Controls.Add(this.lblZoneStockage);
+            this.Controls.Add(this.lblEntreprise);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnAnnul);
             this.Controls.Add(this.lblResume);
+            this.Controls.Add(this.txtResume);
+            this.Controls.Add(this.lblPrixHT);
+            this.Controls.Add(this.txtPrixHT);
+            this.Controls.Add(this.btnAjout);
+            this.Controls.Add(this.dtDerniereModif);
+            this.Controls.Add(this.dtControle);
+            this.Controls.Add(this.dtCreation);
+            this.Controls.Add(this.lblDateControle);
+            this.Controls.Add(this.lblDateCreation);
+            this.Controls.Add(this.lblDateDerniereModif);
             this.Name = "FormControleRealise";
-            this.Text = "FormControleRealise";
+            this.Text = "Ajout d\'un contrôle";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,16 +232,23 @@ namespace GSBControleStockage
 
         #endregion
 
-        private System.Windows.Forms.Label lblResume;
-        private System.Windows.Forms.Label lblPrixHT;
         private System.Windows.Forms.Label lblDateDerniereModif;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPrixHT;
-        private System.Windows.Forms.TextBox txtResume;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.Label lblDateCreation;
+        private System.Windows.Forms.Label lblDateControle;
+        private System.Windows.Forms.DateTimePicker dtCreation;
+        private System.Windows.Forms.DateTimePicker dtControle;
+        private System.Windows.Forms.DateTimePicker dtDerniereModif;
         private System.Windows.Forms.Button btnAjout;
+        private System.Windows.Forms.TextBox txtPrixHT;
+        private System.Windows.Forms.Label lblPrixHT;
+        private System.Windows.Forms.TextBox txtResume;
+        private System.Windows.Forms.Label lblResume;
+        private System.Windows.Forms.Button btnAnnul;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label lblEntreprise;
+        private System.Windows.Forms.Label lblZoneStockage;
+        private System.Windows.Forms.Label lblTypeControle;
     }
 }
