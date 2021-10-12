@@ -35,6 +35,12 @@ namespace ControleStockDAL
         /// <param name="sel">sel de sécurisation du mot du passe</param>
         /// <param name="identifiantConnexion">identifiant de connexion de l'utilisateur</param>
         /// <param name="profil">profil de l'utilisateur</param>
+        /// <exception cref="InvalidCastException"></exception>
+        /// <exception cref="SqlException"></exception>
+        /// <exception cref="InvalidOperationException"></exception>
+        /// <exception cref="System.IO.IOException"></exception>
+        /// <exception cref="ObjectDisposedException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public void AjoutUtilisateur(Utilisateur utilisateur, string motDePasse, string sel, string identifiantConnexion)
         {
             //récupération commande
@@ -61,6 +67,11 @@ namespace ControleStockDAL
         /// </summary>
         /// <param name="identifiant">Identifiant à vérifié</param>
         /// <returns>true si une ou plusieurs lignes ont été trouvés</returns>
+        /// <exception cref="InvalidCastException"></exception>
+        /// <exception cref="SqlException"></exception>
+        /// <exception cref="InvalidOperationException"></exception>
+        /// <exception cref="System.IO.IOException"></exception>
+        /// <exception cref="ObjectDisposedException"></exception>
         public bool IdentifiantExiste(string identifiant)
         {
             bool existe;

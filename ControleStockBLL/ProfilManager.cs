@@ -31,7 +31,16 @@ namespace ControleStockBLL
         /// <returns>Liste des profils</returns>
         public List<Profil> GetProfils()
         {
-            return ProfilDAO.GetInstance().GetProfils();
+            List<Profil> lesProfils = null;
+            try
+            {
+                lesProfils =  ProfilDAO.GetInstance().GetProfils();
+            } catch(Exception ex)
+            {
+                ex.LogErreur("Impossible de récupéré les profils dans la base de données.");
+            }
+
+            return lesProfils;
         }
     }
 }

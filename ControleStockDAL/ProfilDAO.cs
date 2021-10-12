@@ -28,6 +28,12 @@ namespace ControleStockDAL
         /// <summary>
         /// Permet de récupéré tous les profils contenus dans la BD
         /// </summary>
+        /// <exception cref="InvalidCastException"></exception>
+        /// <exception cref="SqlException"></exception>
+        /// <exception cref="InvalidOperationException"></exception>
+        /// <exception cref="System.IO.IOException"></exception>
+        /// <exception cref="ObjectDisposedException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         /// <returns>Liste des profils</returns>
         public List<Profil> GetProfils()
         {
