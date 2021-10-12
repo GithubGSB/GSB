@@ -38,7 +38,8 @@ namespace ControleStockBLL
             {
                 bool generationReussite = true;
                 //génération identifiantConnexion
-                identifiant = utilisateur.Prenom + "." + utilisateur.Nom;
+                identifiant = (utilisateur.Prenom + "." + utilisateur.Nom).ToLower();
+
                 int num = 0;
                 try
                 {
@@ -60,7 +61,7 @@ namespace ControleStockBLL
                 {
                     try
                     {
-                        MotDePasseUtil.GenerationMdpHash(motDePasse, out motDePasseHash, out sel),
+                        MotDePasseUtil.GenerationMdpHash(motDePasse, out motDePasseHash, out sel);
                     }
                     catch (Exception ex)
                     {
@@ -74,7 +75,7 @@ namespace ControleStockBLL
                     try
                     {
                         UtilisateurDAO.GetInstance().AjoutUtilisateur(utilisateur, motDePasseHash, sel, identifiant);
-                        MessageBox.Show("Utilisateur ajouté", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Utilisateur ajouté, son identifiant est : " + identifiant, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return true;
                     }
                     catch (Exception ex)
@@ -115,7 +116,7 @@ namespace ControleStockBLL
             //retour et affichage des erreurs
             if (lesErreurs.Count > 0)
                 {
-                    MessageBox.Show("Les données suivantes sont incorrectes :\n" + lesErreurs.Aggregate((x, y) => x + "\n\t-" + y), "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Les données suivantes sont incorrectes :\n\t-" + lesErreurs.Aggregate((x, y) =>x + "\n\t-" + y), "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
                 return true;
