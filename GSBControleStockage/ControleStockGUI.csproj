@@ -88,5 +88,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControleStockBLL\ControleStockBLL.csproj">
+      <Project>{565932BC-2111-4AAE-90D7-A56C33FB11E9}</Project>
+      <Name>ControleStockBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControleStockBO\ControleStockBO.csproj">
+      <Project>{486EEB90-DD0B-47BD-A628-77EE80495E0D}</Project>
+      <Name>ControleStockBO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

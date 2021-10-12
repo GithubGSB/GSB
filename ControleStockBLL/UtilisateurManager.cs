@@ -1,4 +1,5 @@
 ﻿using ControleStockBO;
+using ControleStockDAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,67 @@ namespace ControleStockBLL
             return uneInstance;
         }
         private UtilisateurManager() { }
+
+        public bool AjoutUtilisateur(string nom, string prenom, Profil profil, string motDePasse, string motDePasseConf)
+        {
+            //creation utilisateur
+            Utilisateur utilisateur = new Utilisateur(0, nom, prenom, profil);
+            string identifiant = null, motDePasseHash = null, sel = null;
+            if (motDePasse == null) motDePasse = "";
+
+            //vérification données et ajout
+            if (VerifDonneesUtilisateurs(utilisateur, motDePasse, motDePasseConf))
+            {
+                bool generationReussite = true;
+                //génération identifiantConnexion
+                identifiant = utilisateur.Prenom + "." + utilisateur.Nom;
+                int num = 0;
+                try
+                {
+                    while (UtilisateurDAO.GetInstance().IdentifiantExiste(identifiant))
+                    {
+                        num++;
+                        if (num == 1) identifiant += num;
+                        else identifiant = identifiant.Substring(0, identifiant.Length - 1) + num;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Une erreur c'est produite lors du contrôle de l'identifiant :\n" + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    generationReussite = false;
+                }
+
+                //génération mot de passe et sel
+                if(generationReussite)
+                {
+                    try
+                    {
+                        MotDePasseUtil.GenerationMdpHash(motDePasse, out motDePasseHash, out sel),
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Une erreur c'est produite lors de la génération du mot de passe :\n" + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        generationReussite = false;
+                    }
+                }
+
+                if (generationReussite)
+                {
+                    try
+                    {
+                        UtilisateurDAO.GetInstance().AjoutUtilisateur(utilisateur, motDePasseHash, sel, identifiant);
+                        MessageBox.Show("Utilisateur ajouté", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Une erreur c'est produite lors de l'ajout de l'utilisateur :\n" + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        generationReussite = false;
+                    }
+                }
+            }
+            return false;
+        }
 
         /// <summary>
         /// Permet de vérifié si les données d'un utilisateur sont correctes, et d'affiché les problèmes

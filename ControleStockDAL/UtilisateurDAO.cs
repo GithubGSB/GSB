@@ -35,19 +35,19 @@ namespace ControleStockDAL
         /// <param name="sel">sel de sécurisation du mot du passe</param>
         /// <param name="identifiantConnexion">identifiant de connexion de l'utilisateur</param>
         /// <param name="profil">profil de l'utilisateur</param>
-        public void AjoutUtilisateur(string nom, string prenom, string motDePasse, string sel, string identifiantConnexion, Profil profil)
+        public void AjoutUtilisateur(Utilisateur utilisateur, string motDePasse, string sel, string identifiantConnexion)
         {
             //récupération commande
             SqlCommand cmd = Commande.GetInstance().GetObjCommande();
             cmd.CommandText = "spAjoutUtilisateur";
 
             //ajout des paramètres
-            cmd.Parameters.Add("nom", System.Data.SqlDbType.VarChar).Value = nom;
-            cmd.Parameters.Add("prenom", System.Data.SqlDbType.VarChar).Value = prenom;
+            cmd.Parameters.Add("nom", System.Data.SqlDbType.VarChar).Value = utilisateur.Nom;
+            cmd.Parameters.Add("prenom", System.Data.SqlDbType.VarChar).Value = utilisateur.Prenom;
             cmd.Parameters.Add("motDePasse", System.Data.SqlDbType.VarChar).Value = motDePasse;
             cmd.Parameters.Add("selMotDePasse", System.Data.SqlDbType.VarChar).Value = sel;
             cmd.Parameters.Add("identifiantConnexion", System.Data.SqlDbType.VarChar).Value = identifiantConnexion;
-            cmd.Parameters.Add("idProfil", System.Data.SqlDbType.Int).Value = profil.Id;
+            cmd.Parameters.Add("idProfil", System.Data.SqlDbType.Int).Value = utilisateur.Profil.Id;
 
             //récupération des profils
             cmd.ExecuteNonQuery();

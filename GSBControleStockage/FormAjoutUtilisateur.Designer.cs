@@ -54,6 +54,7 @@ namespace GSBControleStockage
             this.btnAjouter.TabIndex = 11;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = true;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // tabpnlPrincipal
             // 
@@ -182,7 +183,7 @@ namespace GSBControleStockage
             // 
             this.cbxProfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxProfil.FormattingEnabled = true;
-            this.cbxProfil.Location = new System.Drawing.Point(403, 172);
+            this.cbxProfil.Location = new System.Drawing.Point(403, 173);
             this.cbxProfil.Name = "cbxProfil";
             this.cbxProfil.Size = new System.Drawing.Size(394, 24);
             this.cbxProfil.TabIndex = 5;
@@ -196,6 +197,7 @@ namespace GSBControleStockage
             this.btnAnnuler.TabIndex = 10;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // FormAjoutUtilisateur
             // 
