@@ -59,7 +59,7 @@ namespace GSBControleStockage
             this.txtIdentifiant.Location = new System.Drawing.Point(120, 6);
             this.txtIdentifiant.MaxLength = 50;
             this.txtIdentifiant.Name = "txtIdentifiant";
-            this.txtIdentifiant.Size = new System.Drawing.Size(145, 22);
+            this.txtIdentifiant.Size = new System.Drawing.Size(287, 22);
             this.txtIdentifiant.TabIndex = 2;
             this.txtIdentifiant.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -69,7 +69,7 @@ namespace GSBControleStockage
             this.txtMdp.MaxLength = 20;
             this.txtMdp.Name = "txtMdp";
             this.txtMdp.PasswordChar = '*';
-            this.txtMdp.Size = new System.Drawing.Size(144, 22);
+            this.txtMdp.Size = new System.Drawing.Size(286, 22);
             this.txtMdp.TabIndex = 3;
             this.txtMdp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -77,16 +77,17 @@ namespace GSBControleStockage
             // 
             this.btnConnexion.Location = new System.Drawing.Point(13, 71);
             this.btnConnexion.Name = "btnConnexion";
-            this.btnConnexion.Size = new System.Drawing.Size(252, 23);
+            this.btnConnexion.Size = new System.Drawing.Size(394, 23);
             this.btnConnexion.TabIndex = 4;
             this.btnConnexion.Text = "Se connecter";
             this.btnConnexion.UseVisualStyleBackColor = true;
+            this.btnConnexion.Click += new System.EventHandler(this.btnConnexion_Click);
             // 
             // FormConnexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(419, 103);
             this.Controls.Add(this.btnConnexion);
             this.Controls.Add(this.txtMdp);
             this.Controls.Add(this.txtIdentifiant);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControleStockBLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,15 @@ namespace GSBControleStockage
         public FormConnexion()
         {
             InitializeComponent();
+        }
+
+        private void btnConnexion_Click(object sender, EventArgs e)
+        {
+            if(UtilisateurManager.GetInstance().ConnexionUtilisateur(txtIdentifiant.Text, txtMdp.Text))
+            {
+                this.Close();
+                new FormAccueil().Show();
+            }
         }
     }
 }
