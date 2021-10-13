@@ -36,16 +36,15 @@ namespace ControleStockBLL
         /// Permet de réaliser la vérification du mot de passe
         /// </summary>
         /// <param name="mdpSaisie">Mot de passe saisie</param>
-        /// <param name="mdpBD">Mot de passe stocké dans la BD</param>
         /// <param name="selBD">Sel de sécurisation du mot de passe</param>
         /// <exception cref="ArgumentException"></exception>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         /// <exception cref="FormatException"></exception>
-        /// <returns>retourn true si mot de passe saisie est valide sinon false</returns>
-        public static bool VerificationMdp(string mdpSaisie, string mdpBD, string selBD)
+        /// <returns>retourne le hash du mot de passe de vérification</returns>
+        public static string GenerationMdpVerif(string mdpSaisie, string selBD)
         {
-            return Convert.ToBase64String(HashageMdp(mdpSaisie, selBD)) == mdpBD && mdpBD != null;
+            return Convert.ToBase64String(HashageMdp(mdpSaisie, selBD));
         }
 
         /// <summary>
