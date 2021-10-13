@@ -197,5 +197,10 @@ namespace ControleStockBLL
                 return false;
             }
         }
+
+        public void Deconnexion()
+        {
+            this.utilisateurApp = null;
+        }
     }
 }

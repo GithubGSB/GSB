@@ -22,8 +22,12 @@ namespace GSBControleStockage
         {
             if(UtilisateurManager.GetInstance().ConnexionUtilisateur(txtIdentifiant.Text, txtMdp.Text))
             {
-                this.Close();
-                new FormAccueil().Show();
+                txtIdentifiant.Text = "";
+                txtMdp.Text = "";
+                this.Hide();
+                new FormAccueil().ShowDialog();
+                UtilisateurManager.GetInstance().Deconnexion();
+                this.Show();
             }
         }
     }
