@@ -29,7 +29,7 @@ namespace ControleStockDAL
 
             SqlCommand commande = Commande.GetInstance().GetObjCommande();
             commande.CommandType = System.Data.CommandType.StoredProcedure;
-            commande.CommandText = "spGetTypeControles";
+            commande.CommandText = "spGetTypesControles";
 
             SqlDataReader monLecteur = commande.ExecuteReader();
 

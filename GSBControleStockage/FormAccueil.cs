@@ -17,10 +17,10 @@ namespace GSBControleStockage
             InitializeComponent();
         }
 
-        private void ajoutDunEntrepriseToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ajoutDunControleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmEntreprise frmEntreprise = new FrmEntreprise();
-            frmEntreprise.Show();
+            FormControleRealise formControleRealise = new FormControleRealise();
+            formControleRealise.Show();
         }
     }
 }

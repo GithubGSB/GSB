@@ -16,9 +16,9 @@ namespace ControleStockBO
         private float montantHT;
         private TypeControle unTypeControle;
         private Entreprise uneEntreprise;
-        private ZoneStockage uneZoneStockage;
+        // private ZoneStockage uneZoneStockage;
 
-        public ControleRealise(int id, DateTime dateControle, DateTime dateCreation, DateTime dateDerniereModif, string resume, float montantHT, TypeControle unTypeControle, Entreprise uneEntreprise, ZoneStockage uneZoneStockage)
+        public ControleRealise(int id, DateTime dateControle, DateTime dateCreation, DateTime dateDerniereModif, string resume, float montantHT, TypeControle unTypeControle, Entreprise uneEntreprise)
         {
             this.Id = id;
             this.DateControle = dateControle;
@@ -28,10 +28,10 @@ namespace ControleStockBO
             this.MontantHT = montantHT;
             this.UnTypeControle = unTypeControle;
             this.UneEntreprise = uneEntreprise;
-            this.UneZoneStockage = uneZoneStockage;
+            // this.UneZoneStockage = uneZoneStockage;
         }
 
-        public ControleRealise(DateTime dateControle, DateTime dateCreation, DateTime dateDerniereModif, string resume, float montantHT, TypeControle unTypeControle, Entreprise uneEntreprise, ZoneStockage uneZoneStockage)
+        public ControleRealise(DateTime dateControle, DateTime dateCreation, DateTime dateDerniereModif, string resume, float montantHT, TypeControle unTypeControle, Entreprise uneEntreprise)
         {
             this.DateControle = dateControle;
             this.DateCreation = dateCreation;
@@ -40,7 +40,7 @@ namespace ControleStockBO
             this.MontantHT = montantHT;
             this.UnTypeControle = unTypeControle;
             this.UneEntreprise = uneEntreprise;
-            this.UneZoneStockage = uneZoneStockage;
+            // this.UneZoneStockage = uneZoneStockage;
         }
 
         public int Id { get => id; set => id = value; }
@@ -51,6 +51,6 @@ namespace ControleStockBO
         public float MontantHT { get => montantHT; set => montantHT = value; }
         public TypeControle UnTypeControle { get => unTypeControle; set => unTypeControle = value; }
         public Entreprise UneEntreprise { get => uneEntreprise; set => uneEntreprise = value; }
-        public ZoneStockage UneZoneStockage { get => uneZoneStockage; set => uneZoneStockage = value; }
+        // public ZoneStockage UneZoneStockage { get => uneZoneStockage; set => uneZoneStockage = value; }
     }
 }

@@ -1,5 +1,4 @@
-﻿
-namespace GSBControleStockage
+﻿namespace GSBControleStockage
 {
     partial class FormAccueil
     {
@@ -11,7 +10,7 @@ namespace GSBControleStockage
         /// <summary>
         /// Nettoyage des ressources utilisées.
         /// </summary>
-        /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -35,7 +34,7 @@ namespace GSBControleStockage
             this.mnuItemControleRealise = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemControleObliga = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemUtilisateur = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajoutDunEntrepriseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajoutDunControleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGSBControleStock.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,8 +62,6 @@ namespace GSBControleStockage
             // 
             // mnuItemEntreprise
             // 
-            this.mnuItemEntreprise.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajoutDunEntrepriseToolStripMenuItem});
             this.mnuItemEntreprise.Name = "mnuItemEntreprise";
             this.mnuItemEntreprise.Size = new System.Drawing.Size(140, 20);
             this.mnuItemEntreprise.Text = "Gestion des entreprises";
@@ -72,7 +69,7 @@ namespace GSBControleStockage
             // mnuItemControleRealise
             // 
             this.mnuItemControleRealise.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajoutDunContrôleToolStripMenuItem});
+            this.ajoutDunControleToolStripMenuItem});
             this.mnuItemControleRealise.Name = "mnuItemControleRealise";
             this.mnuItemControleRealise.Size = new System.Drawing.Size(173, 20);
             this.mnuItemControleRealise.Text = "Gestion des contrôles réalisés";
@@ -88,6 +85,13 @@ namespace GSBControleStockage
             this.mnuItemUtilisateur.Name = "mnuItemUtilisateur";
             this.mnuItemUtilisateur.Size = new System.Drawing.Size(140, 20);
             this.mnuItemUtilisateur.Text = "Gestion des utilisateurs";
+            // 
+            // ajoutDunControleToolStripMenuItem
+            // 
+            this.ajoutDunControleToolStripMenuItem.Name = "ajoutDunControleToolStripMenuItem";
+            this.ajoutDunControleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajoutDunControleToolStripMenuItem.Text = "Ajout d\'un controle";
+            this.ajoutDunControleToolStripMenuItem.Click += new System.EventHandler(this.ajoutDunControleToolStripMenuItem_Click);
             // 
             // FormAccueil
             // 
@@ -114,6 +118,6 @@ namespace GSBControleStockage
         private System.Windows.Forms.ToolStripMenuItem mnuItemControleRealise;
         private System.Windows.Forms.ToolStripMenuItem mnuItemControleObliga;
         private System.Windows.Forms.ToolStripMenuItem mnuItemUtilisateur;
+        private System.Windows.Forms.ToolStripMenuItem ajoutDunControleToolStripMenuItem;
     }
 }
-

@@ -1,5 +1,4 @@
 ﻿using ControleStockBLL;
-using ControleStockBO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +19,10 @@ namespace GSBControleStockage
             cbxTypeControle.DisplayMember = "libelle";
             cbxTypeControle.ValueMember = "id";
 
+            cbxEntreprise.DisplayMember = "nom";
+            cbxEntreprise.ValueMember = "insee";
+
+            cbxEntreprise.DataSource = EntrepriseManager.GetInstance().
             cbxTypeControle.DataSource = TypeControleManager.GetInstance().GetLesTypeControles();
         }
 
