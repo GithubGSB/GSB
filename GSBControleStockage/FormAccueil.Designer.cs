@@ -36,55 +36,65 @@ namespace GSBControleStockage
             this.mnuItemControleObliga = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemUtilisateur = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuitemAjoutUtilisateur = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemDeconnexion = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGSBControleStock.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuGSBControleStock
             // 
+            this.mnuGSBControleStock.Dock = System.Windows.Forms.DockStyle.Left;
             this.mnuGSBControleStock.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuGSBControleStock.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuItemZoneStock,
             this.mnuItemEntreprise,
             this.mnuItemControleRealise,
             this.mnuItemControleObliga,
-            this.mnuItemUtilisateur});
+            this.mnuItemUtilisateur,
+            this.mnuItemDeconnexion});
+            this.mnuGSBControleStock.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.mnuGSBControleStock.Location = new System.Drawing.Point(0, 0);
             this.mnuGSBControleStock.Name = "mnuGSBControleStock";
-            this.mnuGSBControleStock.Size = new System.Drawing.Size(1087, 28);
+            this.mnuGSBControleStock.Size = new System.Drawing.Size(271, 450);
             this.mnuGSBControleStock.TabIndex = 0;
             this.mnuGSBControleStock.Text = "menuStrip1";
             // 
             // mnuItemZoneStock
             // 
             this.mnuItemZoneStock.Name = "mnuItemZoneStock";
-            this.mnuItemZoneStock.Size = new System.Drawing.Size(205, 24);
+            this.mnuItemZoneStock.Size = new System.Drawing.Size(258, 24);
             this.mnuItemZoneStock.Text = "Gestion zones de stockages";
+            this.mnuItemZoneStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // mnuItemEntreprise
             // 
             this.mnuItemEntreprise.Name = "mnuItemEntreprise";
-            this.mnuItemEntreprise.Size = new System.Drawing.Size(176, 24);
+            this.mnuItemEntreprise.Size = new System.Drawing.Size(258, 24);
             this.mnuItemEntreprise.Text = "Gestion des entreprises";
+            this.mnuItemEntreprise.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // mnuItemControleRealise
             // 
             this.mnuItemControleRealise.Name = "mnuItemControleRealise";
-            this.mnuItemControleRealise.Size = new System.Drawing.Size(218, 24);
+            this.mnuItemControleRealise.Size = new System.Drawing.Size(258, 24);
             this.mnuItemControleRealise.Text = "Gestion des contrôles réalisés";
+            this.mnuItemControleRealise.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // mnuItemControleObliga
             // 
             this.mnuItemControleObliga.Name = "mnuItemControleObliga";
-            this.mnuItemControleObliga.Size = new System.Drawing.Size(265, 24);
+            this.mnuItemControleObliga.Size = new System.Drawing.Size(258, 24);
             this.mnuItemControleObliga.Text = "Gestion des obligations de contrôles";
+            this.mnuItemControleObliga.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // mnuItemUtilisateur
             // 
             this.mnuItemUtilisateur.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuitemAjoutUtilisateur});
             this.mnuItemUtilisateur.Name = "mnuItemUtilisateur";
-            this.mnuItemUtilisateur.Size = new System.Drawing.Size(175, 24);
+            this.mnuItemUtilisateur.Size = new System.Drawing.Size(258, 24);
+            this.mnuItemUtilisateur.Tag = "GU";
             this.mnuItemUtilisateur.Text = "Gestion des utilisateurs";
+            this.mnuItemUtilisateur.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // mnuitemAjoutUtilisateur
             // 
@@ -92,6 +102,14 @@ namespace GSBControleStockage
             this.mnuitemAjoutUtilisateur.Size = new System.Drawing.Size(229, 26);
             this.mnuitemAjoutUtilisateur.Text = "Ajout d\'un utilisateur";
             this.mnuitemAjoutUtilisateur.Click += new System.EventHandler(this.mnuitemAjoutUtilisateur_Click);
+            // 
+            // mnuItemDeconnexion
+            // 
+            this.mnuItemDeconnexion.Name = "mnuItemDeconnexion";
+            this.mnuItemDeconnexion.Size = new System.Drawing.Size(258, 24);
+            this.mnuItemDeconnexion.Text = "Déconnexion";
+            this.mnuItemDeconnexion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mnuItemDeconnexion.Click += new System.EventHandler(this.déconnexionToolStripMenuItem_Click);
             // 
             // FormAccueil
             // 
@@ -118,6 +136,7 @@ namespace GSBControleStockage
         private System.Windows.Forms.ToolStripMenuItem mnuItemControleObliga;
         private System.Windows.Forms.ToolStripMenuItem mnuItemUtilisateur;
         private System.Windows.Forms.ToolStripMenuItem mnuitemAjoutUtilisateur;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemDeconnexion;
     }
 }
 

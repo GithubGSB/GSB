@@ -14,6 +14,8 @@ namespace ControleStockBLL
     /// </summary>
     public class UtilisateurManager
     {
+        private Utilisateur utilisateurApp;
+
         private static UtilisateurManager uneInstance;
         /// <summary>
         /// Premet de récupéré l'instance UtilisateurManager
@@ -24,7 +26,12 @@ namespace ControleStockBLL
             if (uneInstance == null) uneInstance = new UtilisateurManager();
             return uneInstance;
         }
-        private UtilisateurManager() { }
+        private UtilisateurManager()
+        {
+            utilisateurApp = null;
+        }
+
+        public Utilisateur UtilisateurApp {get => utilisateurApp;}
 
         /// <summary>
         /// Permet l'ajout d'un utilisateur dans la base de données
@@ -129,6 +136,71 @@ namespace ControleStockBLL
                 return false;
             }
             return true;
+        }
+    
+        /// <summary>
+        /// Permet de connecté un utilisateur et d'assigné l'utilisateur de l'application
+        /// </summary>
+        /// <param name="identifiant">identifiant</param>
+        /// <param name="motDePasse">mot de passe</param>
+        /// <returns>true si connecté sinon false</returns>
+        public bool ConnexionUtilisateur(string identifiant, string motDePasse)
+        {
+            //contrôle
+            if(identifiant.Length > 50 || motDePasse.Length > 20 || motDePasse.Length < 8)
+            {
+                Logger.LogAttention("Les données de connexion ne sont pas conforme.");
+                return false;
+            }
+            
+            //récupération élément d'identifiant
+            string sel;
+            try
+            {
+                sel = UtilisateurDAO.GetInstance().GetIdentification(identifiant);
+                if(sel == null)
+                {
+                    Logger.LogAttention("Aucun compte trouvé avec cette identifiant.");
+                    return false;
+                }
+            } catch(Exception ex)
+            {
+                ex.LogErreur("Impossible de récupéré les données d'identification.");
+                return false;
+            }
+
+            //generation mot de passe hash;
+            string mdpHash;
+            try
+            {
+                mdpHash = MotDePasseUtil.GenerationMdpVerif(motDePasse, sel);
+            } catch(Exception ex)
+            {
+                ex.LogErreur("Erreur dans la génération des informations d'identification.");
+                return false;
+            }
+
+            //connexion
+            try
+            {
+                this.utilisateurApp = UtilisateurDAO.GetInstance().GetUtilisateurConnexion(identifiant, mdpHash);
+                if(utilisateurApp == null)
+                {
+                    Logger.LogAttention("Information de connexion incorrecte.");
+                    return false;
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                ex.LogErreur("Erreur dans la connexion à l'application");
+                return false;
+            }
+        }
+
+        public void Deconnexion()
+        {
+            this.utilisateurApp = null;
         }
     }
 }
