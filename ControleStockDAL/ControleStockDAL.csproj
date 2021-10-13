@@ -53,5 +53,11 @@
       <Name>ControleStockBO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControleStockBO\ControleStockBO.csproj">
+      <Project>{486eeb90-dd0b-47bd-a628-77ee80495e0d}</Project>
+      <Name>ControleStockBO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

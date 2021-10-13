@@ -35,7 +35,7 @@ namespace GSBControleStockage
             this.mnuItemControleRealise = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemControleObliga = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemUtilisateur = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajoutDunContrôleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajoutDunEntrepriseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGSBControleStock.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,8 @@ namespace GSBControleStockage
             // 
             // mnuItemEntreprise
             // 
+            this.mnuItemEntreprise.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajoutDunEntrepriseToolStripMenuItem});
             this.mnuItemEntreprise.Name = "mnuItemEntreprise";
             this.mnuItemEntreprise.Size = new System.Drawing.Size(140, 20);
             this.mnuItemEntreprise.Text = "Gestion des entreprises";
@@ -86,13 +88,6 @@ namespace GSBControleStockage
             this.mnuItemUtilisateur.Name = "mnuItemUtilisateur";
             this.mnuItemUtilisateur.Size = new System.Drawing.Size(140, 20);
             this.mnuItemUtilisateur.Text = "Gestion des utilisateurs";
-            // 
-            // ajoutDunContrôleToolStripMenuItem
-            // 
-            this.ajoutDunContrôleToolStripMenuItem.Name = "ajoutDunContrôleToolStripMenuItem";
-            this.ajoutDunContrôleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ajoutDunContrôleToolStripMenuItem.Text = "Ajout d\'un contrôle";
-            this.ajoutDunContrôleToolStripMenuItem.Click += new System.EventHandler(this.ajoutDunContrôleToolStripMenuItem_Click);
             // 
             // FormAccueil
             // 
@@ -119,7 +114,6 @@ namespace GSBControleStockage
         private System.Windows.Forms.ToolStripMenuItem mnuItemControleRealise;
         private System.Windows.Forms.ToolStripMenuItem mnuItemControleObliga;
         private System.Windows.Forms.ToolStripMenuItem mnuItemUtilisateur;
-        private System.Windows.Forms.ToolStripMenuItem ajoutDunContrôleToolStripMenuItem;
     }
 }
 

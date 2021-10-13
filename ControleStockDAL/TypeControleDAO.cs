@@ -36,7 +36,7 @@ namespace ControleStockDAL
             while (monLecteur.Read())
             {
                 id = (int)monLecteur["id"];
-                if(monLecteur["libelle"] == DBNull.Value)
+                if (monLecteur["libelle"] == DBNull.Value)
                 {
                     libelle = default(string);
                 }
