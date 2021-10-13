@@ -91,5 +91,41 @@ namespace ControleStockDAL
 
             return existe;
         }
+
+        /// <summary>
+        /// Permet de récupéré le sel pour l'identification du compte
+        /// </summary>
+        /// <param name="identifiant">identifiant saisie</param>
+        /// <exception cref="InvalidCastException"></exception>
+        /// <exception cref="SqlException"></exception>
+        /// <exception cref="InvalidOperationException"></exception>
+        /// <exception cref="System.IO.IOException"></exception>
+        /// <exception cref="ObjectDisposedException"></exception>
+        /// <returns>sel du compte ou null si introuvable</returns>
+        public string GetIdentification(string identifiant)
+        {
+            string sel = null;
+
+            //récupération commande
+            SqlCommand cmd = Commande.GetInstance().GetObjCommande();
+            cmd.CommandText = "spGetIdentification";
+
+            //ajout des paramètres
+            cmd.Parameters.Add("identifiantConnexion", System.Data.SqlDbType.VarChar).Value = identifiant;
+
+            //récupération du sel
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    if (reader["selMotDePasse"] != DBNull.Value) sel = reader["selMotDePasse"].ToString();
+                }
+            }
+
+            //fermeture de la commande
+            Commande.GetInstance().FermerConnexion();
+
+            return sel;
+        }
     }
 }
