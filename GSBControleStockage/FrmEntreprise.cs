@@ -15,8 +15,6 @@ namespace GSBControleStockage
 {
     public partial class FrmEntreprise : Form
     {
-        private Ville laVille;
-
         public FrmEntreprise()
         {
             InitializeComponent();
