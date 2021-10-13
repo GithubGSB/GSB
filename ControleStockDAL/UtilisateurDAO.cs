@@ -127,5 +127,61 @@ namespace ControleStockDAL
 
             return sel;
         }
+
+        /// <summary>
+        /// Permet de récupéré l'utilisateur lors de la connexion
+        /// </summary>
+        /// <param name="identifiant">identifiant de l'utilisateur</param>
+        /// <param name="motDePasseHash">mot de passe hash de l'utilisateur</param>
+        /// <exception cref="InvalidCastException"></exception>
+        /// <exception cref="SqlException"></exception>
+        /// <exception cref="InvalidOperationException"></exception>
+        /// <exception cref="System.IO.IOException"></exception>
+        /// <exception cref="ObjectDisposedException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <returns>Utilisateur si valide, sinon null</returns>
+        public Utilisateur GetUtilisateurConnexion(string identifiant, string motDePasseHash)
+        {
+            Utilisateur utilisateur = null;
+            string nom, prenom, libelle, str;
+            int id, idProfil;
+
+            //récupération commande
+            SqlCommand cmd = Commande.GetInstance().GetObjCommande();
+            cmd.CommandText = "spGetUtilisateurConnexion";
+
+            //ajout des paramètres
+            cmd.Parameters.Add("identifiantConnexion", System.Data.SqlDbType.VarChar).Value = identifiant;
+            cmd.Parameters.Add("motDePasseHash", System.Data.SqlDbType.VarChar).Value = motDePasseHash;
+
+            //récupération du sel
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    if (reader["nom"] == DBNull.Value) nom = default(string);
+                    else nom = reader["nom"].ToString();
+                    if (reader["prenom"] == DBNull.Value) prenom = default(string);
+                    else prenom = reader["prenom"].ToString();
+                    if (reader["libelle"] == DBNull.Value) libelle = default(string);
+                    else libelle = reader["libelle"].ToString();
+
+                    str = reader["idProfil"].ToString();
+                    int.TryParse(str, out idProfil);
+                    str = reader["id"].ToString();
+                    int.TryParse(str, out id);
+
+                    utilisateur = new Utilisateur(id, nom, prenom, new Profil(id, libelle));
+                }
+            }
+
+            //fermeture de la commande
+            Commande.GetInstance().FermerConnexion();
+
+            //récupération des fonctionnaltiés du profil
+            if (utilisateur != null) utilisateur.Profil.LesFoncAutorises = FonctionnaliteDAO.GetInstance().GetFoncProfil(utilisateur.Profil.Id);
+
+            return utilisateur;
+        }
     }
 }

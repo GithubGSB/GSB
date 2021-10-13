@@ -35,7 +35,7 @@ namespace ControleStockDAL
         /// <exception cref="System.IO.IOException"></exception>
         /// <exception cref="ObjectDisposedException"></exception>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
-        /// <returns>Liste des profils</returns>
+        /// <returns>Liste des fonctionnalités</returns>
         public List<Fonctionnalite> GetFoncProfil(int idProfil)
         {
             List<Fonctionnalite> lesFonctionnalites = new List<Fonctionnalite>();
