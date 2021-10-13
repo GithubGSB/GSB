@@ -28,15 +28,15 @@ namespace ControleStockDAL
         private Commande()
         {
             SqlConnection objConnex = new SqlConnection();
-            objConnex.ConnectionString = ConfigurationManager.ConnectionStrings[""].ConnectionString; //a completé
+            objConnex.ConnectionString = ConfigurationManager.ConnectionStrings["GSBControleStockage"].ConnectionString; //a completé
             objCommande = objConnex.CreateCommand();
             objCommande.CommandType = System.Data.CommandType.StoredProcedure;
         }
 
         /// <summary>
-        /// Ourverture d'une commande du la BD
+        /// Ouverture d'une commande du la BD
         /// </summary>
-        /// <returns>Objet responsable de la commande, ou null si imposible d'ouvrir une connexion</returns>
+        /// <returns>Objet responsable de la commande, ou null si impossible d'ouvrir une connexion</returns>
         public SqlCommand GetObjCommande()
         {
             try
