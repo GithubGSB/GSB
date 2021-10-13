@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ControleStockBLL;
+using ControleStockBO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,29 @@ namespace GSBControleStockage
         public FormControleRealise()
         {
             InitializeComponent();
+            cbxTypeControle.DisplayMember = "libelle";
+            cbxTypeControle.ValueMember = "id";
+
+            cbxTypeControle.DataSource = TypeControleManager.GetInstance().GetLesTypeControles();
+        }
+
+        private void btnAjout_Click(object sender, EventArgs e)
+        {
+
+            int entrepriseId = (int)cbxEntreprise.SelectedValue;
+            int zoneStockageId = (int) cbxZoneStockage.SelectedValue;
+            int typeControleId = (int) cbxTypeControle.SelectedValue;
+
+            string resume = lblResume.Text;
+            string valeurHT = lblPrixHT.Text;
+            float montantHT;
+            DateTime dateControle = dtControle.Value;
+            DateTime dateCreation = dtCreation.Value;
+            DateTime derniereModif = dtDerniereModif.Value;
+
+            float.TryParse(valeurHT, out montantHT);
+
+            ControleRealiseManager.GetInstance().AjoutControle(dateControle, dateCreation, derniereModif, resume, montantHT, typeControleId, entrepriseId, zoneStockageId);
         }
     }
 }

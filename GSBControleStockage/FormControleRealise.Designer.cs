@@ -41,9 +41,9 @@ namespace GSBControleStockage
             this.txtResume = new System.Windows.Forms.TextBox();
             this.lblResume = new System.Windows.Forms.Label();
             this.btnAnnul = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbxEntreprise = new System.Windows.Forms.ComboBox();
+            this.cbxTypeControle = new System.Windows.Forms.ComboBox();
+            this.cbxZoneStockage = new System.Windows.Forms.ComboBox();
             this.lblEntreprise = new System.Windows.Forms.Label();
             this.lblZoneStockage = new System.Windows.Forms.Label();
             this.lblTypeControle = new System.Windows.Forms.Label();
@@ -105,6 +105,7 @@ namespace GSBControleStockage
             this.btnAjout.TabIndex = 32;
             this.btnAjout.Text = "Ajouter";
             this.btnAjout.UseVisualStyleBackColor = true;
+            this.btnAjout.Click += new System.EventHandler(this.btnAjout_Click);
             // 
             // txtPrixHT
             // 
@@ -149,29 +150,29 @@ namespace GSBControleStockage
             this.btnAnnul.Text = "Annuler";
             this.btnAnnul.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbxEntreprise
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(196, 215);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(202, 21);
-            this.comboBox1.TabIndex = 34;
+            this.cbxEntreprise.FormattingEnabled = true;
+            this.cbxEntreprise.Location = new System.Drawing.Point(196, 215);
+            this.cbxEntreprise.Name = "cbxEntreprise";
+            this.cbxEntreprise.Size = new System.Drawing.Size(202, 21);
+            this.cbxEntreprise.TabIndex = 34;
             // 
-            // comboBox2
+            // cbxTypeControle
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(196, 269);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(202, 21);
-            this.comboBox2.TabIndex = 35;
+            this.cbxTypeControle.FormattingEnabled = true;
+            this.cbxTypeControle.Location = new System.Drawing.Point(196, 269);
+            this.cbxTypeControle.Name = "cbxTypeControle";
+            this.cbxTypeControle.Size = new System.Drawing.Size(202, 21);
+            this.cbxTypeControle.TabIndex = 35;
             // 
-            // comboBox3
+            // cbxZoneStockage
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(196, 242);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(202, 21);
-            this.comboBox3.TabIndex = 36;
+            this.cbxZoneStockage.FormattingEnabled = true;
+            this.cbxZoneStockage.Location = new System.Drawing.Point(196, 242);
+            this.cbxZoneStockage.Name = "cbxZoneStockage";
+            this.cbxZoneStockage.Size = new System.Drawing.Size(202, 21);
+            this.cbxZoneStockage.TabIndex = 36;
             // 
             // lblEntreprise
             // 
@@ -208,9 +209,9 @@ namespace GSBControleStockage
             this.Controls.Add(this.lblTypeControle);
             this.Controls.Add(this.lblZoneStockage);
             this.Controls.Add(this.lblEntreprise);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbxZoneStockage);
+            this.Controls.Add(this.cbxTypeControle);
+            this.Controls.Add(this.cbxEntreprise);
             this.Controls.Add(this.btnAnnul);
             this.Controls.Add(this.lblResume);
             this.Controls.Add(this.txtResume);
@@ -244,9 +245,9 @@ namespace GSBControleStockage
         private System.Windows.Forms.TextBox txtResume;
         private System.Windows.Forms.Label lblResume;
         private System.Windows.Forms.Button btnAnnul;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbxEntreprise;
+        private System.Windows.Forms.ComboBox cbxTypeControle;
+        private System.Windows.Forms.ComboBox cbxZoneStockage;
         private System.Windows.Forms.Label lblEntreprise;
         private System.Windows.Forms.Label lblZoneStockage;
         private System.Windows.Forms.Label lblTypeControle;

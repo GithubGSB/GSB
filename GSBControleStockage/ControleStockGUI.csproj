@@ -75,6 +75,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -86,7 +87,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <ProjectReference Include="..\ControleStockBLL\ControleStockBLL.csproj">
+      <Project>{565932bc-2111-4aae-90d7-a56c33fb11e9}</Project>
+      <Name>ControleStockBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControleStockBO\ControleStockBO.csproj">
+      <Project>{486EEB90-DD0B-47BD-A628-77EE80495E0D}</Project>
+      <Name>ControleStockBO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
