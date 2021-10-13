@@ -30,5 +30,11 @@ namespace GSBControleStockage
             FormAjoutProd leFormAppele = new FormAjoutProd(maCommand);
             leFormAppele.Show();
         }
+
+        private void ajoutDunEntrepriseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEntreprise frmEntreprise = new FrmEntreprise();
+            frmEntreprise.Show();
+        }
     }
 }
