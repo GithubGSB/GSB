@@ -34,29 +34,29 @@ namespace ControleStockDAL
             // Appel de la procédure
             commande.CommandText = "spAjoutZoneStockage";
 
-            commande.Parameters.Add("parNomZone", System.Data.SqlDbType.VarChar);
-            commande.Parameters["parNomZone"].Value = uneZoneStockage.NomZone;
+            commande.Parameters.Add("nomZone", System.Data.SqlDbType.VarChar);
+            commande.Parameters["nomZone"].Value = uneZoneStockage.NomZone;
 
-            commande.Parameters.Add("parBatiment", System.Data.SqlDbType.VarChar);
-            commande.Parameters["parBatiment"].Value = uneZoneStockage.Batiment;
+            commande.Parameters.Add("batiment", System.Data.SqlDbType.VarChar);
+            commande.Parameters["batiment"].Value = uneZoneStockage.Batiment;
 
-            commande.Parameters.Add("parEtage", System.Data.SqlDbType.VarChar);
-            commande.Parameters["parEtage"].Value = uneZoneStockage.Etage;
+            commande.Parameters.Add("etage", System.Data.SqlDbType.VarChar);
+            commande.Parameters["etage"].Value = uneZoneStockage.Etage;
 
-            commande.Parameters.Add("parDateCreation", System.Data.SqlDbType.DateTime);
-            commande.Parameters["parDateCreation"].Value = uneZoneStockage.DateCreation;
+            commande.Parameters.Add("dateCreation", System.Data.SqlDbType.DateTime);
+            commande.Parameters["dateCreation"].Value = uneZoneStockage.DateCreation;
 
-            commande.Parameters.Add("parDateDernModif", System.Data.SqlDbType.DateTime);
-            commande.Parameters["parDateDernModif"].Value = uneZoneStockage.DateDernModif;
+            commande.Parameters.Add("dateDerniereModif", System.Data.SqlDbType.DateTime);
+            commande.Parameters["dateDerniereModif"].Value = uneZoneStockage.DateDernModif;
 
-            commande.Parameters.Add("parAdresse", System.Data.SqlDbType.VarChar);
-            commande.Parameters["parAdresse"].Value = uneZoneStockage.Adresse;
+            commande.Parameters.Add("adresse", System.Data.SqlDbType.VarChar);
+            commande.Parameters["adresse"].Value = uneZoneStockage.Adresse;
 
-            commande.Parameters.Add("parIdVille", System.Data.SqlDbType.Char);
-            commande.Parameters["parIdVille"].Value = uneZoneStockage.UneVille.Insee;
+            commande.Parameters.Add("insee", System.Data.SqlDbType.Char);
+            commande.Parameters["insee"].Value = uneZoneStockage.UneVille.Insee;
 
-            commande.Parameters.Add("parIdCategProd", System.Data.SqlDbType.Int);
-            commande.Parameters["parIdCategProd"].Value = uneZoneStockage.UneCategProd.Id;
+            commande.Parameters.Add("idCategProduit", System.Data.SqlDbType.Int);
+            commande.Parameters["idCategProduit"].Value = uneZoneStockage.UneCategProd.Id;
 
             int nb = commande.ExecuteNonQuery();
             commande.Connection.Close();

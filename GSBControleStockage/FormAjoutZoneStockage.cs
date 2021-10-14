@@ -23,13 +23,13 @@ namespace GSBControleStockage
         {
             
             InitializeComponent();
-            cbxCategProd.DisplayMember = "uneCategProd";
-            cbxCategProd.ValueMember = "idCategProd";
+            cbxCategProd.DisplayMember = "libelle";
+            cbxCategProd.ValueMember = "id";
             cbxCategProd.DataSource = CategProdManager.GetInstance().GetLesCategoriesProduits();
             cbxCategProd.SelectedIndex = -1;
 
-            cbxVille.DisplayMember = "uneVille";
-            cbxVille.ValueMember = "idVille";
+            cbxVille.DisplayMember = "nom";
+            cbxVille.ValueMember = "insee";
             cbxVille.DataSource = VilleManager.GetInstance().GetLesVilles();
             cbxVille.SelectedIndex = -1;
 
@@ -40,7 +40,7 @@ namespace GSBControleStockage
 
         private void btnAjout_Click(object sender, EventArgs e)
         {
-            int idCategProd = (int)cbxCategProd.SelectedValue;
+            
             string idVille = (string)cbxVille.SelectedValue;
             if (string.IsNullOrWhiteSpace(txtAdresse.Text) || string.IsNullOrWhiteSpace(txtBatiment.Text) || string.IsNullOrWhiteSpace(txtEtage.Text) || string.IsNullOrWhiteSpace(txtNomZone.Text) || cbxCategProd.SelectedIndex == -1 || cbxVille.SelectedIndex == -1)
             {
@@ -49,8 +49,9 @@ namespace GSBControleStockage
             }
             else
             {
+                int idCategProd = (int)cbxCategProd.SelectedValue;
                 int nbZoneCreer = 0;
-                nbZoneCreer = ZoneStockageManager.GetInstance().AjoutZoneStockage(txtNomZone.Text, txtBatiment.Text, txtAdresse.Text, dateAjoutDtp.Value, dateAjoutDtp.Value, txtEtage.Text, idCategProd, idVille);
+                nbZoneCreer = ZoneStockageManager.GetInstance().AjoutZoneStockage(txtNomZone.Text, txtBatiment.Text, txtEtage.Text, dateAjoutDtp.Value, dateDernModifDtp.Value, txtAdresse.Text, idCategProd, idVille);
                 MessageBox.Show("Votre client a été ajouté");
             }
             

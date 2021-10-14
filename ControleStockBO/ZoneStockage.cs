@@ -8,6 +8,7 @@ namespace ControleStockBO
 {
     public class ZoneStockage
     {
+        //variable de ZoneStockage
         private int id;
         private string nomZone;
         private string batiment;
@@ -15,9 +16,12 @@ namespace ControleStockBO
         private string adresse;
         private DateTime dateCreation;
         private DateTime dateDernModif;
+        //Besoin de Ville pour INSEE qui est l'id de Ville
         private Ville uneVille;
+        //Besoin de CategProd pour id qui est l'id de CategProduit
         private CategProd uneCategProd;
 
+        //Propriété de ZoneStockage 
         public int Id { get => id; set => id = value; }
         public string NomZone { get => nomZone; set => nomZone = value; }
         public string Batiment { get => batiment; set => batiment = value; }
@@ -25,6 +29,8 @@ namespace ControleStockBO
         public string Adresse { get => adresse; set => adresse = value; }
         public DateTime DateCreation { get => dateCreation; set => dateCreation = value; }
         public DateTime DateDernModif { get => dateDernModif; set => dateDernModif = value; }
+
+       
         public Ville UneVille { get => uneVille; set => uneVille = value; }
         public CategProd UneCategProd { get => uneCategProd; set => uneCategProd = value; }
 
