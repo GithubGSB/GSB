@@ -26,25 +26,25 @@ namespace ControleStockDAL
         {
         }
 
-     
+        /// <summary>
+        /// Méthode qui permet d'obtenir une liste d'objet d'Entreprise sous forme de Collection de type List.
+        /// Pour chaque Objet seul l'id et le nom sont fournis
+        /// </summary>
+        /// <returns></returns>
         public List<Entreprise> GetLesEntreprises()
         {
             int id;
             string nom;
-            string adresse;
-            string email;
-            DateTime dateCreation;
-            DateTime dateDerniereModif;
-            string insee;
+            // Création d'une Collection de l'objet Entreprise retournant à une Collection d'Entreprise.
             List<Entreprise> lesEntreprises = new List<Entreprise>();
-
+            // Ouverture de la basse de données
             SqlCommand commande = Commande.GetInstance().GetObjCommande();
-
+            // Création de la procédure stockée
             commande.CommandType = System.Data.CommandType.StoredProcedure;
             commande.CommandText = "spGetLesEntreprises";
-
+            // Ouvertur du reader
             SqlDataReader monLecteur = commande.ExecuteReader();
-
+            // Boucle qui permet d'initialiser les attributs
             while(monLecteur.Read())
             {
                 id = (int)monLecteur["id"];
@@ -56,53 +56,10 @@ namespace ControleStockDAL
                 {
                     nom = monLecteur["nom"].ToString();
                 }
-
-                if (monLecteur["adresse"] == DBNull.Value)
-                {
-                    adresse = default(string);
-                }
-                else
-                {
-                    adresse = monLecteur["adresse"].ToString();
-                }
-
-                if (monLecteur["email"] == DBNull.Value)
-                {
-                    email = default(string);
-                }
-                else
-                {
-                    email = monLecteur["email"].ToString();
-                }
-
-                if (monLecteur["dateCreation"] == DBNull.Value)
-                {
-                    dateCreation = default(DateTime);
-                }
-                else
-                {
-                    dateCreation = (DateTime) monLecteur["dateCreation"];
-                }
-
-                if (monLecteur["dateDerniereModif"] == DBNull.Value)
-                {
-                    dateDerniereModif = default(DateTime);
-                }
-                else
-                {
-                    dateDerniereModif = (DateTime)monLecteur["dateDerniereModif"];
-                }
-
-                if (monLecteur["insee"] == DBNull.Value)
-                {
-                    insee = default(string);
-                }
-                else
-                {
-                    insee = monLecteur["insee"].ToString();
-                }
-                lesEntreprises.Add(new Entreprise(id, nom, adresse, email, dateCreation, dateDerniereModif, insee));
+                // Création d'un objet Entreprise avec l'id et le nom
+                lesEntreprises.Add(new Entreprise(id, nom));
             }
+            // Fermeture du lecteur, connexion et on retourne la Collection
             monLecteur.Close();
             Commande.GetInstance().FermerConnexion();
             return lesEntreprises;
@@ -135,7 +92,7 @@ namespace ControleStockDAL
             commande.Parameters[0].Value = unEntreprise.Email;
             commande.Parameters[0].Value = unEntreprise.DateCreation;
             commande.Parameters[0].Value = unEntreprise.DateDerniereModif;
-            commande.Parameters[0].Value = unEntreprise.Insee;
+            commande.Parameters[0].Value = unEntreprise.Id;
 
 
 

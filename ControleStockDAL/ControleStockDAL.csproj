@@ -52,6 +52,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="TypeControleDAO.cs" />
+    <Compile Include="ZoneStockageDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ControleStockBO\ControleStockBO.csproj">

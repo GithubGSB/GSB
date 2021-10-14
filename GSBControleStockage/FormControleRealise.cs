@@ -20,29 +20,39 @@ namespace GSBControleStockage
             cbxTypeControle.ValueMember = "id";
 
             cbxEntreprise.DisplayMember = "nom";
-            cbxEntreprise.ValueMember = "insee";
+            cbxEntreprise.ValueMember = "id";
 
-            cbxEntreprise.DataSource = EntrepriseManager.GetInstance().
+            cbxZoneStockage.DisplayMember = "nomZone";
+            cbxZoneStockage.ValueMember = "id";
+
+            cbxEntreprise.DataSource = EntrepriseManager.GetInstance().GetLesEntreprises();
             cbxTypeControle.DataSource = TypeControleManager.GetInstance().GetLesTypeControles();
+            cbxZoneStockage.DataSource = ZoneStockageManager.GetInstance().GetLesZonesStockages();
         }
 
         private void btnAjout_Click(object sender, EventArgs e)
         {
+            try {
+                int entrepriseId = (int)cbxEntreprise.SelectedValue;
+                int zoneStockageId = (int)cbxZoneStockage.SelectedValue;
+                int typeControleId = (int)cbxTypeControle.SelectedValue;
 
-            int entrepriseId = (int)cbxEntreprise.SelectedValue;
-            int zoneStockageId = (int) cbxZoneStockage.SelectedValue;
-            int typeControleId = (int) cbxTypeControle.SelectedValue;
+                string resume = txtResume.Text;
+                string valeurHT = txtPrixHT.Text;
+                float montantHT;
+                DateTime dateControle = dtControle.Value;
+                DateTime dateCreation = dtCreation.Value;
+                DateTime derniereModif = dtDerniereModif.Value;
 
-            string resume = lblResume.Text;
-            string valeurHT = lblPrixHT.Text;
-            float montantHT;
-            DateTime dateControle = dtControle.Value;
-            DateTime dateCreation = dtCreation.Value;
-            DateTime derniereModif = dtDerniereModif.Value;
+                float.TryParse(valeurHT, out montantHT);
 
-            float.TryParse(valeurHT, out montantHT);
-
-            ControleRealiseManager.GetInstance().AjoutControle(dateControle, dateCreation, derniereModif, resume, montantHT, typeControleId, entrepriseId, zoneStockageId);
+                ControleRealiseManager.GetInstance().AjoutControle(dateControle, dateCreation, derniereModif, resume, montantHT, typeControleId, entrepriseId, zoneStockageId);
+                Logger.LogInformation("Ajout réussi");
+            } 
+            catch (Exception ex)
+            {
+                Logger.LogErreur(ex.Message);
+            }
         }
     }
 }

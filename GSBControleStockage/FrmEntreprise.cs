@@ -29,7 +29,8 @@ namespace GSBControleStockage
                 string email = txtEmail.Text;
                 DateTime dateCreation = dtCreation.Value;
                 DateTime dateModif = dtModif.Value;
-                int insee = (int) cbxInsee.SelectedValue;
+                Ville ville = (Ville)cbxInsee.SelectedValue;
+                string insee = (string) cbxInsee.SelectedValue;
                 EntrepriseManager.GetInstance().CreerEntreprise(nom, adresse, email, dateCreation, dateModif, insee);
 
             }

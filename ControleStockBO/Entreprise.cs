@@ -15,7 +15,6 @@ namespace ControleStockBO
         private DateTime dateCreation;
         private DateTime dateDerniereModif;
         private string insee;
-        // private Ville laVille;
            
         public int Id { get => id; set => id = value; }
         public string Nom { get => nom; set => nom = value; }
@@ -23,7 +22,6 @@ namespace ControleStockBO
         public string Email { get => email; set => email = value; }
         public DateTime DateCreation { get => dateCreation; set => dateCreation = value; }
         public DateTime DateDerniereModif { get => dateDerniereModif; set => dateDerniereModif = value; }
-        public string Insee { get => insee; set => insee = value; }
 
         public Entreprise(int id, string nom, string adresse, string email, DateTime dateCreation, DateTime dateDerniereModif, string insee)
         {
@@ -34,8 +32,12 @@ namespace ControleStockBO
             this.dateCreation = dateCreation;
             this.dateDerniereModif = dateDerniereModif;
             this.insee = insee;
-            // this.laVille = laVille;
 
+        }
+        public Entreprise(int id, string nom)
+        {
+            this.id = id;
+            this.nom = nom;
         }
 
         public Entreprise(string nom, string adresse, string email, DateTime dateCreation, DateTime dateDerniereModif, string insee)
@@ -46,7 +48,6 @@ namespace ControleStockBO
             this.dateCreation = dateCreation;
             this.dateDerniereModif = dateDerniereModif;
             this.insee = insee;
-            // this.laVille = laVille;
 
         }
 

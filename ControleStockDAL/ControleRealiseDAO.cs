@@ -27,29 +27,29 @@ namespace ControleStockDAL
             commande.CommandType = System.Data.CommandType.StoredProcedure;
             commande.CommandText = "spAjoutControleRealise";
 
-            commande.Parameters.Add("dateControle", System.Data.SqlDbType.DateTime);
-            commande.Parameters[0].Value = unControle.DateControle;
+            commande.Parameters.Add("dateControle", System.Data.SqlDbType.Date);
+            commande.Parameters["dateControle"].Value = unControle.DateControle;
 
             commande.Parameters.Add("resume", System.Data.SqlDbType.VarChar);
-            commande.Parameters[0].Value = unControle.Resume;
+            commande.Parameters["resume"].Value = unControle.Resume;
 
             commande.Parameters.Add("montantHT", System.Data.SqlDbType.Float);
-            commande.Parameters[0].Value = unControle.MontantHT;
+            commande.Parameters["montantHT"].Value = unControle.MontantHT;
 
-            commande.Parameters.Add("dateCreation", System.Data.SqlDbType.DateTime);
-            commande.Parameters[0].Value = unControle.DateCreation;
+            commande.Parameters.Add("dateCreation", System.Data.SqlDbType.Date);
+            commande.Parameters["dateCreation"].Value = unControle.DateCreation;
 
-            commande.Parameters.Add("dateDerniereModif", System.Data.SqlDbType.DateTime);
-            commande.Parameters[0].Value = unControle.DateDerniereModif;
+            commande.Parameters.Add("dateDerniereModif", System.Data.SqlDbType.Date);
+            commande.Parameters["dateDerniereModif"].Value = unControle.DateDerniereModif;
 
             commande.Parameters.Add("idTypeControle", System.Data.SqlDbType.Int);
-            commande.Parameters[0].Value = unControle.UnTypeControle.Id;
+            commande.Parameters["idTypeControle"].Value = unControle.UnTypeControle.Id;
 
             commande.Parameters.Add("idEntreprise", System.Data.SqlDbType.Int);
-            commande.Parameters[0].Value = unControle.UneEntreprise.Insee;
+            commande.Parameters["idEntreprise"].Value = unControle.UneEntreprise.Id;
 
             commande.Parameters.Add("idZoneStockage", System.Data.SqlDbType.Int);
-            // commande.Parameters[0].Value = unControle.UneZoneStockage.Id;
+            commande.Parameters["idZoneStockage"].Value = unControle.UneZoneStockage.Id;
 
             int nb = commande.ExecuteNonQuery();
             commande.Connection.Close();
