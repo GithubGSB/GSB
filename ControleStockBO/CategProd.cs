@@ -11,14 +11,14 @@ namespace ControleStockBO
         private int id;
         private string libelle;
 
-        
+
         public int Id { get => id; set => id = value; }
         public string Libelle { get => libelle; set => libelle = value; }
-        public CategProd (int id, string libelle)
+        public CategProd(int id, string libelle)
         {
             this.id = id;
             this.libelle = libelle;
-           
+
         }
         public CategProd(int id)
         {

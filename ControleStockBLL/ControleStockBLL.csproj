@@ -42,13 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategProdManager.cs" />
-    <Compile Include="ControleRealiserManager.cs" />
+    <Compile Include="ControleRealiseManager.cs" />
     <Compile Include="EntrepriseManager.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TypeControleManager.cs" />
-    <Compile Include="VilleManager.cs" />
     <Compile Include="ZoneStockageManager.cs" />
   </ItemGroup>
   <ItemGroup>

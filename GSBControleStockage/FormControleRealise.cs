@@ -48,7 +48,7 @@ namespace GSBControleStockage
 
                 ControleRealiseManager.GetInstance().AjoutControle(dateControle, dateCreation, derniereModif, resume, montantHT, typeControleId, entrepriseId, zoneStockageId);
                 Logger.LogInformation("Ajout réussi");
-            }
+            } 
             catch (Exception ex)
             {
                 Logger.LogErreur(ex.Message);

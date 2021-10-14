@@ -20,10 +20,8 @@ namespace ControleStockBO
         {
             this.insee = insee;
             this.nom = nom;
-           
+            this.codePostal = codePostal;
         }
-
-
         public Ville(string insee)
         {
             this.insee = insee;
