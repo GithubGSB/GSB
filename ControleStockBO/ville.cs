@@ -15,8 +15,8 @@ namespace ControleStockBO
         public int Insee { get => insee; set => insee = value; }
         public string Nom { get => nom; set => nom = value; }
         public int CodePostal { get => codePostal; set => codePostal = value; }
-
-        public Ville(int insee, string nom, int codePostal)
+        //Constructeur pour la
+        public Ville(string insee, string nom)
         {
             this.insee = insee;
             this.nom = nom;
