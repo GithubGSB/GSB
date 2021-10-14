@@ -16,9 +16,14 @@ using ControleStockBLL;
 
 namespace GSBControleStockage
 {
+    /// <summary>
+    /// Formulaire du sous menu Ajout Zone stockage
+    /// </summary>
     public partial class FormAjoutZoneStockage : Form
     {
-        
+        /// <summary>
+        /// Constructeur du formulaire de l'ajout. Elle initialise les combobox et appelle les catégories de produit et les villes
+        /// </summary>
         public FormAjoutZoneStockage()
         {
             
@@ -38,7 +43,10 @@ namespace GSBControleStockage
 
 
         }
-        
+        /// <summary>
+        /// Méthode d'ajout, contrôle la saisie de l'utilisateur
+        /// </summary>
+    
         private void btnAjout_Click(object sender, EventArgs e)
         {
             
