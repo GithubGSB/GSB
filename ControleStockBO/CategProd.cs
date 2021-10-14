@@ -20,6 +20,7 @@ namespace ControleStockBO
             this.libelle = libelle;
            
         }
+        public CategProd(int id)
         {
             this.id = id;
         }

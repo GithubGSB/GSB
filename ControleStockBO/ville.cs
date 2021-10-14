@@ -28,9 +28,5 @@ namespace ControleStockBO
         {
             this.insee = insee;
         }
-        public Ville(string insee)
-        {
-            this.insee = insee;
-        }
     }
 }
