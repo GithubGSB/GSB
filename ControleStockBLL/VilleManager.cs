@@ -27,7 +27,7 @@ namespace ControleStockBLL
         /// <summary>
         /// Méthode qui appelle une méthode de la couche DAO pour retourner les villes de la BD
         /// </summary>
-        /// <returns></returns>
+        /// <returns>la liste des villes</returns>
         public List<Ville> GetLesVilles()
         {
             return VilleDAO.GetInstance().GetLesVilles();

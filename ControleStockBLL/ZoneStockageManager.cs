@@ -40,7 +40,7 @@ namespace ControleStockBLL
         /// <returns>retourne le nombre d'enregistrement realise</returns>
         public int AjoutZoneStockage(string sonNomZone, string sonBatiment, string sonEtage, 
         DateTime saDateCreation, DateTime saDateDernModif,string sonAdresse, int sonIdCategProd,
-            string sonIdVille)
+            int sonIdVille)
         {
             Ville laVille;
             laVille = new Ville(sonIdVille);

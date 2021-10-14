@@ -26,9 +26,13 @@ namespace ControleStockDAL
         {
 
         }
+        /// <summary>
+        /// Retourne les villes via une procédure stockée. Il cherchera l'ensemble des ville de la BD. 
+        /// </summary>
+        /// <returns>retourne collection Villes</returns>
         public List<Ville> GetLesVilles()
         {
-            string insee;
+            int insee;
             string nom;
             List<Ville> lesVilles = new List<Ville>();
 
@@ -39,7 +43,7 @@ namespace ControleStockDAL
             SqlDataReader monLecteur = commande.ExecuteReader();
             while (monLecteur.Read())
             {
-                insee = (string)monLecteur["insee"];
+                insee = (int)monLecteur["insee"];
                 if (monLecteur["nom"] == DBNull.Value)
                 {
                     nom = default(string);

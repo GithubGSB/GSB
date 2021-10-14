@@ -24,6 +24,10 @@ namespace ControleStockBLL
         {
 
         }
+        /// <summary>
+        /// Méthode qui appelle une méthode de la couche DAO pour retourner les categories de produit de la BD
+        /// </summary>
+        /// <returns></returns>
         public List<CategProd> GetLesCategoriesProduits()
         {
             return CategProdDAO.GetInstance().GetLesCategProds();

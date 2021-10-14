@@ -46,7 +46,7 @@ namespace ControleStockDAL
             commande.Parameters.Add("email", System.Data.SqlDbType.VarChar);
             commande.Parameters.Add("dateCreation", System.Data.SqlDbType.DateTime);
             commande.Parameters.Add("dateDerniereModif", System.Data.SqlDbType.DateTime);
-            commande.Parameters.Add("insee", System.Data.SqlDbType.Char);
+            commande.Parameters.Add("insee", System.Data.SqlDbType.Int);
 
             commande.Parameters[0].Value = unEntreprise.Nom;
             commande.Parameters[0].Value = unEntreprise.Adresse;

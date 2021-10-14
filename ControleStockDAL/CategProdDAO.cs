@@ -24,6 +24,11 @@ namespace ControleStockDAL
         {
 
         }
+        /// <summary>
+        /// Retourne les catégories de produit via une procédure stockée. Il cherchera l'ensemble des catégories de produit de la BD. 
+
+        /// </summary>
+        /// <returns> retourne collections CategProd</returns>
         public List<CategProd> GetLesCategProds()
         {
             int id;

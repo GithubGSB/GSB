@@ -62,7 +62,7 @@ namespace ControleStockDAL
             commande.Parameters.Add("adresse", System.Data.SqlDbType.VarChar);
             commande.Parameters["adresse"].Value = uneZoneStockage.Adresse;
 
-            commande.Parameters.Add("insee", System.Data.SqlDbType.Char);
+            commande.Parameters.Add("insee", System.Data.SqlDbType.Int);
             commande.Parameters["insee"].Value = uneZoneStockage.UneVille.Insee;
 
             commande.Parameters.Add("idCategProduit", System.Data.SqlDbType.Int);
