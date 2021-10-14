@@ -20,7 +20,18 @@ namespace ControleStockBLL
             if (instance == null) instance = new ControleRealiseManager();
             return instance;
         }
-
+        /// <summary>
+        /// Méthode qui appelle une méthode de la couche DAO pour ajouter un nouveau controle dans la BD
+        /// </summary>
+        /// <param name="dateControle"></param>
+        /// <param name="dateCreation"></param>
+        /// <param name="dateDerniereModif"></param>
+        /// <param name="resume"></param>
+        /// <param name="montantHT"></param>
+        /// <param name="idTypeControle"></param>
+        /// <param name="idEntreprise"></param>
+        /// <param name="idZoneStockage"></param>
+        /// <returns> Retourne le nb d'enregistrement ajouter </returns>
         public int AjoutControle(DateTime dateControle, DateTime dateCreation, DateTime dateDerniereModif, string resume,
             float montantHT, int idTypeControle, int idEntreprise, int idZoneStockage)
         {
