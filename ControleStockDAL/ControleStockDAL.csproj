@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategProdDAO.cs" />
     <Compile Include="Commande.cs" />
     <Compile Include="ControleRealiseDAO.cs" />
     <Compile Include="EntrepriseDAO.cs" />
@@ -52,13 +53,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="TypeControleDAO.cs" />
+    <Compile Include="VilleDAO.cs" />
     <Compile Include="ZoneStockageDAO.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ControleStockBO\ControleStockBO.csproj">
-      <Project>{486eeb90-dd0b-47bd-a628-77ee80495e0d}</Project>
-      <Name>ControleStockBO</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ControleStockBO\ControleStockBO.csproj">

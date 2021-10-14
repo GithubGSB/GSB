@@ -41,7 +41,7 @@ namespace ControleStockBO
             this.nom = nom;
         }
 
-        public Entreprise(string nom, string adresse, string email, DateTime dateCreation, DateTime dateDerniereModif, Ville insee)
+        public Entreprise(string nom, string adresse, string email, DateTime dateCreation, DateTime dateDerniereModif, int insee, Ville laVille)
         {
             this.nom = nom;
             this.adresse = adresse;
@@ -49,12 +49,8 @@ namespace ControleStockBO
             this.dateCreation = dateCreation;
             this.dateDerniereModif = dateDerniereModif;
             this.insee = insee;
+            this.laVille = laVille;
 
-        }
-
-        public Entreprise(int id)
-        {
-            this.id = id;
         }
     }
 }

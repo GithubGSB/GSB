@@ -11,7 +11,7 @@ namespace ControleStockBLL
     public class ControleRealiseManager
     {
         private static ControleRealiseManager instance;
-        private List<ControleRealise> lesControlesRealises;
+        // private List<ControleRealise> lesControlesRealises = new List<ControleRealise>();
 
         private ControleRealiseManager() { }
 

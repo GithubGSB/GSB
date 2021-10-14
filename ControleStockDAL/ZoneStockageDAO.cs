@@ -53,7 +53,7 @@ namespace ControleStockDAL
         private ZoneStockageDAO(){}
         public int AjoutZoneStockage(ZoneStockage uneZoneStockage)
         {
-
+            
             SqlCommand commande = Commande.GetInstance().GetObjCommande();
             commande.Parameters.Clear();
             // Indique l'appel de la procédure stockée
@@ -87,7 +87,7 @@ namespace ControleStockDAL
 
             int nb = commande.ExecuteNonQuery();
             commande.Connection.Close();
-            return nb;
+            return nb; 
         }
 
     }
