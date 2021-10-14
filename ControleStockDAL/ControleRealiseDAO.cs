@@ -46,7 +46,7 @@ namespace ControleStockDAL
             commande.Parameters[0].Value = unControle.UnTypeControle.Id;
 
             commande.Parameters.Add("idEntreprise", System.Data.SqlDbType.Int);
-            commande.Parameters[0].Value = unControle.UneEntreprise.Id;
+            commande.Parameters[0].Value = unControle.UneEntreprise.Insee;
 
             commande.Parameters.Add("idZoneStockage", System.Data.SqlDbType.Int);
             commande.Parameters[0].Value = unControle.UneZoneStockage.Id;

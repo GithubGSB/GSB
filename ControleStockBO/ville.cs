@@ -8,19 +8,25 @@ namespace ControleStockBO
 {
     public class Ville
     {
-        private int insee;
+        private string insee;
         private string nom;
         private int codePostal;
 
-        public int Insee { get => insee; set => insee = value; }
+        public string Insee { get => insee; set => insee = value; }
         public string Nom { get => nom; set => nom = value; }
         public int CodePostal { get => codePostal; set => codePostal = value; }
-        //Constructeur pour la
+
         public Ville(string insee, string nom)
         {
             this.insee = insee;
             this.nom = nom;
-            this.codePostal = codePostal;
+           
+        }
+
+
+        public Ville(string insee)
+        {
+            this.insee = insee;
         }
     }
 }

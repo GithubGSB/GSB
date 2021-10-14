@@ -52,21 +52,25 @@
     <Compile Include="FormAccueil.Designer.cs">
       <DependentUpon>FormAccueil.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAjoutZoneStockage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAjoutZoneStockage.Designer.cs">
+      <DependentUpon>FormAjoutZoneStockage.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEntreprise.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmEntreprise.Designer.cs">
       <DependentUpon>FrmEntreprise.cs</DependentUpon>
     </Compile>
-    <Compile Include="GSBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GSBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAccueil.resx">
       <DependentUpon>FormAccueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAjoutZoneStockage.resx">
+      <DependentUpon>FormAjoutZoneStockage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEntreprise.resx">
       <DependentUpon>FrmEntreprise.cs</DependentUpon>
@@ -80,17 +84,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="GSBDataSet.xsc">
-      <DependentUpon>GSBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GSBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GSBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GSBDataSet.xss">
-      <DependentUpon>GSBDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -113,6 +106,16 @@
     </ProjectReference>
     <ProjectReference Include="..\ControleStockBO\ControleStockBO.csproj">
       <Project>{486EEB90-DD0B-47BD-A628-77EE80495E0D}</Project>
+      <Name>ControleStockBO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControleStockBLL\ControleStockBLL.csproj">
+      <Project>{565932bc-2111-4aae-90d7-a56c33fb11e9}</Project>
+      <Name>ControleStockBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControleStockBO\ControleStockBO.csproj">
+      <Project>{486eeb90-dd0b-47bd-a628-77ee80495e0d}</Project>
       <Name>ControleStockBO</Name>
     </ProjectReference>
   </ItemGroup>

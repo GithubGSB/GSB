@@ -35,7 +35,8 @@ namespace GSBControleStockage
             this.mnuItemControleRealise = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemControleObliga = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemUtilisateur = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajoutDunEntrepriseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajoutDeLaZoneDeStockageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajoutDuneEntrepriseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGSBControleStock.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +58,8 @@ namespace GSBControleStockage
             // 
             // mnuItemZoneStock
             // 
+            this.mnuItemZoneStock.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajoutDeLaZoneDeStockageToolStripMenuItem});
             this.mnuItemZoneStock.Name = "mnuItemZoneStock";
             this.mnuItemZoneStock.Size = new System.Drawing.Size(163, 20);
             this.mnuItemZoneStock.Text = "Gestion zones de stockages";
@@ -64,7 +67,7 @@ namespace GSBControleStockage
             // mnuItemEntreprise
             // 
             this.mnuItemEntreprise.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajoutDunEntrepriseToolStripMenuItem});
+            this.ajoutDuneEntrepriseToolStripMenuItem});
             this.mnuItemEntreprise.Name = "mnuItemEntreprise";
             this.mnuItemEntreprise.Size = new System.Drawing.Size(140, 20);
             this.mnuItemEntreprise.Text = "Gestion des entreprises";
@@ -87,12 +90,18 @@ namespace GSBControleStockage
             this.mnuItemUtilisateur.Size = new System.Drawing.Size(140, 20);
             this.mnuItemUtilisateur.Text = "Gestion des utilisateurs";
             // 
-            // ajoutDunEntrepriseToolStripMenuItem
+            // ajoutDeLaZoneDeStockageToolStripMenuItem
             // 
-            this.ajoutDunEntrepriseToolStripMenuItem.Name = "ajoutDunEntrepriseToolStripMenuItem";
-            this.ajoutDunEntrepriseToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.ajoutDunEntrepriseToolStripMenuItem.Text = "ajout d\'un entreprise";
-            this.ajoutDunEntrepriseToolStripMenuItem.Click += new System.EventHandler(this.ajoutDunEntrepriseToolStripMenuItem_Click);
+            this.ajoutDeLaZoneDeStockageToolStripMenuItem.Name = "ajoutDeLaZoneDeStockageToolStripMenuItem";
+            this.ajoutDeLaZoneDeStockageToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.ajoutDeLaZoneDeStockageToolStripMenuItem.Text = "Ajout de la zone de stockage";
+            this.ajoutDeLaZoneDeStockageToolStripMenuItem.Click += new System.EventHandler(this.ajoutDeLaZoneDeStockageToolStripMenuItem_Click);
+            // 
+            // ajoutDuneEntrepriseToolStripMenuItem
+            // 
+            this.ajoutDuneEntrepriseToolStripMenuItem.Name = "ajoutDuneEntrepriseToolStripMenuItem";
+            this.ajoutDuneEntrepriseToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.ajoutDuneEntrepriseToolStripMenuItem.Text = "Ajout d\'une entreprise";
             // 
             // FormAccueil
             // 
@@ -101,7 +110,6 @@ namespace GSBControleStockage
             this.ClientSize = new System.Drawing.Size(815, 366);
             this.Controls.Add(this.mnuGSBControleStock);
             this.MainMenuStrip = this.mnuGSBControleStock;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormAccueil";
             this.Text = "GSB Contrôle des stockage";
             this.mnuGSBControleStock.ResumeLayout(false);
@@ -119,7 +127,8 @@ namespace GSBControleStockage
         private System.Windows.Forms.ToolStripMenuItem mnuItemControleRealise;
         private System.Windows.Forms.ToolStripMenuItem mnuItemControleObliga;
         private System.Windows.Forms.ToolStripMenuItem mnuItemUtilisateur;
-        private System.Windows.Forms.ToolStripMenuItem ajoutDunEntrepriseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajoutDeLaZoneDeStockageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajoutDuneEntrepriseToolStripMenuItem;
     }
 }
 

@@ -25,7 +25,7 @@ namespace ControleStockDAL
             if (uneInstance == null) uneInstance = new Commande();
             return uneInstance;
         }
-         private Commande()
+        private Commande()
         {
             SqlConnection objConnex = new SqlConnection();
             objConnex.ConnectionString = ConfigurationManager.ConnectionStrings["GSBControleStockage"].ConnectionString; //a completer
@@ -34,9 +34,9 @@ namespace ControleStockDAL
         }
 
         /// <summary>
-        /// Ourverture d'une commande du la BD
+        /// Ouverture d'une commande du la BD
         /// </summary>
-        /// <returns>Objet responsable de la commande, ou null si imposible d'ouvrir une connexion</returns>
+        /// <returns>Objet responsable de la commande, ou null si impossible d'ouvrir une connexion</returns>
         public SqlCommand GetObjCommande()
         {
             try
