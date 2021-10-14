@@ -25,7 +25,7 @@ namespace ControleStockDAL
             if (uneInstance == null) uneInstance = new Commande();
             return uneInstance;
         }
-         private Commande()
+        private Commande()
         {
             SqlConnection objConnex = new SqlConnection();
             objConnex.ConnectionString = ConfigurationManager.ConnectionStrings["GSBControleStockage"].ConnectionString; //a completé

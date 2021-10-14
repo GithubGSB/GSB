@@ -52,21 +52,28 @@
     <Compile Include="FormAccueil.Designer.cs">
       <DependentUpon>FormAccueil.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAjoutZoneStockage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAjoutZoneStockage.Designer.cs">
+      <DependentUpon>FormAjoutZoneStockage.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEntreprise.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmEntreprise.Designer.cs">
       <DependentUpon>FrmEntreprise.cs</DependentUpon>
     </Compile>
-    <Compile Include="GSBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GSBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAccueil.resx">
       <DependentUpon>FormAccueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAjoutZoneStockage.resx">
+      <DependentUpon>FormAjoutZoneStockage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEntreprise.resx">
+      <DependentUpon>FrmEntreprise.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,17 +84,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="GSBDataSet.xsc">
-      <DependentUpon>GSBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GSBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GSBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GSBDataSet.xss">
-      <DependentUpon>GSBDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

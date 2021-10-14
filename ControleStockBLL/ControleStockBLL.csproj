@@ -42,9 +42,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategProdManager.cs" />
     <Compile Include="ControleRealiserManager.cs" />
+    <Compile Include="EntrepriseManager.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypeControleManager.cs" />
+    <Compile Include="VilleManager.cs" />
+    <Compile Include="ZoneStockageManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControleStockBO\ControleStockBO.csproj">
+      <Project>{486eeb90-dd0b-47bd-a628-77ee80495e0d}</Project>
+      <Name>ControleStockBO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControleStockDAL\ControleStockDAL.csproj">
+      <Project>{466f1454-b76c-46b7-819e-dd81cfbe9ed4}</Project>
+      <Name>ControleStockDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

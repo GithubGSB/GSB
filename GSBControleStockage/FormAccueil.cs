@@ -19,22 +19,21 @@ namespace GSBControleStockage
         public FormAccueil()
         {
             InitializeComponent();
-            SqlConnection maConnexion;
-            string strConnect = ConfigurationManager.ConnectionStrings["GSBControleStockage"].ConnectionString;
-            maConnexion = new SqlConnection(strConnect);
-            maCommand = new SqlCommand("", maConnexion);
+            
         }
 
-        private void AjoutZoneStockageMnuItem_Click(object sender, EventArgs e)
-        {
-            FormAjoutProd leFormAppele = new FormAjoutProd(maCommand);
-            leFormAppele.Show();
-        }
+       
 
         private void ajoutDunEntrepriseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmEntreprise frmEntreprise = new FrmEntreprise();
             frmEntreprise.Show();
+        }
+
+        private void ajoutDeLaZoneDeStockageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAjoutZoneStockage frmAjoutZoneStockage = new FormAjoutZoneStockage();
+            frmAjoutZoneStockage.Show();
         }
     }
 }

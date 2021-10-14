@@ -24,24 +24,18 @@ namespace ControleStockBLL
         {
 
         }
-        public List<CategProd> GetLesCategoriesProduits()
-        {
-            return CategorieProduitDAO.GetInstance().GetLesCategoriesProduits();
-        }
-        public List<Ville> GetLesVilles()
-        {
-            return VilleDAO.GetInstance().GetLesVilles();
-        }
+        
+        
         public int AjoutZoneStockage(string sonNomZone, string sonBatiment, string sonEtage, 
-            string sonAdresse, DateTime saDateCreation, DateTime saDateDernModif,
-            int sonIdVille, int sonIdCategProd)
+        DateTime saDateCreation, DateTime saDateDernModif,string sonAdresse, int sonIdCategProd,
+            string sonIdVille)
         {
             Ville laVille;
             laVille = new Ville(sonIdVille);
             CategProd laCategProd;
             laCategProd = new CategProd(sonIdCategProd);
             ZoneStockage laZoneStockage;
-            laZoneStockage = new ZoneStockage(sonNomZone, sonBatiment, sonEtage, sonAdresse, saDateCreation, saDateDernModif, laVille, laCategProd);
+            laZoneStockage = new ZoneStockage(sonNomZone, sonBatiment, sonEtage, saDateCreation, saDateDernModif, sonAdresse, laCategProd, laVille);
             return ZoneStockageDAO.GetInstance().AjoutZoneStockage(laZoneStockage);
         }
 
