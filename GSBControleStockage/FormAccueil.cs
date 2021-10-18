@@ -21,7 +21,7 @@ namespace GSBControleStockage
             Utilisateur util = UtilisateurManager.GetInstance().UtilisateurApp;
             if (util == null || util.Profil == null) this.Close();
             List<Fonctionnalite> lesFonc = util.Profil.LesFoncAutorises;
-
+            /*
             foreach(ToolStripMenuItem mnuItemParent in mnuGSBControleStock.Items)
             {
                 if (mnuItemParent.Name == "mnuItemUtilisateur")
@@ -38,7 +38,9 @@ namespace GSBControleStockage
                     }
                 }
             }
+            */
         }
+
 
         private void mnuitemAjoutUtilisateur_Click(object sender, EventArgs e)
         {
@@ -55,8 +57,19 @@ namespace GSBControleStockage
 
         private void ajoutDunControleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormControleRealise formControleRealise = new FormControleRealise();
-            formControleRealise.Show();
+            FormControleRealise fcr = new FormControleRealise();
+            fcr.Show();
+        }
+
+        private void ajoutDuneEntrepriseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEntreprise frmEntreprise = new FrmEntreprise();
+            frmEntreprise.Show();
+        }
+
+        private void ajoutDuneZoneStockageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
