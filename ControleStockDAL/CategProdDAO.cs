@@ -8,8 +8,14 @@ using ControleStockBO;
 
 namespace ControleStockDAL
 {
+    /// <summary>
+    /// DAL de CategProd
+    /// </summary>
     public class CategProdDAO
     {
+        /// <summary>
+        /// Générer une instance de CategProdDAO
+        /// </summary>
         private static CategProdDAO uneInstance;
         // PATERN SINGLETON
         public static CategProdDAO GetInstance()

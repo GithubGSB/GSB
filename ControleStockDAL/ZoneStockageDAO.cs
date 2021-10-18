@@ -9,6 +9,9 @@ using System.Data;
 
 namespace ControleStockDAL
 {
+    /// <summary>
+    /// DAL de ZoneStockage
+    /// </summary>
     public class ZoneStockageDAO
     {
         private static ZoneStockageDAO uneInstance;

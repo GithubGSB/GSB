@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace ControleStockDAL
 {
+    /// <summary>
+    /// Créer une instance d'entreprise si elle n'existe pas 
+    /// </summary>
+    /// 
     public class EntrepriseDAO
     {
         private static EntrepriseDAO uneInstance;
@@ -21,7 +25,9 @@ namespace ControleStockDAL
             }
             return uneInstance;
         }
-
+        /// <summary>
+        /// Génèrer un constructeur 
+        /// </summary>
         private EntrepriseDAO()
         {
         }

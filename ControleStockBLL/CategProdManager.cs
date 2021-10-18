@@ -8,10 +8,17 @@ using ControleStockBO;
 
 namespace ControleStockBLL
 {
+    /// <summary>
+    /// BLL de CategProd
+    /// </summary>
     public class CategProdManager
     {
         private static CategProdManager uneCategProdManager;
         // PATERN SINGLETON 
+        /// <summary>
+        /// Créer une instance de CategProd
+        /// </summary>
+        /// <returns></returns>
         public static CategProdManager GetInstance()
         {
             if (uneCategProdManager == null)
@@ -27,7 +34,7 @@ namespace ControleStockBLL
         /// <summary>
         /// Méthode qui appelle une méthode de la couche DAO pour retourner les categories de produit de la BD
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Listes des Catégories de produit</returns>
         public List<CategProd> GetLesCategoriesProduits()
         {
             return CategProdDAO.GetInstance().GetLesCategProds();
