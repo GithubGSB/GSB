@@ -49,11 +49,36 @@ namespace GSBControleStockage
     
         private void btnAjout_Click(object sender, EventArgs e)
         {
-            
+            string error = "";
             
             if (string.IsNullOrWhiteSpace(txtAdresse.Text) || string.IsNullOrWhiteSpace(txtBatiment.Text) || string.IsNullOrWhiteSpace(txtEtage.Text) || string.IsNullOrWhiteSpace(txtNomZone.Text) || cbxCategProd.SelectedIndex == -1 || cbxVille.SelectedIndex == -1)
             {
-                Logger.LogErreur("Attention, vous devez saisir tous les champs !");
+                
+                if (string.IsNullOrWhiteSpace(txtAdresse.Text))
+                {
+                    error = "adresse;";
+                }
+                if (string.IsNullOrWhiteSpace(txtBatiment.Text))
+                {
+                    error = error + " batiment;";
+                }
+                if (string.IsNullOrWhiteSpace(txtEtage.Text))
+                {
+                    error = error + " etage;";
+                }
+                if (string.IsNullOrWhiteSpace(txtNomZone.Text))
+                {
+                    error = error + " nom de la Zone;";
+                }
+                if (cbxCategProd.SelectedIndex == -1)
+                {
+                    error = error + " Choisir une catégorie de produit !";
+                }
+                if (cbxVille.SelectedIndex == -1)
+                {
+                    error = error + " Choisir une ville !";
+                }
+                Logger.LogErreur("Attention, vous devez saisir : "+error);
             }
             else
             {

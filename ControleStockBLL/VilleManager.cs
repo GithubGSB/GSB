@@ -8,10 +8,18 @@ using ControleStockBO;
 
 namespace ControleStockBLL
 {
+    /// <summary>
+    /// BLL de ville
+    /// </summary>
     public class VilleManager
     {
+
         private static VilleManager uneVilleManager;
         // PATERN SINGLETON
+        /// <summary>
+        /// Création de l'insance de VilleManager
+        /// </summary>
+        /// <returns>uneVilleManager</returns>
         public static VilleManager GetInstance()
         {
             if (uneVilleManager == null)
