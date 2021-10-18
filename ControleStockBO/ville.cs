@@ -22,9 +22,15 @@ namespace ControleStockBO
             this.nom = nom;
             this.codePostal = codePostal;
         }
+
+
         public Ville(int insee)
         {
             this.insee = insee;
+        }public Ville(int insee, string nom)
+        {
+            this.insee = insee;
+            this.nom = nom;
         }
     }
 }

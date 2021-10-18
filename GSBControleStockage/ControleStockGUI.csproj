@@ -58,6 +58,12 @@
     <Compile Include="FormAjoutUtilisateur.Designer.cs">
       <DependentUpon>FormAjoutUtilisateur.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAjoutZoneStockage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAjoutZoneStockage.Designer.cs">
+      <DependentUpon>FormAjoutZoneStockage.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConnexion.cs">
       <SubType>Form</SubType>
     </Compile>

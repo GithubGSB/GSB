@@ -6,21 +6,25 @@ using System.Threading.Tasks;
 
 namespace ControleStockBO
 {
+    /// <summary>
+    /// création de la classe CategProd pour les catégories de produits
+    /// </summary>
     public class CategProd
     {
         private int id;
         private string libelle;
 
 
+       
         public int Id { get => id; set => id = value; }
         public string Libelle { get => libelle; set => libelle = value; }
-        public CategProd(int id, string libelle)
+        public CategProd (int id, string libelle)
         {
             this.id = id;
             this.libelle = libelle;
 
         }
-        public CategProd(int id)
+        public CategProd (int id)
         {
             this.id = id;
         }
