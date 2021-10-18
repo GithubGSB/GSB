@@ -27,10 +27,37 @@ namespace ControleStockDAL
             }
             return uneInstance;
         }
-        private ZoneStockageDAO()
-        {
 
+        public List<ZoneStockage> GetLesZonesStockages()
+        {
+            int id;
+            string nomZone;
+
+            List<ZoneStockage> lesZonesStockages = new List<ZoneStockage>();
+
+            SqlCommand commande = Commande.GetInstance().GetObjCommande();
+            commande.CommandType = CommandType.StoredProcedure;
+            commande.CommandText = "spGetLesZonesStockages";
+
+            SqlDataReader monLecteur = commande.ExecuteReader();
+            while(monLecteur.Read())
+            {
+                id = (int)monLecteur["id"];
+                if(monLecteur["nomZone"] == DBNull.Value)
+                {
+                    nomZone = default(string);
+                }
+                else
+                {
+                    nomZone = monLecteur["nomZone"].ToString();
+                }
+                lesZonesStockages.Add(new ZoneStockage(id, nomZone)) ;
+            }
+            monLecteur.Close();
+            Commande.GetInstance().FermerConnexion();
+            return lesZonesStockages;
         }
+        private ZoneStockageDAO(){}
         /// <summary>
         /// Ajout d'une zone de stockage dans la BD via une procédure stockée. On ouvre l'accès au donnée avec l'objet Commande
         /// en appelant une instance de Commande.
@@ -39,7 +66,7 @@ namespace ControleStockDAL
         /// <returns>Un objet de ZoneStockage avec tous les arguments sans l'id</returns>
         public int AjoutZoneStockage(ZoneStockage uneZoneStockage)
         {
-            // Ouverture de l'accès à la BD
+            
             SqlCommand commande = Commande.GetInstance().GetObjCommande();
             commande.Parameters.Clear();
             // Indique l'appel de la procédure stockée
@@ -74,7 +101,7 @@ namespace ControleStockDAL
             int nb = commande.ExecuteNonQuery();
             //fermeture de l'accès à la BD
             commande.Connection.Close();
-            return nb; 
+            return nb;
         }
 
     }

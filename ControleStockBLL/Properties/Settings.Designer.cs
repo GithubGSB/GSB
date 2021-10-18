@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ControleStockBO.Properties {
+namespace ControleStockBLL.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -30,6 +30,16 @@ namespace ControleStockBO.Properties {
         public string GSBConnectionString {
             get {
                 return ((string)(this["GSBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=tcp:301P17,1443;Initial Catalog=\"GSB Test\";Integrated Security=True")]
+        public string GSB_TestConnectionString {
+            get {
+                return ((string)(this["GSB_TestConnectionString"]));
             }
         }
     }

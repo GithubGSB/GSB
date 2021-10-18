@@ -20,7 +20,10 @@ namespace ControleStockDAL
             if (instance == null) instance = new TypeControleDAO();
             return instance;
         }
-
+        /// <summary>
+        /// Méthode permettant de voir la liste des type de contrôle retournant une Collection de TypeControle
+        /// </summary>
+        /// <returns></returns>
         public List<TypeControle> GetLesTypeControles()
         {
             int id;
@@ -29,7 +32,7 @@ namespace ControleStockDAL
 
             SqlCommand commande = Commande.GetInstance().GetObjCommande();
             commande.CommandType = System.Data.CommandType.StoredProcedure;
-            commande.CommandText = "spGetTypeControles";
+            commande.CommandText = "spGetTypesControles";
 
             SqlDataReader monLecteur = commande.ExecuteReader();
 
@@ -50,5 +53,16 @@ namespace ControleStockDAL
             Commande.GetInstance().FermerConnexion();
             return typeControles;
         }
+
+        //public int AjoutTypeControle(TypeControle unTypeControle)
+        //{
+        //    SqlCommand commande = Commande.GetInstance().GetObjCommande();
+        //    commande.Parameters.Clear();
+        //    // TODO -> Procédure stockée
+
+        //    int nb = commande.ExecuteNonQuery();
+        //    commande.Connection.Close();
+        //    return nb;
+        //}
     }
 }

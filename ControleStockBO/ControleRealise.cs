@@ -31,7 +31,7 @@ namespace ControleStockBO
             this.UneZoneStockage = uneZoneStockage;
         }
 
-        public ControleRealise(DateTime dateControle, DateTime dateCreation, DateTime dateDerniereModif, string resume, float montantHT, TypeControle unTypeControle, Entreprise uneEntreprise, ZoneStockage uneZoneStockage)
+        public ControleRealise(DateTime dateControle, DateTime dateCreation, DateTime dateDerniereModif, string resume, float montantHT, TypeControle unTypeControle, Entreprise uneEntreprise)
         {
             this.DateControle = dateControle;
             this.DateCreation = dateCreation;
@@ -41,6 +41,18 @@ namespace ControleStockBO
             this.UnTypeControle = unTypeControle;
             this.UneEntreprise = uneEntreprise;
             this.UneZoneStockage = uneZoneStockage;
+        }
+
+        public ControleRealise(DateTime dateControle, DateTime dateCreation, DateTime dateDerniereModif, string resume, float montantHT, TypeControle unTypeControle, Entreprise uneEntreprise, ZoneStockage uneZoneStockage)
+        {
+            this.dateControle = dateControle;
+            this.dateCreation = dateCreation;
+            this.dateDerniereModif = dateDerniereModif;
+            this.resume = resume;
+            this.montantHT = montantHT;
+            this.unTypeControle = unTypeControle;
+            this.uneEntreprise = uneEntreprise;
+            this.uneZoneStockage = uneZoneStockage;
         }
 
         public int Id { get => id; set => id = value; }

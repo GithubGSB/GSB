@@ -8,37 +8,49 @@ namespace ControleStockBO
 {
      public class Entreprise
     {
+        private int id;
         private string nom;
         private string adresse;
         private string email;
         private DateTime dateCreation;
         private DateTime dateDerniereModif;
-        private int insee;
-       // private Ville laVille;
-
-       // public Ville Ville { get => laVille; set => laVille = value; }
+           
+        public int Id { get => id; set => id = value; }
         public string Nom { get => nom; set => nom = value; }
         public string Adresse { get => adresse; set => adresse = value; }
         public string Email { get => email; set => email = value; }
         public DateTime DateCreation { get => dateCreation; set => dateCreation = value; }
         public DateTime DateDerniereModif { get => dateDerniereModif; set => dateDerniereModif = value; }
-        public int Insee { get => insee; set => insee = value; }
 
-        public Entreprise(string nom, string adresse, string email, DateTime dateCreation, DateTime dateDerniereModif, int insee)
+        public Entreprise(int id, string nom, string adresse, string email, DateTime dateCreation, DateTime dateDerniereModif)
+        {
+            this.id = id;
+            this.nom = nom;
+            this.adresse = adresse;
+            this.email = email;
+            this.dateCreation = dateCreation;
+            this.dateDerniereModif = dateDerniereModif;
+
+        }
+        public Entreprise(int id, string nom)
+        {
+            this.id = id;
+            this.nom = nom;
+        }
+
+        public Entreprise(string nom, string adresse, string email, DateTime dateCreation, DateTime dateDerniereModif)
         {
             this.nom = nom;
             this.adresse = adresse;
             this.email = email;
             this.dateCreation = dateCreation;
             this.dateDerniereModif = dateDerniereModif;
-            this.insee = insee;
-           // this.laVille = laVille;
 
         }
 
-        public Entreprise(int insee)
+        public Entreprise(int id)
         {
-            this.insee = insee;
+            this.id = id;
         }
     }
 }

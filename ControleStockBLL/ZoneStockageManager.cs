@@ -13,6 +13,7 @@ namespace ControleStockBLL
     /// </summary>
     public class ZoneStockageManager
     {
+        private static ZoneStockageManager uneZoneStockageManager;
         
         private static ZoneStockageManager uneZoneStockageManager; 
         // PATERN SINGLETON
@@ -32,22 +33,11 @@ namespace ControleStockBLL
         {
 
         }
-
-        /// <summary>
-        /// Méthode qui appelle une méthode de la couche DAO pour ajouter une nouvelle Zone de Stockage dans la BD
-        /// </summary>
-        /// <param name="sonNomZone"></param>
-        /// <param name="sonBatiment"></param>
-        /// <param name="sonEtage"></param>
-        /// <param name="saDateCreation"></param>
-        /// <param name="saDateDernModif"></param>
-        /// <param name="sonAdresse"></param>
-        /// <param name="sonIdCategProd"></param>
-        /// <param name="sonIdVille"></param>
-        /// <returns>retourne le nombre d'enregistrement realise</returns>
+        
+        
         public int AjoutZoneStockage(string sonNomZone, string sonBatiment, string sonEtage, 
         DateTime saDateCreation, DateTime saDateDernModif,string sonAdresse, int sonIdCategProd,
-            int sonIdVille)
+            string sonIdVille)
         {
             Ville laVille;
             laVille = new Ville(sonIdVille);
