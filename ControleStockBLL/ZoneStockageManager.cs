@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ControleStockDAL;
 using ControleStockBO;
+using ControleStockDAL;
 
 namespace ControleStockBLL
 {
@@ -31,7 +31,7 @@ namespace ControleStockBLL
         }
         public int AjoutZoneStockage(string sonNomZone, string sonBatiment, string sonEtage,
         DateTime saDateCreation, DateTime saDateDernModif, string sonAdresse, int sonIdCategProd,
-            string sonIdVille)
+            int sonIdVille)
         {
             Ville laVille;
             laVille = new Ville(sonIdVille);

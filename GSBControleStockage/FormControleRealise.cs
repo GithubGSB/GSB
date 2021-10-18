@@ -45,9 +45,12 @@ namespace GSBControleStockage
                 DateTime derniereModif = dtDerniereModif.Value;
 
                 float.TryParse(valeurHT, out montantHT);
-
-                ControleRealiseManager.GetInstance().AjoutControle(dateControle, dateCreation, derniereModif, resume, montantHT, typeControleId, entrepriseId, zoneStockageId);
-                Logger.LogInformation("Ajout réussi");
+                if (string.IsNullOrWhiteSpace(resume) || string.IsNullOrWhiteSpace(valeurHT)) Logger.LogErreur("Vous devez remplir tous les champs.");
+                else
+                {
+                    ControleRealiseManager.GetInstance().AjoutControle(dateControle, dateCreation, derniereModif, resume, montantHT, typeControleId, entrepriseId, zoneStockageId);
+                    Logger.LogInformation("Ajout réussi");
+                }
             } 
             catch (Exception ex)
             {

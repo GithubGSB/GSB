@@ -31,7 +31,7 @@ namespace GSBControleStockage
                 DateTime dateModif = dtModif.Value;
                 Ville ville = (Ville)cbxInsee.SelectedValue;
                 string insee = (string) cbxInsee.SelectedValue;
-                EntrepriseManager.GetInstance().CreerEntreprise(nom, adresse, email, dateCreation, dateModif, insee);
+                EntrepriseManager.GetInstance().CreerEntreprise(nom, adresse, email, dateCreation, dateModif);
 
             }
             catch(Exception ex)
