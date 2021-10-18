@@ -69,6 +69,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GSBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GSBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GSBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAccueil.resx">
@@ -89,6 +94,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="App.config" />
     <None Include="GSBDataSet.xsc">
       <DependentUpon>GSBDataSet.xsd</DependentUpon>
     </None>
@@ -100,6 +106,17 @@
     <None Include="GSBDataSet.xss">
       <DependentUpon>GSBDataSet.xsd</DependentUpon>
     </None>
+    <None Include="GSBDataSet1.xsc">
+      <DependentUpon>GSBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GSBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GSBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GSBDataSet1.xss">
+      <DependentUpon>GSBDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -109,9 +126,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ControleStockBLL\ControleStockBLL.csproj">
