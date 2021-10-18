@@ -16,13 +16,19 @@ using ControleStockBLL;
 
 namespace GSBControleStockage
 {
+    /// <summary>
+    /// Formulaire du sous menu Ajout Zone stockage
+    /// </summary>
     public partial class FormAjoutZoneStockage : Form
     {
-        
+        /// <summary>
+        /// Constructeur du formulaire de l'ajout. Elle initialise les combobox et appelle les catégories de produit et les villes
+        /// </summary>
         public FormAjoutZoneStockage()
         {
             
             InitializeComponent();
+            //réglage des combobox
             cbxCategProd.DisplayMember = "libelle";
             cbxCategProd.ValueMember = "id";
             cbxCategProd.DataSource = CategProdManager.GetInstance().GetLesCategoriesProduits();
@@ -37,22 +43,25 @@ namespace GSBControleStockage
 
 
         }
-
+        /// <summary>
+        /// Méthode d'ajout, contrôle la saisie de l'utilisateur
+        /// </summary>
+    
         private void btnAjout_Click(object sender, EventArgs e)
         {
             
-            string idVille = (string)cbxVille.SelectedValue;
+            
             if (string.IsNullOrWhiteSpace(txtAdresse.Text) || string.IsNullOrWhiteSpace(txtBatiment.Text) || string.IsNullOrWhiteSpace(txtEtage.Text) || string.IsNullOrWhiteSpace(txtNomZone.Text) || cbxCategProd.SelectedIndex == -1 || cbxVille.SelectedIndex == -1)
             {
-                MessageBox.Show("Attention, vous devez saisir tous les champs ! ", "Erreur de saisie",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.LogErreur("Attention, vous devez saisir tous les champs !");
             }
             else
             {
+                int idVille = (int)cbxVille.SelectedValue;
                 int idCategProd = (int)cbxCategProd.SelectedValue;
                 int nbZoneCreer = 0;
                 nbZoneCreer = ZoneStockageManager.GetInstance().AjoutZoneStockage(txtNomZone.Text, txtBatiment.Text, txtEtage.Text, dateAjoutDtp.Value, dateDernModifDtp.Value, txtAdresse.Text, idCategProd, idVille);
-                MessageBox.Show("Votre client a été ajouté");
+                Logger.LogInformation("Ajout réussi !");
             }
             
 

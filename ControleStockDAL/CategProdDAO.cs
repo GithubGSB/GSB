@@ -8,8 +8,14 @@ using ControleStockBO;
 
 namespace ControleStockDAL
 {
+    /// <summary>
+    /// DAL de CategProd
+    /// </summary>
     public class CategProdDAO
     {
+        /// <summary>
+        /// Générer une instance de CategProdDAO
+        /// </summary>
         private static CategProdDAO uneInstance;
         // PATERN SINGLETON
         public static CategProdDAO GetInstance()
@@ -24,6 +30,11 @@ namespace ControleStockDAL
         {
 
         }
+        /// <summary>
+        /// Retourne les catégories de produit via une procédure stockée. Il cherchera l'ensemble des catégories de produit de la BD. 
+
+        /// </summary>
+        /// <returns> retourne collections CategProd</returns>
         public List<CategProd> GetLesCategProds()
         {
             int id;

@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace ControleStockDAL
 {
+    /// <summary>
+    /// Créer une instance d'entreprise si elle n'existe pas 
+    /// </summary>
+    /// 
     public class EntrepriseDAO
     {
         private static EntrepriseDAO uneInstance;
@@ -21,7 +25,9 @@ namespace ControleStockDAL
             }
             return uneInstance;
         }
-
+        /// <summary>
+        /// Génèrer un constructeur 
+        /// </summary>
         private EntrepriseDAO()
         {
         }
@@ -46,7 +52,7 @@ namespace ControleStockDAL
             commande.Parameters.Add("email", System.Data.SqlDbType.VarChar);
             commande.Parameters.Add("dateCreation", System.Data.SqlDbType.DateTime);
             commande.Parameters.Add("dateDerniereModif", System.Data.SqlDbType.DateTime);
-            commande.Parameters.Add("insee", System.Data.SqlDbType.Char);
+            commande.Parameters.Add("insee", System.Data.SqlDbType.Int);
 
             commande.Parameters[0].Value = unEntreprise.Nom;
             commande.Parameters[0].Value = unEntreprise.Adresse;
