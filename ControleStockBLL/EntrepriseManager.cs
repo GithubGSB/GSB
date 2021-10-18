@@ -22,10 +22,10 @@ namespace ControleStockBLL
         }
 
 
-        public int CreerEntreprise(string leNom, string LAdresse, string lEmail, DateTime dateCreation, DateTime dateDerniereModif, string insee)
+        public int CreerEntreprise(string leNom, string LAdresse, string lEmail, DateTime dateCreation, DateTime dateDerniereModif)
         {
             Entreprise uneEntreprise;
-            uneEntreprise = new Entreprise(leNom, LAdresse, lEmail, dateCreation, dateDerniereModif, insee);
+            uneEntreprise = new Entreprise(leNom, LAdresse, lEmail, dateCreation, dateDerniereModif);
             return EntrepriseDAO.GetInstance().AjoutEntreprise(uneEntreprise);
         }
 

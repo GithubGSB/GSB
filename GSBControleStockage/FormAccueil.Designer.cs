@@ -34,9 +34,6 @@
             this.mnuItemControleRealise = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemControleObliga = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemUtilisateur = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuitemAjoutUtilisateur = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuItemDeconnexion = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajoutDunControleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGSBControleStock.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +47,7 @@
             this.mnuItemControleRealise,
             this.mnuItemControleObliga,
             this.mnuItemUtilisateur,
-            this.mnuItemDeconnexion});
+            });
             this.mnuGSBControleStock.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.mnuGSBControleStock.Location = new System.Drawing.Point(0, 0);
             this.mnuGSBControleStock.Name = "mnuGSBControleStock";
@@ -75,7 +72,7 @@
             // mnuItemControleRealise
             // 
             this.mnuItemControleRealise.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajoutDunControleToolStripMenuItem});
+            });
             this.mnuItemControleRealise.Name = "mnuItemControleRealise";
             this.mnuItemControleRealise.Size = new System.Drawing.Size(218, 24);
             this.mnuItemControleRealise.Text = "Gestion des contrôles réalisés";
@@ -91,33 +88,13 @@
             // mnuItemUtilisateur
             // 
             this.mnuItemUtilisateur.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuitemAjoutUtilisateur});
+            });
             this.mnuItemUtilisateur.Name = "mnuItemUtilisateur";
             this.mnuItemUtilisateur.Size = new System.Drawing.Size(175, 24);
             this.mnuItemUtilisateur.Text = "Gestion des utilisateurs";
             this.mnuItemUtilisateur.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // mnuitemAjoutUtilisateur
-            // 
-            this.mnuitemAjoutUtilisateur.Name = "mnuitemAjoutUtilisateur";
-            this.mnuitemAjoutUtilisateur.Size = new System.Drawing.Size(229, 26);
-            this.mnuitemAjoutUtilisateur.Text = "Ajout d\'un utilisateur";
-            this.mnuitemAjoutUtilisateur.Click += new System.EventHandler(this.mnuitemAjoutUtilisateur_Click);
-            // 
-            // mnuItemDeconnexion
-            // 
-            this.mnuItemDeconnexion.Name = "mnuItemDeconnexion";
-            this.mnuItemDeconnexion.Size = new System.Drawing.Size(258, 24);
-            this.mnuItemDeconnexion.Text = "Déconnexion";
-            this.mnuItemDeconnexion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mnuItemDeconnexion.Click += new System.EventHandler(this.déconnexionToolStripMenuItem_Click);
-            // 
-            // ajoutDunControleToolStripMenuItem
-            // 
-            this.ajoutDunControleToolStripMenuItem.Name = "ajoutDunControleToolStripMenuItem";
-            this.ajoutDunControleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ajoutDunControleToolStripMenuItem.Text = "Ajout d\'un controle";
-            this.ajoutDunControleToolStripMenuItem.Click += new System.EventHandler(this.ajoutDunControleToolStripMenuItem_Click);
+
+           
             // 
             // FormAccueil
             // 

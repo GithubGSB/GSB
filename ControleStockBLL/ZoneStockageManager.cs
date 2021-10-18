@@ -13,7 +13,6 @@ namespace ControleStockBLL
     /// </summary>
     public class ZoneStockageManager
     {
-        private static ZoneStockageManager uneZoneStockageManager;
         
         private static ZoneStockageManager uneZoneStockageManager; 
         // PATERN SINGLETON
@@ -33,11 +32,14 @@ namespace ControleStockBLL
         {
 
         }
-        
-        
+
+        public List<ZoneStockage> GetLesZonesStockages()
+        {
+            return ZoneStockageDAO.GetInstance().GetLesZonesStockages();
+        }
         public int AjoutZoneStockage(string sonNomZone, string sonBatiment, string sonEtage, 
         DateTime saDateCreation, DateTime saDateDernModif,string sonAdresse, int sonIdCategProd,
-            string sonIdVille)
+            int sonIdVille)
         {
             Ville laVille;
             laVille = new Ville(sonIdVille);

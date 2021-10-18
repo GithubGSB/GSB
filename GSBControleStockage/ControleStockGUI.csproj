@@ -58,6 +58,12 @@
     <Compile Include="FormAjoutUtilisateur.Designer.cs">
       <DependentUpon>FormAjoutUtilisateur.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAjoutZoneStockage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAjoutZoneStockage.Designer.cs">
+      <DependentUpon>FormAjoutZoneStockage.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConnexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAccueil.resx">
       <DependentUpon>FormAccueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAjoutUtilisateur.resx">
+      <DependentUpon>FormAjoutUtilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConnexion.resx">
+      <DependentUpon>FormConnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControleRealise.resx">
+      <DependentUpon>FormControleRealise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEntreprise.resx">
+      <DependentUpon>FrmEntreprise.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
