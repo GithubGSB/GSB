@@ -198,9 +198,29 @@ namespace ControleStockBLL
             }
         }
 
+        /// <summary>
+        /// permet de supprimer l'utilisateur actuel
+        /// </summary>
         public void Deconnexion()
         {
             this.utilisateurApp = null;
+        }
+
+        /// <summary>
+        /// Permet de récupéré la liste des utilisateurs
+        /// </summary>
+        /// <returns>liste des utilisateur</returns>
+        public List<Utilisateur> ConsultationUtilisateur()
+        {
+            try
+            {
+                return UtilisateurDAO.GetInstance().GetUtilisateurConsult();
+            }
+            catch (Exception ex)
+            {
+                ex.LogErreur("Impossible de récupéré la liste des utlisateurs");
+            }
+            return new List<Utilisateur>();
         }
     }
 }
