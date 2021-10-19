@@ -210,7 +210,7 @@ namespace ControleStockDAL
 
             // récupération commande
             SqlCommand cmd = Commande.GetInstance().GetObjCommande();
-            cmd.CommandText = "[spConsultUtilisateur]";
+            cmd.CommandText = "spConsultUtilisateur";
 
             //récupération des données
             using(SqlDataReader reader = cmd.ExecuteReader())

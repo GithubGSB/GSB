@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControleStockBLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,8 @@ namespace GSBControleStockage
         public FormConsultUtilisateur()
         {
             InitializeComponent();
+            dtgUtilisateur.AutoGenerateColumns = false;
+            dtgUtilisateur.DataSource = UtilisateurManager.GetInstance().ConsultationUtilisateur();
         }
     }
 }
