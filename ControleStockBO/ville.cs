@@ -8,15 +8,15 @@ namespace ControleStockBO
 {
     public class Ville
     {
-        private string insee;
+        private int insee;
         private string nom;
         private int codePostal;
 
-        public string Insee { get => insee; set => insee = value; }
+        public int Insee { get => insee; set => insee = value; }
         public string Nom { get => nom; set => nom = value; }
         public int CodePostal { get => codePostal; set => codePostal = value; }
 
-        public Ville(string insee, string nom)
+        public Ville(int insee, string nom)
         {
             this.insee = insee;
             this.nom = nom;
@@ -24,7 +24,7 @@ namespace ControleStockBO
         }
 
 
-        public Ville(string insee)
+        public Ville(int insee)
         {
             this.insee = insee;
         }

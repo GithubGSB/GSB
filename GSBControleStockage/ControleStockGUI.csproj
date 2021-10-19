@@ -58,11 +58,17 @@
     <Compile Include="FormAjoutZoneStockage.Designer.cs">
       <DependentUpon>FormAjoutZoneStockage.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEntreprise.cs">
+    <Compile Include="FrmAjoutEntreprise.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEntreprise.Designer.cs">
-      <DependentUpon>FrmEntreprise.cs</DependentUpon>
+    <Compile Include="FrmAjoutEntreprise.Designer.cs">
+      <DependentUpon>FrmAjoutEntreprise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultEntreprise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultEntreprise.Designer.cs">
+      <DependentUpon>FrmConsultEntreprise.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,8 +78,11 @@
     <EmbeddedResource Include="FormAjoutZoneStockage.resx">
       <DependentUpon>FormAjoutZoneStockage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEntreprise.resx">
-      <DependentUpon>FrmEntreprise.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAjoutEntreprise.resx">
+      <DependentUpon>FrmAjoutEntreprise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultEntreprise.resx">
+      <DependentUpon>FrmConsultEntreprise.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

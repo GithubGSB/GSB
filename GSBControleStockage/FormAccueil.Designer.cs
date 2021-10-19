@@ -31,12 +31,13 @@ namespace GSBControleStockage
         {
             this.mnuGSBControleStock = new System.Windows.Forms.MenuStrip();
             this.mnuItemZoneStock = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajoutDeLaZoneDeStockageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemEntreprise = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajoutDuneEntrepriseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemControleRealise = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemControleObliga = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemUtilisateur = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajoutDeLaZoneDeStockageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajoutDuneEntrepriseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGSBControleStock.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,13 +65,28 @@ namespace GSBControleStockage
             this.mnuItemZoneStock.Size = new System.Drawing.Size(163, 20);
             this.mnuItemZoneStock.Text = "Gestion zones de stockages";
             // 
+            // ajoutDeLaZoneDeStockageToolStripMenuItem
+            // 
+            this.ajoutDeLaZoneDeStockageToolStripMenuItem.Name = "ajoutDeLaZoneDeStockageToolStripMenuItem";
+            this.ajoutDeLaZoneDeStockageToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.ajoutDeLaZoneDeStockageToolStripMenuItem.Text = "Ajout de la zone de stockage";
+            this.ajoutDeLaZoneDeStockageToolStripMenuItem.Click += new System.EventHandler(this.ajoutDeLaZoneDeStockageToolStripMenuItem_Click);
+            // 
             // mnuItemEntreprise
             // 
             this.mnuItemEntreprise.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajoutDuneEntrepriseToolStripMenuItem});
+            this.ajoutDuneEntrepriseToolStripMenuItem,
+            this.consultationToolStripMenuItem});
             this.mnuItemEntreprise.Name = "mnuItemEntreprise";
             this.mnuItemEntreprise.Size = new System.Drawing.Size(140, 20);
             this.mnuItemEntreprise.Text = "Gestion des entreprises";
+            // 
+            // ajoutDuneEntrepriseToolStripMenuItem
+            // 
+            this.ajoutDuneEntrepriseToolStripMenuItem.Name = "ajoutDuneEntrepriseToolStripMenuItem";
+            this.ajoutDuneEntrepriseToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.ajoutDuneEntrepriseToolStripMenuItem.Text = "Ajout d\'une entreprise";
+            this.ajoutDuneEntrepriseToolStripMenuItem.Click += new System.EventHandler(this.ajoutDuneEntrepriseToolStripMenuItem_Click);
             // 
             // mnuItemControleRealise
             // 
@@ -90,18 +106,12 @@ namespace GSBControleStockage
             this.mnuItemUtilisateur.Size = new System.Drawing.Size(140, 20);
             this.mnuItemUtilisateur.Text = "Gestion des utilisateurs";
             // 
-            // ajoutDeLaZoneDeStockageToolStripMenuItem
+            // consultationToolStripMenuItem
             // 
-            this.ajoutDeLaZoneDeStockageToolStripMenuItem.Name = "ajoutDeLaZoneDeStockageToolStripMenuItem";
-            this.ajoutDeLaZoneDeStockageToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.ajoutDeLaZoneDeStockageToolStripMenuItem.Text = "Ajout de la zone de stockage";
-            this.ajoutDeLaZoneDeStockageToolStripMenuItem.Click += new System.EventHandler(this.ajoutDeLaZoneDeStockageToolStripMenuItem_Click);
-            // 
-            // ajoutDuneEntrepriseToolStripMenuItem
-            // 
-            this.ajoutDuneEntrepriseToolStripMenuItem.Name = "ajoutDuneEntrepriseToolStripMenuItem";
-            this.ajoutDuneEntrepriseToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.ajoutDuneEntrepriseToolStripMenuItem.Text = "Ajout d\'une entreprise";
+            this.consultationToolStripMenuItem.Name = "consultationToolStripMenuItem";
+            this.consultationToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.consultationToolStripMenuItem.Text = "Consultation";
+            this.consultationToolStripMenuItem.Click += new System.EventHandler(this.consultationToolStripMenuItem_Click);
             // 
             // FormAccueil
             // 
@@ -129,6 +139,7 @@ namespace GSBControleStockage
         private System.Windows.Forms.ToolStripMenuItem mnuItemUtilisateur;
         private System.Windows.Forms.ToolStripMenuItem ajoutDeLaZoneDeStockageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajoutDuneEntrepriseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultationToolStripMenuItem;
     }
 }
 

@@ -11,7 +11,6 @@ namespace ControleStockDAL
     public class EntrepriseDAO
     {
         private static EntrepriseDAO uneInstance;
-        private List<Entreprise> lesEntreprises;
 
         public static EntrepriseDAO GetInstance()
         {
@@ -27,7 +26,7 @@ namespace ControleStockDAL
         }
 
      
-
+      
         public int AjoutEntreprise(Entreprise unEntreprise)
         {
             Commande.GetInstance().GetObjCommande();
@@ -46,14 +45,14 @@ namespace ControleStockDAL
             commande.Parameters.Add("email", System.Data.SqlDbType.VarChar);
             commande.Parameters.Add("dateCreation", System.Data.SqlDbType.DateTime);
             commande.Parameters.Add("dateDerniereModif", System.Data.SqlDbType.DateTime);
-            commande.Parameters.Add("insee", System.Data.SqlDbType.Char);
+            commande.Parameters.Add("insee", System.Data.SqlDbType.Int);
 
             commande.Parameters[0].Value = unEntreprise.Nom;
-            commande.Parameters[0].Value = unEntreprise.Adresse;
-            commande.Parameters[0].Value = unEntreprise.Email;
-            commande.Parameters[0].Value = unEntreprise.DateCreation;
-            commande.Parameters[0].Value = unEntreprise.DateDerniereModif;
-            commande.Parameters[0].Value = unEntreprise.Insee;
+            commande.Parameters[1].Value = unEntreprise.Adresse;
+            commande.Parameters[2].Value = unEntreprise.Email;
+            commande.Parameters[3].Value = unEntreprise.DateCreation;
+            commande.Parameters[4].Value = unEntreprise.DateDerniereModif;
+            commande.Parameters[5].Value = unEntreprise.Ville.Insee;
 
 
 

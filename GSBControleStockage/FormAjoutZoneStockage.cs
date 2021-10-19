@@ -41,7 +41,7 @@ namespace GSBControleStockage
         private void btnAjout_Click(object sender, EventArgs e)
         {
             
-            string idVille = (string)cbxVille.SelectedValue;
+            int idVille = (int)cbxVille.SelectedValue;
             if (string.IsNullOrWhiteSpace(txtAdresse.Text) || string.IsNullOrWhiteSpace(txtBatiment.Text) || string.IsNullOrWhiteSpace(txtEtage.Text) || string.IsNullOrWhiteSpace(txtNomZone.Text) || cbxCategProd.SelectedIndex == -1 || cbxVille.SelectedIndex == -1)
             {
                 MessageBox.Show("Attention, vous devez saisir tous les champs ! ", "Erreur de saisie",

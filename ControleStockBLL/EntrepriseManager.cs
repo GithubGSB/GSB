@@ -22,10 +22,22 @@ namespace ControleStockBLL
         }
 
 
-        public int CreerEntreprise(string leNom, string LAdresse, string lEmail, DateTime dateCreation, DateTime dateDerniereModif, int insee)
+        /// <summary>
+        /// methode qui permet la création une entreprise et retourne une methode de la couche DAO pour AjoutEntreprise de BD
+        /// </summary>
+        /// <param name="leNom"></param>
+        /// <param name="LAdresse"></param>
+        /// <param name="lEmail"></param>
+        /// <param name="dateCreation"></param>
+        /// <param name="dateDerniereModif"></param>
+        /// <param name="sonIdVille"></param>
+        /// <returns></returns>
+        public int CreerEntreprise(string leNom, string LAdresse, string lEmail, DateTime dateCreation, DateTime dateDerniereModif, int sonIdVille)
         {
             Entreprise uneEntreprise;
-            uneEntreprise = new Entreprise(leNom, LAdresse, lEmail, dateCreation, dateDerniereModif, insee);
+            Ville laVille;
+            laVille = new Ville(sonIdVille);
+            uneEntreprise = new Entreprise(leNom, LAdresse, lEmail, dateCreation, dateDerniereModif, laVille);
             return EntrepriseDAO.GetInstance().AjoutEntreprise(uneEntreprise);
         }
 
