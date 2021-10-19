@@ -50,7 +50,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TypeControle.cs" />
     <Compile Include="Utilisateur.cs" />
-    <Compile Include="ville.cs" />
+    <Compile Include="Ville.cs" />
     <Compile Include="ZoneStockage.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace ControleStockBLL
 {
-     public class EntrepriseManager
+    public class EntrepriseManager
     {
         private static EntrepriseManager uneInstance;
-        
+
         public static EntrepriseManager GetInstance()
         {
-            if(uneInstance == null)
+            if (uneInstance == null)
             {
                 uneInstance = new EntrepriseManager();
             }
@@ -22,19 +22,10 @@ namespace ControleStockBLL
         }
 
 
-        /// <summary>
-        /// methode qui permet la création une entreprise et retourne une methode de la couche DAO pour AjoutEntreprise de BD
-        /// </summary>
-        /// <param name="leNom"></param>
-        /// <param name="LAdresse"></param>
-        /// <param name="lEmail"></param>
-        /// <param name="dateCreation"></param>
-        /// <param name="dateDerniereModif"></param>
-        /// <param name="sonIdVille"></param>
-        /// <returns></returns>
-        public int CreerEntreprise(string leNom, string LAdresse, string lEmail, DateTime dateCreation, DateTime dateDerniereModif, int sonIdVille)
+        public int CreerEntreprise(string leNom, string LAdresse, string lEmail, DateTime dateCreation, DateTime dateDerniereModif, int idVille)
         {
             Entreprise uneEntreprise;
+            Ville insee = new Ville(idVille);
             uneEntreprise = new Entreprise(leNom, LAdresse, lEmail, dateCreation, dateDerniereModif, insee);
             return EntrepriseDAO.GetInstance().AjoutEntreprise(uneEntreprise);
         }

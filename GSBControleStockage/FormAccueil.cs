@@ -22,12 +22,6 @@ namespace GSBControleStockage
             
         }
 
-        private void ajoutDeLaZoneDeStockageToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormAjoutZoneStockage frmAjoutZoneStockage = new FormAjoutZoneStockage();
-            frmAjoutZoneStockage.Show();
-        }
-
         private void ajoutDuneEntrepriseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmAjoutEntreprise frmEntreprise = new FrmAjoutEntreprise();
@@ -38,6 +32,18 @@ namespace GSBControleStockage
         {
             FrmConsultEntreprise frmConsult = new FrmConsultEntreprise();
             frmConsult.Show();
+        }
+
+        private void ajoutDunControleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormControleRealise fcr = new FormControleRealise();
+            fcr.Show();
+        }
+
+        private void ajoutDuneZoneStockageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAjoutZoneStockage frmAjoutZoneStockage = new FormAjoutZoneStockage();
+            frmAjoutZoneStockage.Show();
         }
     }
 }

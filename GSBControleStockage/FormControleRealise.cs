@@ -33,9 +33,10 @@ namespace GSBControleStockage
         private void btnAjout_Click(object sender, EventArgs e)
         {
             try {
-                int entrepriseId = (int)cbxEntreprise.SelectedValue;
                 int zoneStockageId = (int)cbxZoneStockage.SelectedValue;
                 int typeControleId = (int)cbxTypeControle.SelectedValue;
+                int entrepriseId = (int)cbxEntreprise.SelectedValue;
+
 
                 string resume = txtResume.Text;
                 string valeurHT = txtPrixHT.Text;

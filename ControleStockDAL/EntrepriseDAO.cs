@@ -8,14 +8,9 @@ using System.Threading.Tasks;
 
 namespace ControleStockDAL
 {
-    /// <summary>
-    /// Créer une instance d'entreprise si elle n'existe pas 
-    /// </summary>
-    /// 
     public class EntrepriseDAO
     {
         private static EntrepriseDAO uneInstance;
-
 
         public static EntrepriseDAO GetInstance()
         {
@@ -25,9 +20,7 @@ namespace ControleStockDAL
             }
             return uneInstance;
         }
-        /// <summary>
-        /// Génèrer un constructeur 
-        /// </summary>
+
         private EntrepriseDAO()
         {
         }
@@ -51,10 +44,10 @@ namespace ControleStockDAL
             // Ouvertur du reader
             SqlDataReader monLecteur = commande.ExecuteReader();
             // Boucle qui permet d'initialiser les attributs
-            while(monLecteur.Read())
+            while (monLecteur.Read())
             {
                 id = (int)monLecteur["id"];
-                if(monLecteur["nom"] == DBNull.Value)
+                if (monLecteur["nom"] == DBNull.Value)
                 {
                     nom = default(string);
                 }
@@ -70,7 +63,9 @@ namespace ControleStockDAL
             Commande.GetInstance().FermerConnexion();
             return lesEntreprises;
 
-     
+
+
+        }
 
         public int AjoutEntreprise(Entreprise unEntreprise)
         {
@@ -83,9 +78,9 @@ namespace ControleStockDAL
             commande.Parameters.Clear();
             commande.CommandType = System.Data.CommandType.StoredProcedure;
             commande.CommandText = ("spAjoutEntreprise ");
-            
 
-            commande.Parameters.Add("nom",System.Data.SqlDbType.VarChar);
+
+            commande.Parameters.Add("nom", System.Data.SqlDbType.VarChar);
             commande.Parameters.Add("adresse", System.Data.SqlDbType.VarChar);
             commande.Parameters.Add("email", System.Data.SqlDbType.VarChar);
             commande.Parameters.Add("dateCreation", System.Data.SqlDbType.DateTime);
@@ -93,11 +88,11 @@ namespace ControleStockDAL
             commande.Parameters.Add("insee", System.Data.SqlDbType.Int);
 
             commande.Parameters[0].Value = unEntreprise.Nom;
-            commande.Parameters[0].Value = unEntreprise.Adresse;
-            commande.Parameters[0].Value = unEntreprise.Email;
-            commande.Parameters[0].Value = unEntreprise.DateCreation;
-            commande.Parameters[0].Value = unEntreprise.DateDerniereModif;
-            commande.Parameters[0].Value = unEntreprise.Insee;
+            commande.Parameters[1].Value = unEntreprise.Adresse;
+            commande.Parameters[2].Value = unEntreprise.Email;
+            commande.Parameters[3].Value = unEntreprise.DateCreation;
+            commande.Parameters[4].Value = unEntreprise.DateDerniereModif;
+            commande.Parameters[5].Value = unEntreprise.Insee.Insee;
 
 
 

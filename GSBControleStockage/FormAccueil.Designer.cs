@@ -37,8 +37,7 @@
             this.ajoutDunControleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemControleObliga = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemUtilisateur = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajoutDeLaZoneDeStockageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajoutDuneEntrepriseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGSBControleStock.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,15 +68,28 @@
             this.mnuItemZoneStock.Text = "Gestion zones de stockages";
             this.mnuItemZoneStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // ajoutDuneZoneStockageToolStripMenuItem
+            // 
+            this.ajoutDuneZoneStockageToolStripMenuItem.Name = "ajoutDuneZoneStockageToolStripMenuItem";
+            this.ajoutDuneZoneStockageToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.ajoutDuneZoneStockageToolStripMenuItem.Text = "Ajout d\'une Zone de Stockage";
+            this.ajoutDuneZoneStockageToolStripMenuItem.Click += new System.EventHandler(this.ajoutDuneZoneStockageToolStripMenuItem_Click);
+            // 
             // mnuItemEntreprise
             // 
             this.mnuItemEntreprise.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajoutDuneEntrepriseToolStripMenuItem,
-            this.consultationToolStripMenuItem});
+            this.ajoutDuneEntrepriseToolStripMenuItem});
             this.mnuItemEntreprise.Name = "mnuItemEntreprise";
             this.mnuItemEntreprise.Size = new System.Drawing.Size(203, 19);
             this.mnuItemEntreprise.Text = "Gestion des entreprises";
             this.mnuItemEntreprise.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ajoutDuneEntrepriseToolStripMenuItem
+            // 
+            this.ajoutDuneEntrepriseToolStripMenuItem.Name = "ajoutDuneEntrepriseToolStripMenuItem";
+            this.ajoutDuneEntrepriseToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.ajoutDuneEntrepriseToolStripMenuItem.Text = "Ajout  d\'une Entreprise";
+            this.ajoutDuneEntrepriseToolStripMenuItem.Click += new System.EventHandler(this.ajoutDuneEntrepriseToolStripMenuItem_Click);
             // 
             // mnuItemControleRealise
             // 
@@ -108,19 +120,14 @@
             this.mnuItemUtilisateur.Name = "mnuItemUtilisateur";
             this.mnuItemUtilisateur.Size = new System.Drawing.Size(203, 19);
             this.mnuItemUtilisateur.Text = "Gestion des utilisateurs";
+            this.mnuItemUtilisateur.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // ajoutDeLaZoneDeStockageToolStripMenuItem
+            // déconnexionToolStripMenuItem
             // 
-            this.ajoutDeLaZoneDeStockageToolStripMenuItem.Name = "ajoutDeLaZoneDeStockageToolStripMenuItem";
-            this.ajoutDeLaZoneDeStockageToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.ajoutDeLaZoneDeStockageToolStripMenuItem.Text = "Ajout de la zone de stockage";
-            this.ajoutDeLaZoneDeStockageToolStripMenuItem.Click += new System.EventHandler(this.ajoutDeLaZoneDeStockageToolStripMenuItem_Click);
-            // 
-            // ajoutDuneEntrepriseToolStripMenuItem
-            // 
-            this.ajoutDuneEntrepriseToolStripMenuItem.Name = "ajoutDuneEntrepriseToolStripMenuItem";
-            this.ajoutDuneEntrepriseToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.ajoutDuneEntrepriseToolStripMenuItem.Text = "Ajout d\'une entreprise";
+            this.déconnexionToolStripMenuItem.Name = "déconnexionToolStripMenuItem";
+            this.déconnexionToolStripMenuItem.Size = new System.Drawing.Size(203, 19);
+            this.déconnexionToolStripMenuItem.Text = "Déconnexion";
+            this.déconnexionToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FormAccueil
             // 
@@ -149,5 +156,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuItemUtilisateur;
         private System.Windows.Forms.ToolStripMenuItem ajoutDuneZoneStockageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajoutDuneEntrepriseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajoutDunControleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem déconnexionToolStripMenuItem;
     }
 }
