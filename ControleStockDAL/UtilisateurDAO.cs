@@ -190,5 +190,59 @@ namespace ControleStockDAL
 
             return utilisateur;
         }
+
+        /// <summary>
+        /// Permet de récupéré la liste des utilisateurs
+        /// </summary>
+        /// <exception cref="InvalidCastException"></exception>
+        /// <exception cref="SqlException"></exception>
+        /// <exception cref="InvalidOperationException"></exception>
+        /// <exception cref="System.IO.IOException"></exception>
+        /// <exception cref="ObjectDisposedException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <returns>Utilisateur si valide, sinon null</returns>
+        public List<Utilisateur> GetUtilisateurConsult()
+        {
+            List<Utilisateur> lesUtilisateurs = new List<Utilisateur>();
+            string nom, prenom, libelle, str;
+            int id, idProfil;
+            DateTime dateCreation, dateDerniereModif;
+
+            // récupération commande
+            SqlCommand cmd = Commande.GetInstance().GetObjCommande();
+            cmd.CommandText = "[spConsultUtilisateur]";
+
+            //récupération des données
+            using(SqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    if (reader["nom"] == DBNull.Value) nom = default(string);
+                    else nom = reader["nom"].ToString();
+                    if (reader["prenom"] == DBNull.Value) prenom = default(string);
+                    else prenom = reader["prenom"].ToString();
+                    if (reader["libelle"] == DBNull.Value) libelle = default(string);
+                    else libelle = reader["libelle"].ToString();
+
+                    if (reader["dateCreation"] == DBNull.Value) dateCreation = default(DateTime);
+                    else dateCreation = DateTime.Parse(reader["dateCreation"].ToString());
+                    if (reader["dateDerniereModif"] == DBNull.Value) dateDerniereModif = default(DateTime);
+                    else dateDerniereModif = DateTime.Parse(reader["dateDerniereModif"].ToString());
+
+                    str = reader["idProfil"].ToString();
+                    int.TryParse(str, out idProfil);
+                    str = reader["id"].ToString();
+                    int.TryParse(str, out id);
+
+                    lesUtilisateurs.Add(new Utilisateur(id, nom, prenom, new Profil(id, libelle), dateCreation, dateDerniereModif));
+                }
+            }
+
+            //fermeture de la commande
+            Commande.GetInstance().FermerConnexion();
+
+            return lesUtilisateurs;
+            
+        }
     }
 }
