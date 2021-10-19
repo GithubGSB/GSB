@@ -54,6 +54,7 @@ namespace ControleStockDAL
             cmd.Parameters.Add("selMotDePasse", System.Data.SqlDbType.VarChar).Value = sel;
             cmd.Parameters.Add("identifiantConnexion", System.Data.SqlDbType.VarChar).Value = identifiantConnexion;
             cmd.Parameters.Add("idProfil", System.Data.SqlDbType.Int).Value = utilisateur.Profil.Id;
+            cmd.Parameters.Add("dateCreation", System.Data.SqlDbType.Date).Value = DateTime.Now;
 
             //récupération des profils
             cmd.ExecuteNonQuery();
@@ -145,6 +146,7 @@ namespace ControleStockDAL
             Utilisateur utilisateur = null;
             string nom, prenom, libelle, str;
             int id, idProfil;
+            DateTime dateCreation, dateDerniereModif;
 
             //récupération commande
             SqlCommand cmd = Commande.GetInstance().GetObjCommande();
@@ -166,12 +168,17 @@ namespace ControleStockDAL
                     if (reader["libelle"] == DBNull.Value) libelle = default(string);
                     else libelle = reader["libelle"].ToString();
 
+                    if (reader["dateCreation"] == DBNull.Value) dateCreation = default(DateTime);
+                    else dateCreation = DateTime.Parse(reader["dateCreation"].ToString());
+                    if (reader["dateDerniereModif"] == DBNull.Value) dateDerniereModif = default(DateTime);
+                    else dateDerniereModif = DateTime.Parse(reader["dateDerniereModif"].ToString());
+
                     str = reader["idProfil"].ToString();
                     int.TryParse(str, out idProfil);
                     str = reader["id"].ToString();
                     int.TryParse(str, out id);
 
-                    utilisateur = new Utilisateur(id, nom, prenom, new Profil(id, libelle));
+                    utilisateur = new Utilisateur(id, nom, prenom, new Profil(id, libelle), dateCreation, dateDerniereModif);
                 }
             }
 
