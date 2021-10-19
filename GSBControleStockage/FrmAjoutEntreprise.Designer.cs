@@ -1,6 +1,6 @@
 ﻿namespace GSBControleStockage
 {
-    partial class FrmEntreprise
+    partial class FrmAjoutEntreprise
     {
         /// <summary>
         /// Required designer variable.

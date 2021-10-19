@@ -70,9 +70,8 @@ namespace ControleStockDAL
             Commande.GetInstance().FermerConnexion();
             return lesEntreprises;
 
+     
 
-
-        }
         public int AjoutEntreprise(Entreprise unEntreprise)
         {
             Commande.GetInstance().GetObjCommande();
@@ -98,7 +97,7 @@ namespace ControleStockDAL
             commande.Parameters[0].Value = unEntreprise.Email;
             commande.Parameters[0].Value = unEntreprise.DateCreation;
             commande.Parameters[0].Value = unEntreprise.DateDerniereModif;
-            commande.Parameters[0].Value = unEntreprise.Id;
+            commande.Parameters[0].Value = unEntreprise.Insee;
 
 
 

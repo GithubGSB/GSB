@@ -16,7 +16,7 @@ namespace ControleStockBO
         public string Nom { get => nom; set => nom = value; }
         public int CodePostal { get => codePostal; set => codePostal = value; }
 
-        public Ville(int insee, string nom, int codePostal)
+        public Ville(string insee, string nom)
         {
             this.insee = insee;
             this.nom = nom;
@@ -24,10 +24,7 @@ namespace ControleStockBO
         }
 
 
-        public Ville(int insee)
-        {
-            this.insee = insee;
-        }public Ville(int insee, string nom)
+        public Ville(string insee)
         {
             this.insee = insee;
             this.nom = nom;
