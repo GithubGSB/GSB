@@ -21,7 +21,7 @@ namespace GSBControleStockage
             Utilisateur util = UtilisateurManager.GetInstance().UtilisateurApp;
             if (util == null || util.Profil == null) this.Close();
             List<Fonctionnalite> lesFonc = util.Profil.LesFoncAutorises;
-            /*
+
             foreach(ToolStripMenuItem mnuItemParent in mnuGSBControleStock.Items)
             {
                 if (mnuItemParent.Name == "mnuItemUtilisateur")
@@ -38,37 +38,34 @@ namespace GSBControleStockage
                     }
                 }
             }
-            */
         }
 
 
         private void mnuitemAjoutUtilisateur_Click(object sender, EventArgs e)
         {
-            using(FormAjoutUtilisateur fau = new FormAjoutUtilisateur())
-            {
-                fau.ShowDialog();
-            }
+            FormAjoutUtilisateur fau = new FormAjoutUtilisateur();
+            fau.Show();
         }
 
-        private void ajoutDunControleToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuItemAjoutControle_Click(object sender, EventArgs e)
         {
             FormControleRealise fcr = new FormControleRealise();
             fcr.Show();
         }
 
-        private void ajoutDuneEntrepriseToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuItemAjoutEntreprise_Click(object sender, EventArgs e)
         {
             FrmEntreprise frmEntreprise = new FrmEntreprise();
             frmEntreprise.Show();
         }
 
-        private void ajoutDuneZoneStockageToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuItemAjoutZoneStock_Click(object sender, EventArgs e)
         {
             FormAjoutZoneStockage faz = new FormAjoutZoneStockage();
             faz.Show();
         }
 
-        private void déconnexionToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuItemDeconnexion_Click(object sender, EventArgs e)
         {
             this.Close();
         }
