@@ -37,8 +37,8 @@
             this.ajoutDunControleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemControleObliga = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemUtilisateur = new System.Windows.Forms.ToolStripMenuItem();
-            this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajoutDunUtilisateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGSBControleStock.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,7 +105,7 @@
             // ajoutDunControleToolStripMenuItem
             // 
             this.ajoutDunControleToolStripMenuItem.Name = "ajoutDunControleToolStripMenuItem";
-            this.ajoutDunControleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajoutDunControleToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.ajoutDunControleToolStripMenuItem.Text = "Ajout d\'un controle";
             this.ajoutDunControleToolStripMenuItem.Click += new System.EventHandler(this.ajoutDunControleToolStripMenuItem_Click);
             // 
@@ -122,8 +122,17 @@
             this.ajoutDunUtilisateurToolStripMenuItem});
             this.mnuItemUtilisateur.Name = "mnuItemUtilisateur";
             this.mnuItemUtilisateur.Size = new System.Drawing.Size(203, 19);
+            this.mnuItemUtilisateur.Tag = "GU";
             this.mnuItemUtilisateur.Text = "Gestion des utilisateurs";
             this.mnuItemUtilisateur.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ajoutDunUtilisateurToolStripMenuItem
+            // 
+            this.ajoutDunUtilisateurToolStripMenuItem.Name = "ajoutDunUtilisateurToolStripMenuItem";
+            this.ajoutDunUtilisateurToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.ajoutDunUtilisateurToolStripMenuItem.Tag = "GU";
+            this.ajoutDunUtilisateurToolStripMenuItem.Text = "Ajout d\'un utilisateur";
+            this.ajoutDunUtilisateurToolStripMenuItem.Click += new System.EventHandler(this.ajoutDunUtilisateurToolStripMenuItem_Click);
             // 
             // déconnexionToolStripMenuItem
             // 
@@ -132,13 +141,6 @@
             this.déconnexionToolStripMenuItem.Text = "Déconnexion";
             this.déconnexionToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.déconnexionToolStripMenuItem.Click += new System.EventHandler(this.déconnexionToolStripMenuItem_Click);
-            // 
-            // ajoutDunUtilisateurToolStripMenuItem
-            // 
-            this.ajoutDunUtilisateurToolStripMenuItem.Name = "ajoutDunUtilisateurToolStripMenuItem";
-            this.ajoutDunUtilisateurToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.ajoutDunUtilisateurToolStripMenuItem.Text = "Ajout d\'un utilisateur";
-            this.ajoutDunUtilisateurToolStripMenuItem.Click += new System.EventHandler(this.ajoutDunUtilisateurToolStripMenuItem_Click);
             // 
             // FormAccueil
             // 
