@@ -57,6 +57,63 @@ namespace ControleStockDAL
             Commande.GetInstance().FermerConnexion();
             return lesZonesStockages;
         }
+        public List<ZoneStockage> ConsultZonesStockages()
+        {
+            int id;
+            string nomZone;
+            string nomVille;
+            string adresse;
+            string batiment;
+            string etage;
+            string categProd;
+            
+
+
+            List<ZoneStockage> lesZonesStockages = new List<ZoneStockage>();
+
+            SqlCommand commande = Commande.GetInstance().GetObjCommande();
+            commande.CommandType = CommandType.StoredProcedure;
+            commande.CommandText = "spConsultZonesStockages";
+
+            SqlDataReader monLecteur = commande.ExecuteReader();
+            while (monLecteur.Read())
+            {
+                id = (int)monLecteur["zoneStockage.id"];
+                if (monLecteur["nomZone"] == DBNull.Value)
+                {
+                    nomZone = default(string);
+                }
+                if (monLecteur["nom"] == DBNull.Value)
+                {
+                    nomVille = default(string);
+                }
+                if (monLecteur["adresse"]== DBNull.Value)
+                {
+                    adresse = default(string);
+                }
+                if (monLecteur["batiment"] == DBNull.Value )
+                {
+                    batiment = default(string);
+                }
+                if (monLecteur["etage"] == DBNull.Value)
+                {
+                    etage = default(string);
+                }
+                if (monLecteur["categProd"] == DBNull.Value)
+                {
+                    categProd = default(string);
+                }
+                else
+                {
+                    categProd = monLecteur["categorieProduit.libelle"].ToString();
+                }
+                lesZonesStockages.Add(new ZoneStockage(id, nomZone, nomVille, adresse, batiment, etage, categProd));
+            }
+            monLecteur.Close();
+            Commande.GetInstance().FermerConnexion();
+            return lesZonesStockages;
+        }
+        
         private ZoneStockageDAO(){}
         /// <summary>
         /// Ajout d'une zone de stockage dans la BD via une procédure stockée. On ouvre l'accès au donnée avec l'objet Commande
