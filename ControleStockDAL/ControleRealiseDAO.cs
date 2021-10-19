@@ -55,5 +55,35 @@ namespace ControleStockDAL
             commande.Connection.Close();
             return nb;
         }
+
+        public List<ControleRealise> GetLesControlesRealises()
+        {
+            List<ControleRealise> lesControles = new List<ControleRealise>();
+            SqlCommand commande = Commande.GetInstance().GetObjCommande();
+            commande.Parameters.Clear();
+            commande.CommandType = System.Data.CommandType.StoredProcedure;
+            commande.CommandText = "spConsultLesControles";
+
+            SqlDataReader monLecteur = commande.ExecuteReader();
+             /**   
+            while(monLecteur.Read())
+            {
+                id = (int)monLecteur["id"];
+                if (monLecteur["libelle"] == DBNull.Value)
+                {
+                    libelle = default(string);
+                }
+                else
+                {
+                    libelle = monLecteur["libelle"].ToString();
+                }
+                typeControles.Add(new TypeControle(id, libelle));
+            }
+             **/
+            monLecteur.Close();
+            Commande.GetInstance().FermerConnexion();
+            return lesControles;
+
+        }
     }
 }
