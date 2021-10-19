@@ -70,6 +70,12 @@
     <Compile Include="FormConnexion.Designer.cs">
       <DependentUpon>FormConnexion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultUtilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultUtilisateur.Designer.cs">
+      <DependentUpon>FormConsultUtilisateur.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormControleRealise.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConnexion.resx">
       <DependentUpon>FormConnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultUtilisateur.resx">
+      <DependentUpon>FormConsultUtilisateur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormControleRealise.resx">
       <DependentUpon>FormControleRealise.cs</DependentUpon>
