@@ -38,6 +38,7 @@
             this.mnuItemControleObliga = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemUtilisateur = new System.Windows.Forms.ToolStripMenuItem();
             this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajoutDunUtilisateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGSBControleStock.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,6 +118,8 @@
             // 
             // mnuItemUtilisateur
             // 
+            this.mnuItemUtilisateur.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajoutDunUtilisateurToolStripMenuItem});
             this.mnuItemUtilisateur.Name = "mnuItemUtilisateur";
             this.mnuItemUtilisateur.Size = new System.Drawing.Size(203, 19);
             this.mnuItemUtilisateur.Text = "Gestion des utilisateurs";
@@ -128,6 +131,14 @@
             this.déconnexionToolStripMenuItem.Size = new System.Drawing.Size(203, 19);
             this.déconnexionToolStripMenuItem.Text = "Déconnexion";
             this.déconnexionToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.déconnexionToolStripMenuItem.Click += new System.EventHandler(this.déconnexionToolStripMenuItem_Click);
+            // 
+            // ajoutDunUtilisateurToolStripMenuItem
+            // 
+            this.ajoutDunUtilisateurToolStripMenuItem.Name = "ajoutDunUtilisateurToolStripMenuItem";
+            this.ajoutDunUtilisateurToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.ajoutDunUtilisateurToolStripMenuItem.Text = "Ajout d\'un utilisateur";
+            this.ajoutDunUtilisateurToolStripMenuItem.Click += new System.EventHandler(this.ajoutDunUtilisateurToolStripMenuItem_Click);
             // 
             // FormAccueil
             // 
@@ -158,5 +169,6 @@
         private System.Windows.Forms.ToolStripMenuItem ajoutDuneEntrepriseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajoutDunControleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem déconnexionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajoutDunUtilisateurToolStripMenuItem;
     }
 }
