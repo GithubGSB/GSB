@@ -41,6 +41,10 @@ namespace GSBControleStockage
             this.cbxVille = new System.Windows.Forms.ComboBox();
             this.lblCategProd = new System.Windows.Forms.Label();
             this.cbxCategProd = new System.Windows.Forms.ComboBox();
+            this.lblDateAjout = new System.Windows.Forms.Label();
+            this.dateAjoutDtp = new System.Windows.Forms.DateTimePicker();
+            this.lblDateDernModif = new System.Windows.Forms.Label();
+            this.dateDernModifDtp = new System.Windows.Forms.DateTimePicker();
             this.btnAjout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -142,6 +146,38 @@ namespace GSBControleStockage
             this.cbxCategProd.Size = new System.Drawing.Size(151, 21);
             this.cbxCategProd.TabIndex = 11;
             // 
+            // lblDateAjout
+            // 
+            this.lblDateAjout.AutoSize = true;
+            this.lblDateAjout.Location = new System.Drawing.Point(300, 57);
+            this.lblDateAjout.Name = "lblDateAjout";
+            this.lblDateAjout.Size = new System.Drawing.Size(70, 13);
+            this.lblDateAjout.TabIndex = 12;
+            this.lblDateAjout.Text = "Date d\'ajout :";
+            // 
+            // dateAjoutDtp
+            // 
+            this.dateAjoutDtp.Location = new System.Drawing.Point(427, 54);
+            this.dateAjoutDtp.Name = "dateAjoutDtp";
+            this.dateAjoutDtp.Size = new System.Drawing.Size(180, 20);
+            this.dateAjoutDtp.TabIndex = 13;
+            // 
+            // lblDateDernModif
+            // 
+            this.lblDateDernModif.AutoSize = true;
+            this.lblDateDernModif.Location = new System.Drawing.Point(300, 85);
+            this.lblDateDernModif.Name = "lblDateDernModif";
+            this.lblDateDernModif.Size = new System.Drawing.Size(115, 13);
+            this.lblDateDernModif.TabIndex = 14;
+            this.lblDateDernModif.Text = "Dernière modification : ";
+            // 
+            // dateDernModifDtp
+            // 
+            this.dateDernModifDtp.Location = new System.Drawing.Point(427, 82);
+            this.dateDernModifDtp.Name = "dateDernModifDtp";
+            this.dateDernModifDtp.Size = new System.Drawing.Size(180, 20);
+            this.dateDernModifDtp.TabIndex = 15;
+            // 
             // btnAjout
             // 
             this.btnAjout.Location = new System.Drawing.Point(235, 206);
@@ -158,6 +194,10 @@ namespace GSBControleStockage
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(618, 302);
             this.Controls.Add(this.btnAjout);
+            this.Controls.Add(this.dateDernModifDtp);
+            this.Controls.Add(this.lblDateDernModif);
+            this.Controls.Add(this.dateAjoutDtp);
+            this.Controls.Add(this.lblDateAjout);
             this.Controls.Add(this.cbxCategProd);
             this.Controls.Add(this.lblCategProd);
             this.Controls.Add(this.cbxVille);
@@ -191,6 +231,10 @@ namespace GSBControleStockage
         private System.Windows.Forms.ComboBox cbxVille;
         private System.Windows.Forms.Label lblCategProd;
         private System.Windows.Forms.ComboBox cbxCategProd;
+        private System.Windows.Forms.Label lblDateAjout;
+        private System.Windows.Forms.DateTimePicker dateAjoutDtp;
+        private System.Windows.Forms.Label lblDateDernModif;
+        private System.Windows.Forms.DateTimePicker dateDernModifDtp;
         private System.Windows.Forms.Button btnAjout;
     }
 }
