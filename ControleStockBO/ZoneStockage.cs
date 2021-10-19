@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ControleStockBO
 {
+    /// <summary>
+    /// BO de Zone de stockage
+    /// </summary>
     public class ZoneStockage
     {
         private int id;
