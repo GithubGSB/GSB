@@ -106,6 +106,7 @@
             // 
             this.ajoutDunControleToolStripMenuItem.Name = "ajoutDunControleToolStripMenuItem";
             this.ajoutDunControleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajoutDunControleToolStripMenuItem.Tag = "GC";
             this.ajoutDunControleToolStripMenuItem.Text = "Ajout d\'un controle";
             this.ajoutDunControleToolStripMenuItem.Click += new System.EventHandler(this.ajoutDunControleToolStripMenuItem_Click);
             // 
