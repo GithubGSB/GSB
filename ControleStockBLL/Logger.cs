@@ -19,7 +19,7 @@ namespace ControleStockBLL
         public static void LogErreur(string message)
         {
             MessageBox.Show(
-                "Une erreur c'est produite :\n" + message,
+                "Une erreur s'est produite :\n" + message,
                 "Erreur",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Error
@@ -34,7 +34,7 @@ namespace ControleStockBLL
         public static void LogErreur(this Exception ex, string message = null)
         {
             MessageBox.Show(
-                "Une erreur c'est produite :\n" + message + "\nInformation sur l'exception :\n" + ex.Message,
+                "Une erreur s'est produite :\n" + message + "\nInformation sur l'exception :\n" + ex.Message,
                 "Erreur",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Error

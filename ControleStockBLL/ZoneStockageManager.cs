@@ -37,9 +37,6 @@ namespace ControleStockBLL
         {
             return ZoneStockageDAO.GetInstance().GetLesZonesStockages();
         }
-        public int AjoutZoneStockage(string sonNomZone, string sonBatiment, string sonEtage,
-        DateTime saDateCreation, DateTime saDateDernModif, string sonAdresse, int sonIdCategProd,
-            int sonIdVille)
         public int AjoutZoneStockage(string sonNomZone, string sonBatiment, string sonEtage, 
         DateTime saDateCreation, DateTime saDateDernModif,string sonAdresse, int sonIdCategProd,
             int sonIdVille)

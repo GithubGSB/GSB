@@ -50,11 +50,6 @@ namespace GSBControleStockage
             }
         }
 
-        private void déconnexionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void ajoutDunControleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormControleRealise fcr = new FormControleRealise();
@@ -69,7 +64,13 @@ namespace GSBControleStockage
 
         private void ajoutDuneZoneStockageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            FormAjoutZoneStockage faz = new FormAjoutZoneStockage();
+            faz.Show();
+        }
+
+        private void déconnexionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
