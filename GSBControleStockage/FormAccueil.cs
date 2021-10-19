@@ -22,7 +22,6 @@ namespace GSBControleStockage
             Utilisateur util = UtilisateurManager.GetInstance().UtilisateurApp;
             if (util == null || util.Profil == null) this.Close();
             List<Fonctionnalite> lesFonc = util.Profil.LesFoncAutorises;
-
             foreach (ToolStripMenuItem mnuItemParent in mnuGSBControleStock.Items)
             {
                 if (mnuItemParent.Name == "mnuItemUtilisateur")

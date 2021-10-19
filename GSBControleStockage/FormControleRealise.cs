@@ -13,9 +13,12 @@ namespace GSBControleStockage
 {
     public partial class FormControleRealise : Form
     {
+        public static DateTime derniereModif = default(DateTime);
+         
         public FormControleRealise()
         {
             InitializeComponent();
+            Logger.LogInformation(derniereModif.ToString());
             cbxTypeControle.DisplayMember = "libelle";
             cbxTypeControle.ValueMember = "id";
 
@@ -42,9 +45,14 @@ namespace GSBControleStockage
                 string valeurHT = txtPrixHT.Text;
                 float montantHT;
                 DateTime dateControle = dtControle.Value;
-                DateTime dateCreation = dtCreation.Value;
-                DateTime derniereModif = dtDerniereModif.Value;
+                DateTime dateCreation = DateTime.Now;
+                
 
+                if (dateControle > dateCreation)
+                {
+                    Logger.LogErreur("Attention la date de contrôle ne peut pas être supérieure à la date du jour"); 
+                    return;
+                }
                 float.TryParse(valeurHT, out montantHT);
                 if (string.IsNullOrWhiteSpace(resume) || string.IsNullOrWhiteSpace(valeurHT)) Logger.LogErreur("Vous devez remplir tous les champs.");
                 else
