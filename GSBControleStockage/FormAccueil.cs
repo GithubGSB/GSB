@@ -75,11 +75,10 @@ namespace GSBControleStockage
         {
             this.Close();
         }
-
-        private void consultationDuneZoneDeStockageToolStripMenuItem_Click(object sender, EventArgs e)
+        private void consultationDesZonesDeStockagesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormConsultZonesStockages frmConsultZoneStockage = new FormConsultZonesStockages();
-            frmConsultZoneStockage.Show();
+            FormConsultZonesStockages fczs = new FormConsultZonesStockages();
+            fczs.Show();
         }
     }
 }

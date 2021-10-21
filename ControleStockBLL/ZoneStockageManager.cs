@@ -49,6 +49,10 @@ namespace ControleStockBLL
             laZoneStockage = new ZoneStockage(sonNomZone, sonBatiment, sonEtage, saDateCreation, saDateDernModif, sonAdresse, laCategProd, laVille);
             return ZoneStockageDAO.GetInstance().AjoutZoneStockage(laZoneStockage);
         }
+        public List<ZoneStockage> ConsultZonesStockages()
+        {
+            return ZoneStockageDAO.GetInstance().ConsultZonesStockages();
+        }
 
     }
 }

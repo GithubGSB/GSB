@@ -39,7 +39,7 @@
             this.mnuItemUtilisateur = new System.Windows.Forms.ToolStripMenuItem();
             this.ajoutDunUtilisateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultationDuneZoneDeStockageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultationDesZonesDeStockagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGSBControleStock.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +65,7 @@
             // 
             this.mnuItemZoneStock.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajoutDuneZoneStockageToolStripMenuItem,
-            this.consultationDuneZoneDeStockageToolStripMenuItem});
+            this.consultationDesZonesDeStockagesToolStripMenuItem});
             this.mnuItemZoneStock.Name = "mnuItemZoneStock";
             this.mnuItemZoneStock.Size = new System.Drawing.Size(203, 19);
             this.mnuItemZoneStock.Tag = "GZ";
@@ -75,7 +75,7 @@
             // ajoutDuneZoneStockageToolStripMenuItem
             // 
             this.ajoutDuneZoneStockageToolStripMenuItem.Name = "ajoutDuneZoneStockageToolStripMenuItem";
-            this.ajoutDuneZoneStockageToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
+            this.ajoutDuneZoneStockageToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
             this.ajoutDuneZoneStockageToolStripMenuItem.Tag = "GZ";
             this.ajoutDuneZoneStockageToolStripMenuItem.Text = "Ajout d\'une Zone de Stockage";
             this.ajoutDuneZoneStockageToolStripMenuItem.Click += new System.EventHandler(this.ajoutDuneZoneStockageToolStripMenuItem_Click);
@@ -111,7 +111,7 @@
             // ajoutDunControleToolStripMenuItem
             // 
             this.ajoutDunControleToolStripMenuItem.Name = "ajoutDunControleToolStripMenuItem";
-            this.ajoutDunControleToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.ajoutDunControleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ajoutDunControleToolStripMenuItem.Tag = "GC";
             this.ajoutDunControleToolStripMenuItem.Text = "Ajout d\'un controle";
             this.ajoutDunControleToolStripMenuItem.Click += new System.EventHandler(this.ajoutDunControleToolStripMenuItem_Click);
@@ -148,12 +148,13 @@
             this.déconnexionToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.déconnexionToolStripMenuItem.Click += new System.EventHandler(this.déconnexionToolStripMenuItem_Click);
             // 
-            // consultationDuneZoneDeStockageToolStripMenuItem
+            // consultationDesZonesDeStockagesToolStripMenuItem
             // 
-            this.consultationDuneZoneDeStockageToolStripMenuItem.Name = "consultationDuneZoneDeStockageToolStripMenuItem";
-            this.consultationDuneZoneDeStockageToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
-            this.consultationDuneZoneDeStockageToolStripMenuItem.Text = "Consultation d\'une Zone de Stockage";
-            this.consultationDuneZoneDeStockageToolStripMenuItem.Click += new System.EventHandler(this.consultationDuneZoneDeStockageToolStripMenuItem_Click);
+            this.consultationDesZonesDeStockagesToolStripMenuItem.Name = "consultationDesZonesDeStockagesToolStripMenuItem";
+            this.consultationDesZonesDeStockagesToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
+            this.consultationDesZonesDeStockagesToolStripMenuItem.Tag = "GZ";
+            this.consultationDesZonesDeStockagesToolStripMenuItem.Text = "Consultation des zones de stockages";
+            this.consultationDesZonesDeStockagesToolStripMenuItem.Click += new System.EventHandler(this.consultationDesZonesDeStockagesToolStripMenuItem_Click);
             // 
             // FormAccueil
             // 
@@ -185,6 +186,6 @@
         private System.Windows.Forms.ToolStripMenuItem ajoutDunControleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem déconnexionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajoutDunUtilisateurToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultationDuneZoneDeStockageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultationDesZonesDeStockagesToolStripMenuItem;
     }
 }
