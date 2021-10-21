@@ -58,6 +58,19 @@ namespace ControleStockDAL
 
         public List<ControleRealise> GetLesControlesRealises()
         {
+            int id;
+            DateTime dateControle;
+            string resume;
+            float montantHT;
+            DateTime dateCreation;
+            DateTime dateDerniereModif;
+            int idEntreprise;
+            int idZoneStockage;
+            int idTypeControle;
+
+            string libelleTypeControle;
+            string nomZone;
+            string nomEntreprise;
             List<ControleRealise> lesControles = new List<ControleRealise>();
             SqlCommand commande = Commande.GetInstance().GetObjCommande();
             commande.Parameters.Clear();
@@ -65,21 +78,85 @@ namespace ControleStockDAL
             commande.CommandText = "spConsultLesControles";
 
             SqlDataReader monLecteur = commande.ExecuteReader();
-             /**   
+
             while(monLecteur.Read())
             {
                 id = (int)monLecteur["id"];
-                if (monLecteur["libelle"] == DBNull.Value)
+                idEntreprise = (int)monLecteur["idEntreprise"];
+                idZoneStockage = (int)monLecteur["idZoneStockage"];
+                idTypeControle = (int)monLecteur["idTypeControle"];
+                
+                if(monLecteur["dateControle"] == DBNull.Value)
                 {
-                    libelle = default(string);
+                    dateControle = default(DateTime);
                 }
                 else
                 {
-                    libelle = monLecteur["libelle"].ToString();
+                    dateControle = (DateTime)monLecteur["dateControle"];
                 }
-                typeControles.Add(new TypeControle(id, libelle));
+                if (monLecteur["resume"] == DBNull.Value)
+                {
+                    resume = default(string);
+                }
+                else
+                {
+                    resume = monLecteur["resume"].ToString();
+                }
+                if (monLecteur["montantHT"] == DBNull.Value)
+                {
+                    montantHT = default(float);
+                }
+                else
+                {
+                    montantHT = float.Parse(monLecteur["montantHT"].ToString());
+                }
+                if (monLecteur["dateCreation"] == DBNull.Value)
+                {
+                    dateCreation = default(DateTime);
+                }
+                else
+                {
+                    dateCreation = (DateTime)monLecteur["dateControle"];
+                }
+                if (monLecteur["dateDerniereModif"] == DBNull.Value)
+                {
+                    dateDerniereModif = default(DateTime);
+                }
+                else
+                {
+                    dateDerniereModif = (DateTime)monLecteur["dateControle"];
+                }
+                if(monLecteur["libelle"] == DBNull.Value)
+                {
+                    libelleTypeControle = default(string);
+                }
+                else
+                {
+                    libelleTypeControle = monLecteur["libelle"].ToString();
+                }
+                if (monLecteur["nom"] == DBNull.Value)
+                {
+                    nomEntreprise = default(string);
+                }
+                else
+                {
+                    nomEntreprise = monLecteur["nom"].ToString();
+
+                }
+                if (monLecteur["nomZone"] == DBNull.Value)
+                {
+                    nomZone = default(string);
+                }
+                else
+                {
+                    nomZone = monLecteur["nomZone"].ToString();
+                }
+                
+                lesControles.Add(new ControleRealise(id, dateControle, dateCreation, dateDerniereModif, resume, montantHT, 
+                    new TypeControle(idTypeControle, libelleTypeControle), 
+                    new Entreprise(idEntreprise, nomEntreprise), 
+                    new ZoneStockage(idZoneStockage, nomZone)));
             }
-             **/
             monLecteur.Close();
             Commande.GetInstance().FermerConnexion();
             return lesControles;

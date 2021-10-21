@@ -41,5 +41,10 @@ namespace ControleStockBLL
 
             return ControleRealiseDAO.GetInstance().AjoutControle(new ControleRealise(dateControle, dateCreation, dateDerniereModif, resume, montantHT, unTypeControle, uneEntreprise, uneZoneStockage));
         }
+
+        public List<ControleRealise> GetLesControlesRealises()
+        {
+            return ControleRealiseDAO.GetInstance().GetLesControlesRealises();
+        }
     }
 }

@@ -35,6 +35,7 @@
             this.ajoutDuneEntrepriseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemControleRealise = new System.Windows.Forms.ToolStripMenuItem();
             this.ajoutDunControleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultationDesControlesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemControleObliga = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemUtilisateur = new System.Windows.Forms.ToolStripMenuItem();
             this.ajoutDunUtilisateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -110,10 +111,18 @@
             // ajoutDunControleToolStripMenuItem
             // 
             this.ajoutDunControleToolStripMenuItem.Name = "ajoutDunControleToolStripMenuItem";
-            this.ajoutDunControleToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.ajoutDunControleToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.ajoutDunControleToolStripMenuItem.Tag = "GC";
             this.ajoutDunControleToolStripMenuItem.Text = "Ajout d\'un controle";
             this.ajoutDunControleToolStripMenuItem.Click += new System.EventHandler(this.ajoutDunControleToolStripMenuItem_Click);
+            // 
+            // consultationDesControlesToolStripMenuItem
+            // 
+            this.consultationDesControlesToolStripMenuItem.Name = "consultationDesControlesToolStripMenuItem";
+            this.consultationDesControlesToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.consultationDesControlesToolStripMenuItem.Tag = "GC";
+            this.consultationDesControlesToolStripMenuItem.Text = "Consultation des controles";
+            this.consultationDesControlesToolStripMenuItem.Click += new System.EventHandler(this.consultationDesControlesToolStripMenuItem_Click);
             // 
             // mnuItemControleObliga
             // 
@@ -148,13 +157,6 @@
             this.déconnexionToolStripMenuItem.Text = "Déconnexion";
             this.déconnexionToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.déconnexionToolStripMenuItem.Click += new System.EventHandler(this.déconnexionToolStripMenuItem_Click);
-            // 
-            // ajoutDunUtilisateurToolStripMenuItem
-            // 
-            this.ajoutDunUtilisateurToolStripMenuItem.Name = "ajoutDunUtilisateurToolStripMenuItem";
-            this.ajoutDunUtilisateurToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.ajoutDunUtilisateurToolStripMenuItem.Text = "Ajout d\'un utilisateur";
-            this.ajoutDunUtilisateurToolStripMenuItem.Click += new System.EventHandler(this.ajoutDunUtilisateurToolStripMenuItem_Click);
             // 
             // FormAccueil
             // 

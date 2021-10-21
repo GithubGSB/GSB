@@ -1,4 +1,5 @@
 ﻿using ControleStockBLL;
+using ControleStockBO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace GSBControleStockage
          
         public FormControleRealise()
         {
+            
             InitializeComponent();
             Logger.LogInformation(derniereModif.ToString());
             cbxTypeControle.DisplayMember = "libelle";

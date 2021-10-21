@@ -64,5 +64,11 @@ namespace ControleStockBO
         public TypeControle UnTypeControle { get => unTypeControle; set => unTypeControle = value; }
         public Entreprise UneEntreprise { get => uneEntreprise; set => uneEntreprise = value; }
         public ZoneStockage UneZoneStockage { get => uneZoneStockage; set => uneZoneStockage = value; }
+
+        public string LibelleTypeControle { get => unTypeControle.Libelle; set => unTypeControle.Libelle = value; }
+        public string NomEntreprise { get => uneEntreprise.Nom; set => uneEntreprise.Nom = value; }
+        public string NomeZoneStockage { get => uneZoneStockage.NomZone; set => uneZoneStockage.NomZone = value; }
+
+        
     }
 }

@@ -77,7 +77,8 @@ namespace GSBControleStockage
 
         private void consultationDesControlesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormConsultControleRealise fccr = new FormConsultControleRealise();
+            fccr.Show();
         }
     }
 }
