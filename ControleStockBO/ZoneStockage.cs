@@ -30,6 +30,8 @@ namespace ControleStockBO
         public DateTime DateDernModif { get => dateDernModif; set => dateDernModif = value; }
         public Ville UneVille { get => uneVille; set => uneVille = value; }
         public CategProd UneCategProd { get => uneCategProd; set => uneCategProd = value; }
+        public string NomVille { get => uneVille.Nom; set => uneVille.Nom = value; }
+        public string LibelleCategProd { get => uneCategProd.Libelle; set => uneCategProd.Libelle = value; }
 
         public ZoneStockage(int id, string nomZone, string batiment, string etage, string adresse, DateTime dateCreation, DateTime dateDernModif, Ville uneVille, CategProd uneCategProd)
         {
@@ -40,6 +42,17 @@ namespace ControleStockBO
             this.adresse = adresse;
             this.dateCreation = dateCreation;
             this.dateDernModif = dateDernModif;
+            this.uneVille = uneVille;
+            this.uneCategProd = uneCategProd;
+        }
+        public ZoneStockage(int id, string nomZone, Ville uneVille, string adresse, string batiment, string etage, CategProd uneCategProd)
+        {
+            this.id = id;
+            this.nomZone = nomZone;
+            this.batiment = batiment;
+            this.etage = etage;
+            this.adresse = adresse;
+            
             this.uneVille = uneVille;
             this.uneCategProd = uneCategProd;
         }

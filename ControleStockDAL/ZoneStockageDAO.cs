@@ -57,6 +57,107 @@ namespace ControleStockDAL
             Commande.GetInstance().FermerConnexion();
             return lesZonesStockages;
         }
+        public List<ZoneStockage> ConsultZonesStockages()
+        {
+            int id;
+            int idCategProd;
+            int idVille;
+            
+            string nomCateg;
+            string nomZone;
+            string adresse;
+            string batiment;
+            string etage;
+
+            string libelle;
+            string nomVille;
+
+
+
+            List<ZoneStockage> lesZonesStockages = new List<ZoneStockage>();
+
+            SqlCommand commande = Commande.GetInstance().GetObjCommande();
+            commande.CommandType = CommandType.StoredProcedure;
+            commande.CommandText = "spConsultZonesStockages";
+
+            SqlDataReader monLecteur = commande.ExecuteReader();
+            while (monLecteur.Read())
+            {
+                id = (int)monLecteur["id"];
+                idCategProd = (int)monLecteur["idCategProduit"];
+                idVille = (int)monLecteur["insee"];
+
+
+
+                if (monLecteur["nomZone"] == DBNull.Value)
+                {
+                    nomZone = default(string);
+                }
+                else
+                {
+                    nomZone = monLecteur["nomZone"].ToString();
+                }
+                if (monLecteur["adresse"]== DBNull.Value)
+                {
+                    adresse = default(string);
+                }
+                
+                else
+                {
+                    adresse = monLecteur["adresse"].ToString();
+                }
+                
+                if (monLecteur["nom"]==DBNull.Value)
+                {
+                    nomVille = default(string);
+                }
+                else
+                {
+                    nomVille = monLecteur["nom"].ToString();
+                }               
+                if (monLecteur["libelle"]==DBNull.Value)
+                {
+                    libelle = default(string);
+                }
+                else
+                {
+                    libelle = monLecteur["libelle"].ToString();
+                }
+                
+                if (monLecteur["batiment"] == DBNull.Value)
+                {
+                    batiment = default(string);
+                }
+                else
+                {
+                    batiment = monLecteur["batiment"].ToString();
+                }
+                if (monLecteur["etage"] == DBNull.Value)
+                {
+                    etage = default(string);
+                }
+                else
+                {
+                    etage = monLecteur["etage"].ToString();
+                }
+                if (monLecteur["nom"] == DBNull.Value)
+                {
+                    nomCateg = default(string);
+                }
+                else
+                {
+                    nomCateg = monLecteur["nom"].ToString();
+                }
+                
+
+                CategProd laCateg = new CategProd(idCategProd, libelle);
+                Ville laVille = new Ville(idVille, nomVille);
+                lesZonesStockages.Add(new ZoneStockage(id, nomZone, laVille, adresse, batiment, etage, laCateg));
+            }
+            monLecteur.Close();
+            Commande.GetInstance().FermerConnexion();
+            return lesZonesStockages;
+        }
         private ZoneStockageDAO(){}
         /// <summary>
         /// Ajout d'une zone de stockage dans la BD via une procédure stockée. On ouvre l'accès au donnée avec l'objet Commande
