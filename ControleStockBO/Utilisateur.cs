@@ -75,5 +75,6 @@ namespace ControleStockBO
         public DateTime DateCreation { get => dateCreation; set => dateCreation = value; }
         public DateTime DateDerniereModif { get => dateDerniereModif; set => dateDerniereModif = value; }
         public string LibelleProfil { get => profil.Libelle; }
+        public string NomPrenom { get => nom + " " + prenom; }
     }
 }

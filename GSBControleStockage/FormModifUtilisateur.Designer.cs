@@ -37,10 +37,10 @@ namespace GSBControleStockage
             this.txtNom = new System.Windows.Forms.TextBox();
             this.lblPrenom = new System.Windows.Forms.Label();
             this.lblProfil = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlModif = new System.Windows.Forms.Panel();
             this.lblSelectionUtilisateur = new System.Windows.Forms.Label();
-            this.cbcUtilisateur = new System.Windows.Forms.ComboBox();
-            this.panel1.SuspendLayout();
+            this.cbxUtilisateur = new System.Windows.Forms.ComboBox();
+            this.pnlModif.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAnnuler
@@ -120,20 +120,20 @@ namespace GSBControleStockage
             this.lblProfil.Text = "Profil :";
             this.lblProfil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // panel1
+            // pnlModif
             // 
-            this.panel1.Controls.Add(this.lblNom);
-            this.panel1.Controls.Add(this.lblPrenom);
-            this.panel1.Controls.Add(this.txtNom);
-            this.panel1.Controls.Add(this.txtPrenom);
-            this.panel1.Controls.Add(this.cbxProfil);
-            this.panel1.Controls.Add(this.btnAnnuler);
-            this.panel1.Controls.Add(this.lblProfil);
-            this.panel1.Controls.Add(this.btnModifier);
-            this.panel1.Location = new System.Drawing.Point(12, 38);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(549, 124);
-            this.panel1.TabIndex = 24;
+            this.pnlModif.Controls.Add(this.lblNom);
+            this.pnlModif.Controls.Add(this.lblPrenom);
+            this.pnlModif.Controls.Add(this.txtNom);
+            this.pnlModif.Controls.Add(this.txtPrenom);
+            this.pnlModif.Controls.Add(this.cbxProfil);
+            this.pnlModif.Controls.Add(this.btnAnnuler);
+            this.pnlModif.Controls.Add(this.lblProfil);
+            this.pnlModif.Controls.Add(this.btnModifier);
+            this.pnlModif.Location = new System.Drawing.Point(12, 38);
+            this.pnlModif.Name = "pnlModif";
+            this.pnlModif.Size = new System.Drawing.Size(549, 124);
+            this.pnlModif.TabIndex = 24;
             // 
             // lblSelectionUtilisateur
             // 
@@ -145,28 +145,28 @@ namespace GSBControleStockage
             this.lblSelectionUtilisateur.Text = "Utilisateur a modifier :";
             this.lblSelectionUtilisateur.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // cbcUtilisateur
+            // cbxUtilisateur
             // 
-            this.cbcUtilisateur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbcUtilisateur.FormattingEnabled = true;
-            this.cbcUtilisateur.Location = new System.Drawing.Point(163, 6);
-            this.cbcUtilisateur.Name = "cbcUtilisateur";
-            this.cbcUtilisateur.Size = new System.Drawing.Size(398, 24);
-            this.cbcUtilisateur.TabIndex = 24;
-            this.cbcUtilisateur.SelectionChangeCommitted += new System.EventHandler(this.cbcUtilisateur_SelectionChangeCommitted);
+            this.cbxUtilisateur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxUtilisateur.FormattingEnabled = true;
+            this.cbxUtilisateur.Location = new System.Drawing.Point(163, 6);
+            this.cbxUtilisateur.Name = "cbxUtilisateur";
+            this.cbxUtilisateur.Size = new System.Drawing.Size(398, 24);
+            this.cbxUtilisateur.TabIndex = 24;
+            this.cbxUtilisateur.SelectionChangeCommitted += new System.EventHandler(this.cbcUtilisateur_SelectionChangeCommitted);
             // 
             // FormModifUtilisateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(573, 174);
-            this.Controls.Add(this.cbcUtilisateur);
+            this.Controls.Add(this.cbxUtilisateur);
             this.Controls.Add(this.lblSelectionUtilisateur);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlModif);
             this.Name = "FormModifUtilisateur";
             this.Text = "Modification d\'un utilisateur";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlModif.ResumeLayout(false);
+            this.pnlModif.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,8 +182,8 @@ namespace GSBControleStockage
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Label lblPrenom;
         private System.Windows.Forms.Label lblProfil;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlModif;
         private System.Windows.Forms.Label lblSelectionUtilisateur;
-        private System.Windows.Forms.ComboBox cbcUtilisateur;
+        private System.Windows.Forms.ComboBox cbxUtilisateur;
     }
 }
