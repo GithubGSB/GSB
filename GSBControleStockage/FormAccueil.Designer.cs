@@ -57,7 +57,7 @@
             this.mnuGSBControleStock.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.mnuGSBControleStock.Location = new System.Drawing.Point(0, 0);
             this.mnuGSBControleStock.Name = "mnuGSBControleStock";
-            this.mnuGSBControleStock.Size = new System.Drawing.Size(273, 450);
+            this.mnuGSBControleStock.Size = new System.Drawing.Size(271, 450);
             this.mnuGSBControleStock.TabIndex = 0;
             this.mnuGSBControleStock.Text = "menuStrip1";
             // 
@@ -66,7 +66,7 @@
             this.mnuItemZoneStock.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajoutDuneZoneStockageToolStripMenuItem});
             this.mnuItemZoneStock.Name = "mnuItemZoneStock";
-            this.mnuItemZoneStock.Size = new System.Drawing.Size(256, 24);
+            this.mnuItemZoneStock.Size = new System.Drawing.Size(258, 24);
             this.mnuItemZoneStock.Tag = "GZ";
             this.mnuItemZoneStock.Text = "Gestion zones de stockages";
             this.mnuItemZoneStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -84,7 +84,7 @@
             this.mnuItemEntreprise.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajoutDuneEntrepriseToolStripMenuItem});
             this.mnuItemEntreprise.Name = "mnuItemEntreprise";
-            this.mnuItemEntreprise.Size = new System.Drawing.Size(256, 24);
+            this.mnuItemEntreprise.Size = new System.Drawing.Size(258, 24);
             this.mnuItemEntreprise.Tag = "GE";
             this.mnuItemEntreprise.Text = "Gestion des entreprises";
             this.mnuItemEntreprise.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -102,7 +102,7 @@
             this.mnuItemControleRealise.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajoutDunControleToolStripMenuItem});
             this.mnuItemControleRealise.Name = "mnuItemControleRealise";
-            this.mnuItemControleRealise.Size = new System.Drawing.Size(256, 24);
+            this.mnuItemControleRealise.Size = new System.Drawing.Size(258, 24);
             this.mnuItemControleRealise.Tag = "GC";
             this.mnuItemControleRealise.Text = "Gestion des contrôles réalisés";
             this.mnuItemControleRealise.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -118,7 +118,7 @@
             // mnuItemControleObliga
             // 
             this.mnuItemControleObliga.Name = "mnuItemControleObliga";
-            this.mnuItemControleObliga.Size = new System.Drawing.Size(256, 24);
+            this.mnuItemControleObliga.Size = new System.Drawing.Size(258, 24);
             this.mnuItemControleObliga.Tag = "GO";
             this.mnuItemControleObliga.Text = "Gestion des obligations de contrôles";
             this.mnuItemControleObliga.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -129,7 +129,8 @@
             this.ajoutDunUtilisateurToolStripMenuItem,
             this.consultationDesUtilisateursToolStripMenuItem});
             this.mnuItemUtilisateur.Name = "mnuItemUtilisateur";
-            this.mnuItemUtilisateur.Size = new System.Drawing.Size(256, 24);
+            this.mnuItemUtilisateur.Size = new System.Drawing.Size(258, 24);
+            this.mnuItemUtilisateur.Tag = "GU";
             this.mnuItemUtilisateur.Text = "Gestion des utilisateurs";
             this.mnuItemUtilisateur.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -150,7 +151,7 @@
             // déconnexionToolStripMenuItem
             // 
             this.déconnexionToolStripMenuItem.Name = "déconnexionToolStripMenuItem";
-            this.déconnexionToolStripMenuItem.Size = new System.Drawing.Size(256, 24);
+            this.déconnexionToolStripMenuItem.Size = new System.Drawing.Size(258, 24);
             this.déconnexionToolStripMenuItem.Text = "Déconnexion";
             this.déconnexionToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.déconnexionToolStripMenuItem.Click += new System.EventHandler(this.déconnexionToolStripMenuItem_Click);
