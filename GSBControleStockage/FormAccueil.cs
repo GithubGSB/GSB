@@ -80,5 +80,11 @@ namespace GSBControleStockage
             FormConsultUtilisateur fcu = new FormConsultUtilisateur();
             fcu.Show();
         }
+
+        private void modificationDunUtilisateurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormModifUtilisateur fmu = new FormModifUtilisateur();
+            fmu.Show();
+        }
     }
 }

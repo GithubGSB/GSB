@@ -82,6 +82,12 @@
     <Compile Include="FormControleRealise.Designer.cs">
       <DependentUpon>FormControleRealise.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModifUtilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifUtilisateur.Designer.cs">
+      <DependentUpon>FormModifUtilisateur.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAjoutEntreprise.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormControleRealise.resx">
       <DependentUpon>FormControleRealise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModifUtilisateur.resx">
+      <DependentUpon>FormModifUtilisateur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAjoutEntreprise.resx">
       <DependentUpon>FrmAjoutEntreprise.cs</DependentUpon>
