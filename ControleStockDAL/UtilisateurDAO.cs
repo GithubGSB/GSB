@@ -244,5 +244,35 @@ namespace ControleStockDAL
             return lesUtilisateurs;
             
         }
+
+        /// <summary>
+        /// Permet de modifier un utilisateur dans la base de données
+        /// </summary>
+        /// <param name="utilisateur">utilisateur modifier</param>
+        /// <exception cref="InvalidCastException"></exception>
+        /// <exception cref="SqlException"></exception>
+        /// <exception cref="InvalidOperationException"></exception>
+        /// <exception cref="System.IO.IOException"></exception>
+        /// <exception cref="ObjectDisposedException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        public void ModifierUtilisateur(Utilisateur utilisateur)
+        {
+            //récupération commande
+            SqlCommand cmd = Commande.GetInstance().GetObjCommande();
+            cmd.CommandText = "spModifUtilisateur";
+
+            //ajout des paramètres
+            cmd.Parameters.Add("id", System.Data.SqlDbType.VarChar).Value = utilisateur.Id;
+            cmd.Parameters.Add("nom", System.Data.SqlDbType.VarChar).Value = utilisateur.Nom;
+            cmd.Parameters.Add("prenom", System.Data.SqlDbType.VarChar).Value = utilisateur.Prenom;
+            cmd.Parameters.Add("idProfil", System.Data.SqlDbType.Int).Value = utilisateur.Profil.Id;
+            cmd.Parameters.Add("dateDerniereModif", System.Data.SqlDbType.Date).Value = DateTime.Now;
+
+            //récupération des profils
+            cmd.ExecuteNonQuery();
+
+            //fermeture de la commande
+            Commande.GetInstance().FermerConnexion();
+        }
     }
 }
