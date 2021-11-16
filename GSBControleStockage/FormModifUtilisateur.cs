@@ -16,5 +16,20 @@ namespace GSBControleStockage
         {
             InitializeComponent();
         }
+
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cbcUtilisateur_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+
+        }
     }
 }
