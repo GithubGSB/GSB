@@ -105,6 +105,39 @@ namespace ControleStockBLL
         }
 
         /// <summary>
+        /// Permet la modification d'un utilisateur dans la base de données
+        /// </summary>
+        /// <param name="nom">Nom de l'utilisateur</param>
+        /// <param name="prenom">Prénom de l'utilisateur</param>
+        /// <param name="profil">Profil de l'utilisateur</param>
+        /// <param name="utilisateur">utilisateur à modifier</param>
+        /// <returns>true si réussite, sinon false</returns>
+        public bool ModifUtilisateur(Utilisateur utilisateur, string nom, string prenom, Profil profil)
+        {
+            //creation utilisateur
+            utilisateur.Nom = nom;
+            utilisateur.Prenom = prenom;
+            utilisateur.Profil = profil;
+
+            //vérification données et ajout
+            if (VerifDonneesUtilisateurs(utilisateur))
+            {
+                 try
+                    {
+                        UtilisateurDAO.GetInstance().ModifierUtilisateur(utilisateur);
+                        Logger.LogInformation("Utilisateur modifier.");
+                        return true;
+                    }
+                    catch (Exception ex)
+                    {
+                        ex.LogErreur("Impossible de modifier l'utilisateur dans la base de données.");
+                    }
+            }
+            return false;
+        }
+
+
+        /// <summary>
         /// Permet de vérifié si les données d'un utilisateur sont correctes, et d'affiché les problèmes
         /// </summary>
         /// <param name="utilisateur">Utilisateur à vérifié</param>
