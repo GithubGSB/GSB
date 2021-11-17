@@ -72,8 +72,6 @@ namespace ControleStockDAL
             string libelle;
             string nomVille;
 
-
-
             List<ZoneStockage> lesZonesStockages = new List<ZoneStockage>();
 
             SqlCommand commande = Commande.GetInstance().GetObjCommande();
@@ -86,8 +84,6 @@ namespace ControleStockDAL
                 id = (int)monLecteur["id"];
                 idCategProd = (int)monLecteur["idCategProduit"];
                 idVille = (int)monLecteur["insee"];
-
-
 
                 if (monLecteur["nomZone"] == DBNull.Value)
                 {
@@ -203,6 +199,123 @@ namespace ControleStockDAL
             //fermeture de l'accès à la BD
             commande.Connection.Close();
             return nb;
+        }
+        public int ModifZoneStockage(ZoneStockage uneZoneStockage)
+        {
+            SqlCommand commande = Commande.GetInstance().GetObjCommande();
+            commande.Parameters.Clear();
+            // Indique l'appel de la procédure stockée
+            commande.CommandType = CommandType.StoredProcedure;
+            // Appel de la procédure
+            commande.CommandText = "spModifZoneStockage";
+
+            commande.Parameters.Add("nomZone", System.Data.SqlDbType.VarChar);
+            commande.Parameters["nomZone"].Value = uneZoneStockage.NomZone;
+
+            commande.Parameters.Add("batiment", System.Data.SqlDbType.VarChar);
+            commande.Parameters["batiment"].Value = uneZoneStockage.Batiment;
+
+            commande.Parameters.Add("etage", System.Data.SqlDbType.VarChar);
+            commande.Parameters["etage"].Value = uneZoneStockage.Etage;
+
+            commande.Parameters.Add("dateDerniereModif", System.Data.SqlDbType.DateTime);
+            commande.Parameters["dateDerniereModif"].Value = uneZoneStockage.DateDernModif;
+
+            commande.Parameters.Add("adresse", System.Data.SqlDbType.VarChar);
+            commande.Parameters["adresse"].Value = uneZoneStockage.Adresse;
+
+            commande.Parameters.Add("insee", System.Data.SqlDbType.Int);
+            commande.Parameters["insee"].Value = uneZoneStockage.UneVille.Insee;
+
+            commande.Parameters.Add("idCategProduit", System.Data.SqlDbType.Int);
+            commande.Parameters["idCategProduit"].Value = uneZoneStockage.UneCategProd.Id;
+
+            int nb = commande.ExecuteNonQuery();
+            //fermeture de l'accès à la BD
+            commande.Connection.Close();
+            return nb;
+        }
+        public ZoneStockage GetLaZoneStockage(int sonId)
+        {
+            string nomZone;
+            string batiment;
+            string etage;
+            string adresse;
+            char idVille;
+            int idCateg;
+            string nomVille;
+            string nomCategProd;
+
+            SqlCommand commande = Commande.GetInstance().GetObjCommande();
+            commande.Parameters.Clear();
+            // Indique l'appel de la procédure stockée
+            commande.CommandType = CommandType.StoredProcedure;
+            // Appel de la procédure
+            commande.CommandText = "spGetLaZoneStockage";
+
+            commande.Parameters.Add("id", System.Data.SqlDbType.Int);
+            commande.Parameters["id"].Value = sonId;
+
+            SqlDataReader monLecteur;
+            monLecteur = commande.ExecuteReader();
+            monLecteur.Read();
+            sonId = (int)monLecteur["id"];
+            idCateg = (int)monLecteur["idCategProd"];
+            idVille = (char)monLecteur["insee"];
+
+            if (monLecteur["nomZone"] == DBNull.Value)
+            {
+                nomZone = default(string);
+            }
+            else
+            {
+                nomZone = monLecteur["nomZone"].ToString();
+            }
+            if (monLecteur["adresse"] == DBNull.Value)
+            {
+                adresse = default(string);
+            }
+            else
+            {
+                adresse = monLecteur["adresse"].ToString();
+            }
+            if (monLecteur["batiment"] == DBNull.Value)
+            {
+                batiment = default(string);
+            }
+            else
+            {
+                batiment = monLecteur["batiment"].ToString();
+            }
+            if (monLecteur["etage"] == DBNull.Value)
+            {
+              etage  = default(string);
+            }
+            else
+            {
+               etage = monLecteur["etage"].ToString();
+            }
+            if (monLecteur["nom"] == DBNull.Value)
+            {
+                nomVille = default(string);
+            }
+            else
+            {
+                nomVille = monLecteur["nom"].ToString();
+            }
+            if (monLecteur["libelle"] == DBNull.Value)
+            {
+                nomCategProd = default(string);
+            }
+            else
+            {
+                nomCategProd = monLecteur["libelle"].ToString();
+            }
+
+            monLecteur.Close();
+            Commande.GetInstance().FermerConnexion();
+
+            return new ZoneStockage(sonId, nomZone, new Ville(idVille, nomVille), adresse, batiment, etage, new CategProd(idCateg, nomCategProd)) ; 
         }
 
     }

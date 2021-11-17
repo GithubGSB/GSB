@@ -42,6 +42,8 @@ namespace GSBControleStockage
             this.lblCategProduit = new System.Windows.Forms.Label();
             this.cbxCategProduit = new System.Windows.Forms.ComboBox();
             this.btnModifZS = new System.Windows.Forms.Button();
+            this.lblNomZoneStokage = new System.Windows.Forms.Label();
+            this.txtNomZoneStockage = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblNomZoneStockage
@@ -60,12 +62,10 @@ namespace GSBControleStockage
             this.cbxNomZoneStockage.Name = "cbxNomZoneStockage";
             this.cbxNomZoneStockage.Size = new System.Drawing.Size(169, 21);
             this.cbxNomZoneStockage.TabIndex = 1;
-
             // 
             // lblBatiment
             // 
             this.lblBatiment.AutoSize = true;
-            this.lblBatiment.Location = new System.Drawing.Point(37, 79);
             this.lblBatiment.Name = "lblBatiment";
             this.lblBatiment.Size = new System.Drawing.Size(57, 13);
             this.lblBatiment.TabIndex = 2;
@@ -73,7 +73,6 @@ namespace GSBControleStockage
             // 
             // txtBatiment
             // 
-            this.txtBatiment.Location = new System.Drawing.Point(100, 76);
             this.txtBatiment.Name = "txtBatiment";
             this.txtBatiment.Size = new System.Drawing.Size(100, 20);
             this.txtBatiment.TabIndex = 3;
@@ -81,7 +80,6 @@ namespace GSBControleStockage
             // lblEtage
             // 
             this.lblEtage.AutoSize = true;
-            this.lblEtage.Location = new System.Drawing.Point(37, 118);
             this.lblEtage.Name = "lblEtage";
             this.lblEtage.Size = new System.Drawing.Size(44, 13);
             this.lblEtage.TabIndex = 4;
@@ -89,7 +87,6 @@ namespace GSBControleStockage
             // 
             // txtEtage
             // 
-            this.txtEtage.Location = new System.Drawing.Point(100, 111);
             this.txtEtage.Name = "txtEtage";
             this.txtEtage.Size = new System.Drawing.Size(100, 20);
             this.txtEtage.TabIndex = 5;
@@ -97,7 +94,6 @@ namespace GSBControleStockage
             // lblAdresse
             // 
             this.lblAdresse.AutoSize = true;
-            this.lblAdresse.Location = new System.Drawing.Point(246, 79);
             this.lblAdresse.Name = "lblAdresse";
             this.lblAdresse.Size = new System.Drawing.Size(54, 13);
             this.lblAdresse.TabIndex = 6;
@@ -105,7 +101,6 @@ namespace GSBControleStockage
             // 
             // txtAdresse
             // 
-            this.txtAdresse.Location = new System.Drawing.Point(318, 76);
             this.txtAdresse.Name = "txtAdresse";
             this.txtAdresse.Size = new System.Drawing.Size(177, 20);
             this.txtAdresse.TabIndex = 7;
@@ -113,7 +108,6 @@ namespace GSBControleStockage
             // lblVille
             // 
             this.lblVille.AutoSize = true;
-            this.lblVille.Location = new System.Drawing.Point(246, 118);
             this.lblVille.Name = "lblVille";
             this.lblVille.Size = new System.Drawing.Size(35, 13);
             this.lblVille.TabIndex = 8;
@@ -122,7 +116,6 @@ namespace GSBControleStockage
             // cbxVille
             // 
             this.cbxVille.FormattingEnabled = true;
-            this.cbxVille.Location = new System.Drawing.Point(318, 110);
             this.cbxVille.Name = "cbxVille";
             this.cbxVille.Size = new System.Drawing.Size(177, 21);
             this.cbxVille.TabIndex = 9;
@@ -130,7 +123,6 @@ namespace GSBControleStockage
             // lblCategProduit
             // 
             this.lblCategProduit.AutoSize = true;
-            this.lblCategProduit.Location = new System.Drawing.Point(97, 183);
             this.lblCategProduit.Name = "lblCategProduit";
             this.lblCategProduit.Size = new System.Drawing.Size(111, 13);
             this.lblCategProduit.TabIndex = 10;
@@ -139,14 +131,12 @@ namespace GSBControleStockage
             // cbxCategProduit
             // 
             this.cbxCategProduit.FormattingEnabled = true;
-            this.cbxCategProduit.Location = new System.Drawing.Point(249, 175);
             this.cbxCategProduit.Name = "cbxCategProduit";
             this.cbxCategProduit.Size = new System.Drawing.Size(159, 21);
             this.cbxCategProduit.TabIndex = 11;
             // 
             // btnModifZS
             // 
-            this.btnModifZS.Location = new System.Drawing.Point(100, 234);
             this.btnModifZS.Name = "btnModifZS";
             this.btnModifZS.Size = new System.Drawing.Size(100, 36);
             this.btnModifZS.TabIndex = 12;
@@ -154,11 +144,29 @@ namespace GSBControleStockage
             this.btnModifZS.UseVisualStyleBackColor = true;
             this.btnModifZS.Click += new System.EventHandler(this.btnModifZS_Click);
             // 
+            // lblNomZoneStokage
+            // 
+            this.lblNomZoneStokage.AutoSize = true;
+            this.lblNomZoneStokage.Location = new System.Drawing.Point(37, 97);
+            this.lblNomZoneStokage.Name = "lblNomZoneStokage";
+            this.lblNomZoneStokage.Size = new System.Drawing.Size(152, 13);
+            this.lblNomZoneStokage.TabIndex = 13;
+            this.lblNomZoneStokage.Text = "Nom de la zone de stockage : ";
+            // 
+            // txtNomZoneStockage
+            // 
+            this.txtNomZoneStockage.Location = new System.Drawing.Point(195, 94);
+            this.txtNomZoneStockage.Name = "txtNomZoneStockage";
+            this.txtNomZoneStockage.Size = new System.Drawing.Size(162, 20);
+            this.txtNomZoneStockage.TabIndex = 14;
+            // 
             // FormModifZoneStockage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 588);
+            this.Controls.Add(this.txtNomZoneStockage);
+            this.Controls.Add(this.lblNomZoneStokage);
             this.Controls.Add(this.btnModifZS);
             this.Controls.Add(this.cbxCategProduit);
             this.Controls.Add(this.lblCategProduit);
@@ -194,5 +202,7 @@ namespace GSBControleStockage
         private System.Windows.Forms.Label lblCategProduit;
         private System.Windows.Forms.ComboBox cbxCategProduit;
         private System.Windows.Forms.Button btnModifZS;
+        private System.Windows.Forms.Label lblNomZoneStokage;
+        private System.Windows.Forms.TextBox txtNomZoneStockage;
     }
 }

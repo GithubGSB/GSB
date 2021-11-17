@@ -80,5 +80,11 @@ namespace GSBControleStockage
             FormConsultZonesStockages fczs = new FormConsultZonesStockages();
             fczs.Show();
         }
+
+        private void modificationDuneZoneDeStockageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormModifZoneStockage fmzs = new FormModifZoneStockage();
+            fmzs.Show();
+        }
     }
 }

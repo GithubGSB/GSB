@@ -53,7 +53,6 @@ namespace ControleStockBLL
         {
             return ZoneStockageDAO.GetInstance().ConsultZonesStockages();
         }
-       
 
     }
 }
