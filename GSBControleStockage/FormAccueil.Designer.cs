@@ -40,6 +40,7 @@
             this.mnuItemUtilisateur = new System.Windows.Forms.ToolStripMenuItem();
             this.ajoutDunUtilisateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifierUnContrôleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGSBControleStock.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,7 +102,8 @@
             // 
             this.mnuItemControleRealise.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajoutDunControleToolStripMenuItem,
-            this.consultationDesControlesToolStripMenuItem});
+            this.consultationDesControlesToolStripMenuItem,
+            this.modifierUnContrôleToolStripMenuItem});
             this.mnuItemControleRealise.Name = "mnuItemControleRealise";
             this.mnuItemControleRealise.Size = new System.Drawing.Size(203, 19);
             this.mnuItemControleRealise.Tag = "GC";
@@ -158,6 +160,14 @@
             this.déconnexionToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.déconnexionToolStripMenuItem.Click += new System.EventHandler(this.déconnexionToolStripMenuItem_Click);
             // 
+            // modifierUnContrôleToolStripMenuItem
+            // 
+            this.modifierUnContrôleToolStripMenuItem.Name = "modifierUnContrôleToolStripMenuItem";
+            this.modifierUnContrôleToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.modifierUnContrôleToolStripMenuItem.Tag = "GC";
+            this.modifierUnContrôleToolStripMenuItem.Text = "Modifier un contrôle";
+            this.modifierUnContrôleToolStripMenuItem.Click += new System.EventHandler(this.modifierUnContrôleToolStripMenuItem_Click);
+            // 
             // FormAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,5 +199,6 @@
         private System.Windows.Forms.ToolStripMenuItem déconnexionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajoutDunUtilisateurToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultationDesControlesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifierUnContrôleToolStripMenuItem;
     }
 }

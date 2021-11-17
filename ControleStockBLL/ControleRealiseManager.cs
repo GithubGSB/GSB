@@ -53,7 +53,7 @@ namespace ControleStockBLL
             TypeControle unTypeControle = new TypeControle(idTypeControle);
             Entreprise uneEntreprise = new Entreprise(idEntreprise);
             ZoneStockage uneZoneStockage = new ZoneStockage(idZoneStockage);
-            return ControleRealiseDAO.GetInstance().ModifControle(new ControleRealise(dateControle, dateCreation, dateDerniereModif, resume, montantHT, unTypeControle, uneEntreprise, uneZoneStockage));
+            return ControleRealiseDAO.GetInstance().ModifControle(new ControleRealise(id, dateControle, dateCreation, dateDerniereModif, resume, montantHT, unTypeControle, uneEntreprise, uneZoneStockage));
 
 
         }
@@ -61,6 +61,11 @@ namespace ControleStockBLL
         public ControleRealise RecupererControle(int id)
         {
             return ControleRealiseDAO.GetInstance().RecupererControle(id);
+        }
+
+        public ControleRealise RecupererTousControle(int id)
+        {
+            return ControleRealiseDAO.GetInstance().RecupererTousLesControles(id);
         }
     }
 }

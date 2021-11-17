@@ -80,5 +80,11 @@ namespace GSBControleStockage
             FormConsultControleRealise fccr = new FormConsultControleRealise();
             fccr.Show();
         }
+
+        private void modifierUnContrôleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormModifControleRealise fmcr = new FormModifControleRealise();
+            fmcr.Show();
+        }
     }
 }

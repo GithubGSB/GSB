@@ -46,7 +46,7 @@ namespace GSBControleStockage
                 string resume = txtResume.Text;
                 string valeurHT = txtPrixHT.Text;
                 float montantHT;
-                DateTime dateControle = dtControle.Value;
+                DateTime dateControle = DateTime.Now;
                 DateTime dateCreation = DateTime.Now;
                 
 
@@ -56,6 +56,7 @@ namespace GSBControleStockage
                     return;
                 }
                 float.TryParse(valeurHT, out montantHT);
+                if (montantHT <= 0) Logger.LogAttention("Le prix hors taxe doit être supérieur à 0 euro.");
                 if (string.IsNullOrWhiteSpace(resume) || string.IsNullOrWhiteSpace(valeurHT)) Logger.LogErreur("Vous devez remplir tous les champs.");
                 else
                 {
