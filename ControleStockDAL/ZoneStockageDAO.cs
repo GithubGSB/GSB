@@ -154,6 +154,7 @@ namespace ControleStockDAL
             Commande.GetInstance().FermerConnexion();
             return lesZonesStockages;
         }
+       
         private ZoneStockageDAO(){}
         /// <summary>
         /// Ajout d'une zone de stockage dans la BD via une procédure stockée. On ouvre l'accès au donnée avec l'objet Commande
@@ -209,6 +210,9 @@ namespace ControleStockDAL
             // Appel de la procédure
             commande.CommandText = "spModifZoneStockage";
 
+            commande.Parameters.Add("id", System.Data.SqlDbType.Int);
+            commande.Parameters["id"].Value = uneZoneStockage.Id;
+
             commande.Parameters.Add("nomZone", System.Data.SqlDbType.VarChar);
             commande.Parameters["nomZone"].Value = uneZoneStockage.NomZone;
 
@@ -241,7 +245,7 @@ namespace ControleStockDAL
             string batiment;
             string etage;
             string adresse;
-            char idVille;
+            int idVille;
             int idCateg;
             string nomVille;
             string nomCategProd;
@@ -260,8 +264,8 @@ namespace ControleStockDAL
             monLecteur = commande.ExecuteReader();
             monLecteur.Read();
             sonId = (int)monLecteur["id"];
-            idCateg = (int)monLecteur["idCategProd"];
-            idVille = (char)monLecteur["insee"];
+            idCateg = (int)monLecteur["idCategProduit"];
+            idVille = (int)monLecteur["insee"];
 
             if (monLecteur["nomZone"] == DBNull.Value)
             {
@@ -295,28 +299,14 @@ namespace ControleStockDAL
             {
                etage = monLecteur["etage"].ToString();
             }
-            if (monLecteur["nom"] == DBNull.Value)
-            {
-                nomVille = default(string);
-            }
-            else
-            {
-                nomVille = monLecteur["nom"].ToString();
-            }
-            if (monLecteur["libelle"] == DBNull.Value)
-            {
-                nomCategProd = default(string);
-            }
-            else
-            {
-                nomCategProd = monLecteur["libelle"].ToString();
-            }
+           
 
             monLecteur.Close();
             Commande.GetInstance().FermerConnexion();
 
-            return new ZoneStockage(sonId, nomZone, new Ville(idVille, nomVille), adresse, batiment, etage, new CategProd(idCateg, nomCategProd)) ; 
+            return new ZoneStockage(sonId, nomZone, new Ville(idVille), adresse, batiment, etage, new CategProd(idCateg)) ; 
         }
+        
 
     }
 }

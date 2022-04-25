@@ -49,23 +49,25 @@ namespace GSBControleStockage
             // lblNomZoneStockage
             // 
             this.lblNomZoneStockage.AutoSize = true;
-            this.lblNomZoneStockage.Location = new System.Drawing.Point(97, 19);
+            this.lblNomZoneStockage.Location = new System.Drawing.Point(97, 91);
             this.lblNomZoneStockage.Name = "lblNomZoneStockage";
-            this.lblNomZoneStockage.Size = new System.Drawing.Size(153, 13);
+            this.lblNomZoneStockage.Size = new System.Drawing.Size(229, 13);
             this.lblNomZoneStockage.TabIndex = 0;
-            this.lblNomZoneStockage.Text = "Nom de la Zone de Stockage :";
+            this.lblNomZoneStockage.Text = "Changement du nom de la Zone de Stockage :";
             // 
             // cbxNomZoneStockage
             // 
             this.cbxNomZoneStockage.FormattingEnabled = true;
-            this.cbxNomZoneStockage.Location = new System.Drawing.Point(249, 12);
+            this.cbxNomZoneStockage.Location = new System.Drawing.Point(292, 50);
             this.cbxNomZoneStockage.Name = "cbxNomZoneStockage";
             this.cbxNomZoneStockage.Size = new System.Drawing.Size(169, 21);
             this.cbxNomZoneStockage.TabIndex = 1;
+            this.cbxNomZoneStockage.SelectionChangeCommitted += new System.EventHandler(this.cbxNomZoneStockage_SelectionChangeCommitted);
             // 
             // lblBatiment
             // 
             this.lblBatiment.AutoSize = true;
+            this.lblBatiment.Location = new System.Drawing.Point(97, 244);
             this.lblBatiment.Name = "lblBatiment";
             this.lblBatiment.Size = new System.Drawing.Size(57, 13);
             this.lblBatiment.TabIndex = 2;
@@ -73,6 +75,7 @@ namespace GSBControleStockage
             // 
             // txtBatiment
             // 
+            this.txtBatiment.Location = new System.Drawing.Point(167, 241);
             this.txtBatiment.Name = "txtBatiment";
             this.txtBatiment.Size = new System.Drawing.Size(100, 20);
             this.txtBatiment.TabIndex = 3;
@@ -80,6 +83,7 @@ namespace GSBControleStockage
             // lblEtage
             // 
             this.lblEtage.AutoSize = true;
+            this.lblEtage.Location = new System.Drawing.Point(97, 280);
             this.lblEtage.Name = "lblEtage";
             this.lblEtage.Size = new System.Drawing.Size(44, 13);
             this.lblEtage.TabIndex = 4;
@@ -87,6 +91,7 @@ namespace GSBControleStockage
             // 
             // txtEtage
             // 
+            this.txtEtage.Location = new System.Drawing.Point(154, 277);
             this.txtEtage.Name = "txtEtage";
             this.txtEtage.Size = new System.Drawing.Size(100, 20);
             this.txtEtage.TabIndex = 5;
@@ -94,6 +99,7 @@ namespace GSBControleStockage
             // lblAdresse
             // 
             this.lblAdresse.AutoSize = true;
+            this.lblAdresse.Location = new System.Drawing.Point(97, 209);
             this.lblAdresse.Name = "lblAdresse";
             this.lblAdresse.Size = new System.Drawing.Size(54, 13);
             this.lblAdresse.TabIndex = 6;
@@ -101,6 +107,7 @@ namespace GSBControleStockage
             // 
             // txtAdresse
             // 
+            this.txtAdresse.Location = new System.Drawing.Point(154, 206);
             this.txtAdresse.Name = "txtAdresse";
             this.txtAdresse.Size = new System.Drawing.Size(177, 20);
             this.txtAdresse.TabIndex = 7;
@@ -108,6 +115,7 @@ namespace GSBControleStockage
             // lblVille
             // 
             this.lblVille.AutoSize = true;
+            this.lblVille.Location = new System.Drawing.Point(97, 172);
             this.lblVille.Name = "lblVille";
             this.lblVille.Size = new System.Drawing.Size(35, 13);
             this.lblVille.TabIndex = 8;
@@ -116,6 +124,7 @@ namespace GSBControleStockage
             // cbxVille
             // 
             this.cbxVille.FormattingEnabled = true;
+            this.cbxVille.Location = new System.Drawing.Point(135, 169);
             this.cbxVille.Name = "cbxVille";
             this.cbxVille.Size = new System.Drawing.Size(177, 21);
             this.cbxVille.TabIndex = 9;
@@ -123,6 +132,7 @@ namespace GSBControleStockage
             // lblCategProduit
             // 
             this.lblCategProduit.AutoSize = true;
+            this.lblCategProduit.Location = new System.Drawing.Point(97, 134);
             this.lblCategProduit.Name = "lblCategProduit";
             this.lblCategProduit.Size = new System.Drawing.Size(111, 13);
             this.lblCategProduit.TabIndex = 10;
@@ -131,14 +141,16 @@ namespace GSBControleStockage
             // cbxCategProduit
             // 
             this.cbxCategProduit.FormattingEnabled = true;
+            this.cbxCategProduit.Location = new System.Drawing.Point(292, 126);
             this.cbxCategProduit.Name = "cbxCategProduit";
             this.cbxCategProduit.Size = new System.Drawing.Size(159, 21);
             this.cbxCategProduit.TabIndex = 11;
             // 
             // btnModifZS
             // 
+            this.btnModifZS.Location = new System.Drawing.Point(100, 339);
             this.btnModifZS.Name = "btnModifZS";
-            this.btnModifZS.Size = new System.Drawing.Size(100, 36);
+            this.btnModifZS.Size = new System.Drawing.Size(394, 36);
             this.btnModifZS.TabIndex = 12;
             this.btnModifZS.Text = "Valider la modification";
             this.btnModifZS.UseVisualStyleBackColor = true;
@@ -147,15 +159,15 @@ namespace GSBControleStockage
             // lblNomZoneStokage
             // 
             this.lblNomZoneStokage.AutoSize = true;
-            this.lblNomZoneStokage.Location = new System.Drawing.Point(37, 97);
+            this.lblNomZoneStokage.Location = new System.Drawing.Point(97, 53);
             this.lblNomZoneStokage.Name = "lblNomZoneStokage";
-            this.lblNomZoneStokage.Size = new System.Drawing.Size(152, 13);
+            this.lblNomZoneStokage.Size = new System.Drawing.Size(192, 13);
             this.lblNomZoneStokage.TabIndex = 13;
-            this.lblNomZoneStokage.Text = "Nom de la zone de stockage : ";
+            this.lblNomZoneStokage.Text = "Nom de la zone de stockage actuelle : ";
             // 
             // txtNomZoneStockage
             // 
-            this.txtNomZoneStockage.Location = new System.Drawing.Point(195, 94);
+            this.txtNomZoneStockage.Location = new System.Drawing.Point(332, 88);
             this.txtNomZoneStockage.Name = "txtNomZoneStockage";
             this.txtNomZoneStockage.Size = new System.Drawing.Size(162, 20);
             this.txtNomZoneStockage.TabIndex = 14;
@@ -164,7 +176,7 @@ namespace GSBControleStockage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 588);
+            this.ClientSize = new System.Drawing.Size(614, 433);
             this.Controls.Add(this.txtNomZoneStockage);
             this.Controls.Add(this.lblNomZoneStokage);
             this.Controls.Add(this.btnModifZS);

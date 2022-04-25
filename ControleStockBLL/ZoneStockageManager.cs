@@ -53,6 +53,21 @@ namespace ControleStockBLL
         {
             return ZoneStockageDAO.GetInstance().ConsultZonesStockages();
         }
+        public ZoneStockage RecupererZoneStockage(int id)
+        {
+            return ZoneStockageDAO.GetInstance().GetLaZoneStockage(id);
+        }
+        public int ModifZoneStockage (int id, string sonNomZone, string sonBatiment, string sonEtage, DateTime saDateDernModif, string sonAdresse, int sonIdCategProd, int sonIdVille)
+        {
+            Ville laVille;
+            laVille = new Ville(sonIdVille);
+            CategProd laCategProd;
+            laCategProd = new CategProd(sonIdCategProd);
+            ZoneStockage laZoneStockage;
+            
+            laZoneStockage = new ZoneStockage(id, sonNomZone, sonBatiment, sonEtage,  sonAdresse, saDateDernModif, laVille, laCategProd);
+            return ZoneStockageDAO.GetInstance().ModifZoneStockage(laZoneStockage);
+        }
 
     }
 }

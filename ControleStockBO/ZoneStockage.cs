@@ -80,6 +80,18 @@ namespace ControleStockBO
             this.uneVille = uneVille;
             this.uneCategProd = uneCategProd;
         }
+        public ZoneStockage(string nomZone, string batiment, string etage, DateTime dateDernModif, string adresse, CategProd uneCategProd, Ville uneVille)
+        {
+
+            this.nomZone = nomZone;
+            this.batiment = batiment;
+            this.etage = etage;
+            this.adresse = adresse;
+           
+            this.dateDernModif = dateDernModif;
+            this.uneVille = uneVille;
+            this.uneCategProd = uneCategProd;
+        }
 
         public ZoneStockage(int id)
         {
