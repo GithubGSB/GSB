@@ -86,5 +86,13 @@ namespace GSBControleStockage
             FormModifZoneStockage fmzs = new FormModifZoneStockage();
             fmzs.Show();
         }
+
+        private void suppressionDuneZoneDeStockageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSupprZoneStockage fszs = new FormSupprZoneStockage();
+            fszs.Show();
+        }
+
+        
     }
 }

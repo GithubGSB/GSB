@@ -33,5 +33,9 @@ namespace ControleStockBO
             this.insee = insee;
             this.nom = nom;
         }
+        public Ville(string nom)
+        {
+            this.nom = nom;
+        }
     }
 }

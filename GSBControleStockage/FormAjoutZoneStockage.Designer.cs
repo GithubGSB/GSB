@@ -171,6 +171,7 @@ namespace GSBControleStockage
             this.Controls.Add(this.txtNomZone);
             this.Controls.Add(this.lblNomZone);
             this.Name = "FormAjoutZoneStockage";
+            this.Tag = "";
             this.Text = "Ajout d\'une zone de stokage";
             this.ResumeLayout(false);
             this.PerformLayout();

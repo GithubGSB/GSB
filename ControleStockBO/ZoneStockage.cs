@@ -20,6 +20,8 @@ namespace ControleStockBO
         private DateTime dateDernModif;
         private Ville uneVille;
         private CategProd uneCategProd;
+        private Ville laVille;
+        private CategProd laCateg;
 
         public int Id { get => id; set => id = value; }
         public string NomZone { get => nomZone; set => nomZone = value; }
@@ -28,7 +30,9 @@ namespace ControleStockBO
         public string Adresse { get => adresse; set => adresse = value; }
         public DateTime DateCreation { get => dateCreation; set => dateCreation = value; }
         public DateTime DateDernModif { get => dateDernModif; set => dateDernModif = value; }
+        [System.ComponentModel.Browsable(false)]
         public Ville UneVille { get => uneVille; set => uneVille = value; }
+        [System.ComponentModel.Browsable(false)]
         public CategProd UneCategProd { get => uneCategProd; set => uneCategProd = value; }
         public string NomVille { get => uneVille.Nom; set => uneVille.Nom = value; }
         public string LibelleCategProd { get => uneCategProd.Libelle; set => uneCategProd.Libelle = value; }
@@ -103,6 +107,16 @@ namespace ControleStockBO
 
             this.nomZone = nomZone;
             this.id = id;
+        }
+
+        public ZoneStockage(string nomZone, Ville laVille, string adresse, string batiment, string etage, CategProd laCateg)
+        {
+            this.nomZone = nomZone;
+            this.laVille = laVille;
+            this.adresse = adresse;
+            this.batiment = batiment;
+            this.etage = etage;
+            this.laCateg = laCateg;
         }
     }
 }

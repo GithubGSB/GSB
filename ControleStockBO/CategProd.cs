@@ -14,8 +14,6 @@ namespace ControleStockBO
         private int id;
         private string libelle;
 
-
-       
         public int Id { get => id; set => id = value; }
         public string Libelle { get => libelle; set => libelle = value; }
         public CategProd (int id, string libelle)
@@ -27,6 +25,11 @@ namespace ControleStockBO
         public CategProd (int id)
         {
             this.id = id;
+        }
+
+        public CategProd(string libelleCateg)
+        {
+            this.libelle = libelle;
         }
     }
 }

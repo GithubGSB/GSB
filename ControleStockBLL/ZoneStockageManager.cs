@@ -30,13 +30,13 @@ namespace ControleStockBLL
         }
         private ZoneStockageManager()
         {
-
         }
 
         public List<ZoneStockage> GetLesZonesStockages()
         {
             return ZoneStockageDAO.GetInstance().GetLesZonesStockages();
         }
+
         public int AjoutZoneStockage(string sonNomZone, string sonBatiment, string sonEtage, 
         DateTime saDateCreation, DateTime saDateDernModif,string sonAdresse, int sonIdCategProd,
             int sonIdVille)
@@ -55,7 +55,7 @@ namespace ControleStockBLL
         }
         public ZoneStockage RecupererZoneStockage(int id)
         {
-            return ZoneStockageDAO.GetInstance().GetLaZoneStockage(id);
+            return ZoneStockageDAO.GetInstance().GetLaZoneStockageASuppr(id);
         }
         public int ModifZoneStockage (int id, string sonNomZone, string sonBatiment, string sonEtage, DateTime saDateDernModif, string sonAdresse, int sonIdCategProd, int sonIdVille)
         {
@@ -67,6 +67,10 @@ namespace ControleStockBLL
             
             laZoneStockage = new ZoneStockage(id, sonNomZone, sonBatiment, sonEtage,  sonAdresse, saDateDernModif, laVille, laCategProd);
             return ZoneStockageDAO.GetInstance().ModifZoneStockage(laZoneStockage);
+        }
+        public int SupprZoneStockage (int sonId)
+        {
+            return ZoneStockageDAO.GetInstance().SupprZoneStockage(sonId);
         }
 
     }

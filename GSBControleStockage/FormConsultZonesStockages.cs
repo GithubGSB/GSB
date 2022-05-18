@@ -28,8 +28,8 @@ namespace GSBControleStockage
                 dtgZoneStockage.Columns[0].Visible = false;
                 dtgZoneStockage.Columns[5].Visible = false;
                 dtgZoneStockage.Columns[6].Visible = false;
-                dtgZoneStockage.Columns[7].Visible = false;
-                dtgZoneStockage.Columns[8].Visible = false;
+                //dtgZoneStockage.Columns[7].Visible = false;
+                //dtgZoneStockage.Columns[8].Visible = false;
             }
             
             catch (Exception except)

@@ -32,6 +32,8 @@
             this.mnuItemZoneStock = new System.Windows.Forms.ToolStripMenuItem();
             this.ajoutDuneZoneStockageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultationDesZonesDeStockagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificationDuneZoneDeStockageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.suppressionDuneZoneDeStockageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemEntreprise = new System.Windows.Forms.ToolStripMenuItem();
             this.ajoutDuneEntrepriseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemControleRealise = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +42,6 @@
             this.mnuItemUtilisateur = new System.Windows.Forms.ToolStripMenuItem();
             this.ajoutDunUtilisateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificationDuneZoneDeStockageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGSBControleStock.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +68,8 @@
             this.mnuItemZoneStock.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajoutDuneZoneStockageToolStripMenuItem,
             this.consultationDesZonesDeStockagesToolStripMenuItem,
-            this.modificationDuneZoneDeStockageToolStripMenuItem});
+            this.modificationDuneZoneDeStockageToolStripMenuItem,
+            this.suppressionDuneZoneDeStockageToolStripMenuItem});
             this.mnuItemZoneStock.Name = "mnuItemZoneStock";
             this.mnuItemZoneStock.Size = new System.Drawing.Size(203, 19);
             this.mnuItemZoneStock.Tag = "GZ";
@@ -89,6 +91,22 @@
             this.consultationDesZonesDeStockagesToolStripMenuItem.Tag = "GZ";
             this.consultationDesZonesDeStockagesToolStripMenuItem.Text = "Consultation des zones de stockages";
             this.consultationDesZonesDeStockagesToolStripMenuItem.Click += new System.EventHandler(this.consultationDesZonesDeStockagesToolStripMenuItem_Click);
+            // 
+            // modificationDuneZoneDeStockageToolStripMenuItem
+            // 
+            this.modificationDuneZoneDeStockageToolStripMenuItem.Name = "modificationDuneZoneDeStockageToolStripMenuItem";
+            this.modificationDuneZoneDeStockageToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
+            this.modificationDuneZoneDeStockageToolStripMenuItem.Tag = "GZ";
+            this.modificationDuneZoneDeStockageToolStripMenuItem.Text = "Modification d\'une zone de stockage";
+            this.modificationDuneZoneDeStockageToolStripMenuItem.Click += new System.EventHandler(this.modificationDuneZoneDeStockageToolStripMenuItem_Click);
+            // 
+            // suppressionDuneZoneDeStockageToolStripMenuItem
+            // 
+            this.suppressionDuneZoneDeStockageToolStripMenuItem.Name = "suppressionDuneZoneDeStockageToolStripMenuItem";
+            this.suppressionDuneZoneDeStockageToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
+            this.suppressionDuneZoneDeStockageToolStripMenuItem.Tag = "GZ";
+            this.suppressionDuneZoneDeStockageToolStripMenuItem.Text = "Suppression d\'une zone de stockage";
+            this.suppressionDuneZoneDeStockageToolStripMenuItem.Click += new System.EventHandler(this.suppressionDuneZoneDeStockageToolStripMenuItem_Click);
             // 
             // mnuItemEntreprise
             // 
@@ -158,14 +176,6 @@
             this.déconnexionToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.déconnexionToolStripMenuItem.Click += new System.EventHandler(this.déconnexionToolStripMenuItem_Click);
             // 
-            // modificationDuneZoneDeStockageToolStripMenuItem
-            // 
-            this.modificationDuneZoneDeStockageToolStripMenuItem.Name = "modificationDuneZoneDeStockageToolStripMenuItem";
-            this.modificationDuneZoneDeStockageToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
-            this.modificationDuneZoneDeStockageToolStripMenuItem.Tag = "GZ";
-            this.modificationDuneZoneDeStockageToolStripMenuItem.Text = "Modification d\'une zone de stockage";
-            this.modificationDuneZoneDeStockageToolStripMenuItem.Click += new System.EventHandler(this.modificationDuneZoneDeStockageToolStripMenuItem_Click);
-            // 
             // FormAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,5 +208,6 @@
         private System.Windows.Forms.ToolStripMenuItem ajoutDunUtilisateurToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultationDesZonesDeStockagesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificationDuneZoneDeStockageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem suppressionDuneZoneDeStockageToolStripMenuItem;
     }
 }
