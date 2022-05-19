@@ -55,6 +55,10 @@ namespace ControleStockBLL
         }
         public ZoneStockage RecupererZoneStockage(int id)
         {
+            return ZoneStockageDAO.GetInstance().GetLaZoneStockage(id);
+        }
+        public ZoneStockage RecupererZoneStockageASuppr(int id)
+        {
             return ZoneStockageDAO.GetInstance().GetLaZoneStockageASuppr(id);
         }
         public int ModifZoneStockage (int id, string sonNomZone, string sonBatiment, string sonEtage, DateTime saDateDernModif, string sonAdresse, int sonIdCategProd, int sonIdVille)

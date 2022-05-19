@@ -30,7 +30,7 @@ namespace GSBControleStockage
             try
             {
                 List<ZoneStockage> lesZonesStockages = new List<ZoneStockage>();
-                lesZonesStockages.Add(ZoneStockageManager.GetInstance().RecupererZoneStockage(idZoneStockage));
+                lesZonesStockages.Add(ZoneStockageManager.GetInstance().RecupererZoneStockageASuppr(idZoneStockage));
                 dtgZoneStockage.DataSource = lesZonesStockages;
                 dtgZoneStockage.Columns[0].Visible = false;
                 dtgZoneStockage.Columns[5].Visible = false;

@@ -330,17 +330,17 @@ namespace ControleStockDAL
             // Indique l'appel de la procédure stockée
             commande.CommandType = CommandType.StoredProcedure;
             // Appel de la procédure
-            commande.CommandText = "spGetLaZoneStockage";
+            commande.CommandText = "spGetLaZonePourSuppr";
 
-            commande.Parameters.Add("id", System.Data.SqlDbType.Int);
-            commande.Parameters["id"].Value = sonId;
+            commande.Parameters.Add("@id", System.Data.SqlDbType.Int);
+            commande.Parameters["@id"].Value = sonId;
 
             SqlDataReader monLecteur;
             monLecteur = commande.ExecuteReader();
             monLecteur.Read();
-            sonId = (int)monLecteur["id"];
-            idCateg = (int)monLecteur["idCategProduit"];
-            idVille = (int)monLecteur["insee"];
+            sonId = (int)monLecteur["idZone"];
+            idCateg = (int)monLecteur["idCategorie"];
+            idVille = (int)monLecteur["idVille"];
 
             if (monLecteur["nomZone"] == DBNull.Value)
             {
@@ -374,6 +374,7 @@ namespace ControleStockDAL
             {
                 etage = monLecteur["etage"].ToString();
             }
+
             if (monLecteur["nomVille"] == DBNull.Value)
             {
                 nomVille = default(string);
@@ -390,6 +391,7 @@ namespace ControleStockDAL
             {
                 libelleCateg = monLecteur["libelleCateg"].ToString();
             }
+
 
 
             monLecteur.Close();
